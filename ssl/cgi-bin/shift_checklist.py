@@ -31,7 +31,7 @@ sSnnetURL = "https://snews.bnl.gov"
 sCgiURL = "https://snews.bnl.gov/cgi-bin/downtime.py"
 sTemplateFile = "shift_template.html"
 sFormFile = "shift_checklist-template.html"
-sShiftLogFile = sHomeDir + "cgi-bin/logfile.html"
+sShiftLogFile = sHomeDir + "wg/shift/logfile.html"
 sShiftEmailFile = "remindme"
 
 SENDMAIL = "/usr/sbin/sendmail"
