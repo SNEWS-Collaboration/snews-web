@@ -1,0 +1,304 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<body
+bgcolor="fffaf0"
+text="000000"
+link="0000ff"
+alink="ff00ff"
+vlink="040080"
+>
+
+<HTML><Title>README</Title>
+<Head>
+<h2> <center>coinccode README</center> </A></h2>
+</Head>
+
+<h3><p> this is (a slightly altered version of) the README file currently 
+included with the coinccode module. <p></h3>
+
+<hr>
+<h4>the short version:</h4>
+<ul>
+
+	<li> install <a href="http://openssl.org">OpenSSL</a>.  you need 
+	  the command line application, so 
+	  make sure you get the full distribution even if you install 
+	  a package with rpm.  run the default installation so that the 
+	  config files can find needed files (& applications)
+	
+	<li> set these environment variables: 
+	  RANDFILE : a file to read random info from. (i.e. /dev/random)
+
+	<li> in the coinccode directory, run gc_config
+	  (run gc_config --help for more information)
+	  it'll build you a Makefile from Makefile.in using configure
+	  and config.guess.
+
+	<li> in the top-level openssl directory, run CA.sh -newreq,
+	  giving either gcclient or gcserver as the common name,
+          remember your password, and email me the certificate request.
+  
+	<li> when i email you back the signed request, decrypt it.
+	  (if you don't do so, you will be prompted for your passphrase
+	  every time gcserver is started or any of the client functions
+	  is called. if you're trying to automate, this is probably bad).  
+	  use 
+	  	openssl rsa -in encrypted_key.pem -out decrypted_key.pem
+	  you will be prompted for your passphrase, and the decrypted
+	  version of your key will be written to the file given after
+	  -out.  you need to recombine the files, substituting the decrypted
+	  key in the out file for the encrypted key in the certificate file
+	  (that is, replace one RSA PRIVATE KEY block for the other)
+	  
+	<li> you should be able to build and run gcserver, and call the gcclient
+	  applications.  you should not have to change any code that 
+	  calls the client routines -- externally, they look the same.
+	  (actually, the client routines now return 0 for success and nonzero
+	  for failure: this has changed!)
+
+	<li> if this doesn't work, read the stuff below and/or email 
+	  <a href="mailto:cmills@superk.bu.edu">  cmills@superk.bu.edu. </a>
+</ul>
+
+<hr>
+<h4>the gory details </h4>
+<hr>
+<hr>
+
+<p>
+<h4>how gc_config looks for the OpenSSL include and library files </h4><br>
+
+look at gc_config for the complete details but here's the gist:  if 
+configure itself doesn't find the libraries and ssl.h, gc_config looks 
+for them in a few places:
+<ul>
+	<li> first, it checks the default install location that 
+	  'make install' for openssl puts them:
+	  libssl.a, libcrypto.a --> /usr/local/ssl/lib
+	  openssl/ssl.h (etc) --> /usr/local/ssl/include
+
+	<li> then, it checks for the environment variable 
+	  SSL_LIBS or SSL_INCLUDE (whichever is appropriate to what
+	  it's looking for) to see if they are defined, and if so,
+	  if the files it's looking for are in those directories.
+
+	<li> finally, it sees if the command 'locate' exists on this
+	  computer.  if so, it runs locate to find the file, and 
+	  picks up the first directory returned by locate as containing
+	  the file.
+
+	<li> if none of these steps locates the file, gc_config exits
+	  and advises the user that they should install openssl.
+	  (or move it somewhere easier to find, or set an env)
+	
+	<li> in other words, here are ways to let gc_config find ssl:
+	  	- install openssl (using the --prefix and
+		  --openssldir options, see openssl's INSTALL
+		  file for details) in a standard location, so that
+		  configure can find it.
+		- install openssl in its default location by simply
+		  running make install
+		- set SSL_LIBS to the directory containing libssl.a
+		  and libcrypto.a, and set SSL_INCLUDE to the dir
+		  containing openssl/ssl.h (that openssl/ contains
+		  all of the other header files, too)
+		- locate is kind of a last resort -- i wouldn't rely
+		  on it, esp. since it's not installed on all machines.
+
+</ul>
+
+<hr>
+<h4>random number generation</h4><br>
+<ul>
+	
+	<li> you may well already have a "randomness device", and it'll just
+	  be a matter of pointing ssl in the right direction.
+
+	<li> set the environmental variable RANDFILE to a file that can 
+	  be used to seed random number generation:  i.e.
+	  /dev/random or /dev/urandom.
+
+	<li> if you still get PRNG (PRNG = Pseudo Random Number Generator)
+	  not seeded errors, try linking $HOME/.rnd to /dev/random with <br>
+  	  	ln -s $RANDFILE $HOME/.rnd <br>
+	  (this in particular may help with certificate and certificate
+	  request generation. -- a lot of the ssl functions check that
+	  location as well as or instead of $RANDFILE)
+
+	<li> for solaris, you may need to get /dev/random, a random number seeder 
+	  that uses information from the terminal (interrupts, mouse movements, 
+	  keystrokes) to create a FIFO from which (nearly irreproducible) 
+	  random bytes can be read*.  this can be found as a patch from sun, 
+	  under patch id 105710-01.  
+
+	<li> it may also be necessary to install an entropy gathering daemon, 
+	  which operates similarly to /dev/random, or maybe in concert with it.
+	  i don't know so much about it, since i haven't needed it,  but 
+	  there's some stuff about it at openssl.org.  
+
+	<li> the FAQ at openssl.org has more information on much of this.
+
+	<li> you may need to adjust the constant SEED_BYTES in gc_ssl.h if 
+	  the PRNG seeding takes forever.  you should not set it to less 
+	  than 1024 -- i believe it will generate an error if you do so.  
+	  (not to mention that it's just kind of a bad idea.)
+</ul>
+
+<hr>
+<h4>you must have a __certificate__. </h4><br>
+	
+	<strong>generating a certificate</strong><br>
+	
+<ul>
+	<li> to generate a certificate request, 
+	  in your <openssl>/apps directory, run CA.sh -newreq. <p>
+
+	<li> make sure that you give your certificate the common name
+	  "gcclient" or "gcserver", exactly (all lower-case).  
+	  this is one of the checks that the server uses (the client 
+	  checks for a good common name, too) <p>
+
+	<li> <strong>remember your password!</strong> <p>
+
+	<li> email the request to 
+	  <a href="mailto:cmills@superk.bu.edu">  cmills@superk.bu.edu. </a>
+	  and i'll sign it and  email it back to you.  this is secure 
+	  because the private key you generated (which is in both the request 
+	  and the certificate) is protected by your password.
+	  (the main check of authenticity is checking that it was signed by
+	  the gcCA certifying authority i set up on superk) <p>
+
+	<li> if you want to avoid having to reenter the pass phrase every time
+	  gcserver runs or your program calls one of the client routines,
+	  double check that the cert file is not readable by anyone other than
+	  the account that the code runs in, and use
+	  	openssl rsa -in encrypted_key.pem -out decrypted_key.pem
+	  you will be prompted for your passphrase, and the decrypted
+	  version of your key/cert file will be writtent to the file given after
+	  -out. <p>
+
+	__other notes__ <p>
+
+	<li> "unable to write to 'random state'" error msg is ok:
+	  that's just openssl's attempt to write back to the random 
+	  file (/dev/random):
+	  not critical, hence not a fatal err.  nothing to worry about. <p>
+
+	<li> on superk: i setenv'd OPENSSL_CONFIG to $SSL_REFS/apps/openssl.cnf,
+	  where SSL_REFS is /pdk2/scratch/habig/openssl-0.9.5beta2/ ,
+	  and added -config $OPENSSL_CONFIG to CA.sh
+	  another version of openssl.cnf, the default i think, is <where?>
+	  ---the default is fine unless you're me, btw.   <p>
+
+	<li> i have everything set up in our SSL_REFS directory on superk
+	  so that we have a working CA of sorts.  all the stuff is in
+	  gcCA/, and things are setup in OPENSSL_CONFIG and CA.sh such that
+	  gcCA and not demoCA is the working certifying authority.   <p>
+
+</ul>
+
+<hr>
+<h4>on configure, configure.in, Makefile.in, and gc_config:</h4><br>
+<ul>
+	<li> __easy: configure__<br>
+	  to just use coinccode, just run ./gc_config, which will generate
+	  Makefile from Makefile.in.  <p>
+
+	<li> __editing Makefile (Makefile.in)__<br>
+	  if you want to change something in Makefile, try to change it by 
+	  editing Makefile.in.  everything not surrounded by @'s
+	  (for example, @LIBS@) is copied verbatim into the Makefile.  <p>
+
+	<li> __autoconf__<br>
+	  if you've made major changes to the source code, (especially anything
+	  that requires new header files or libraries), run 'autoscan' 
+	  if you have it, and then diff configure.scan configure.in.  
+	  if configure.scan has anything that configure.in doesn't, 
+	  add it to configure.in.  then, run autoconf to regenerate configure
+	  from configure.in.  or, better yet, run gc_config --autoconf and 
+	  let gc_config take care of creating any required files.  <p>
+  
+	<li>  __gc_config__<br>
+	  run gc_config --help for usage hints for gc_config.<br>
+	  to quote the header comments on gc_config: <br>
+	<ul>
+
+		# this exists largely to clean up the use of autoconf<br>
+		# and configure -- they were built to do a lot of things, <br>
+		# and we just don't need much.  in particular, they require <br>
+		# a number of files we don't necessarily want<br>
+		# cluttering up our stuff -- files like NEWS, or scripts <br>
+		# callable from configure, whose presence is required <br>
+		# (install.sh, config.sub), but which can be completely blank.  <br>
+
+		# the other reason for this script is that there is a <br>
+		# standard location for openssl to install itself and <br>
+		# its libraries, in which configure does not look.<br>
+		# i'd rather not tinker around with configure itself, <br>
+		# so that it is easy to regenerate (relatively speaking) <br>
+		# from configure.in, so it made more sense to make a <br>
+		# wrapper script.  <br>
+	</ul>
+	</ul>
+		
+<p>
+* a note on this file:  since it is a FIFO, if you try to read from it looking
+  for an EOF, that read will never return.  it's much better just to specify
+  some max number of bytes to read, or something along that line.
+
+<hr>
+<h4>further stuff  </h4>
+<p>
+<h4>reading SSL error output:  </h4><br>
+<ul>
+	<li> the 2nd to last item is the name of the file that output the error.
+
+	<li> the last item, a number, is the line number at which the error 
+	  was called.
+
+	<li> the third from last item is the name of the error.
+
+	<li> the fourth from last item is the name of the function in which 
+	  the error occurred.
+</ul>
+
+<h4> debugging: to get the ssl libraries to play nice with debuggers:</h4>
+<ul>
+	<li> ./config -d   may do all the work.  <br>
+	  but<br>
+	  it didn't on my machine.  <br>
+	  <br>
+	  other things to do:<p>
+
+	<li> in Configure, edit the line for the appropriate platform*:
+	<ul>
+		<li> remove -fomit-frame-pointer (if using gcc)
+		<li> remove any flags starting with -O
+	</ul><p>
+	<li> or, use ./Configure instead of ./config to configure.  then,
+	  you can specify the platform and compiler to use.  i used this
+	  to switch the compiler from the default option for my setup (cc) 
+	  to gcc, by running <br>
+			./Configure debug-solaris-sparcv9-gcc .<br>
+	  switching this will enable gdb to read the line # info. <p>
+
+	<li> for more information see: 
+	<ul>
+		<li> the INSTALL text file in the top level openssl directory
+		<li> http://www2.psy.uq.edu.au/~ftp/Crypto/#Problems
+	</ul>
+		(i collated this information from those 2 sources,
+		 with the help of much trial and error.  :>  )
+<p>	 
+<hr>
+<p>
+
+<li> to find out what platform you're running, run ./config -t  .  
+  (note that config -t changes no files.) alternatively, do the default build, 
+  and read after the PLATFORM= at the top of the Makefile on the 
+  top level.  (mine, for example, says debug-solaris-sparcv9-gcc
+  at the moment.)  <p>
+
+  these lines start under the line "my %table=(".  each line is surrounded
+  by quotes.  they run for quite a while.  (from line 91 to line 377 in mine.)
+

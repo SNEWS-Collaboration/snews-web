@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<body
+bgcolor="fffaf0"
+text="000000"
+link="0000ff"
+alink="ff00ff"
+vlink="040080"
+>
+
+<HTML><Title>To do list</Title>
+<Head>
+<H1> <center>To do list</center> </A></H1>
+</Head>
+
+
+<p> A few things to do to increase robustness and elegance of the
+code...  (for major jobs, look 
+<a href=https://cyclo.mit.edu/snnet/wg/joblist.html>here</a>).
+
+<ul>
+
+<li> for some types of client failure, have an email sent to a maintainer
+that something has gone amiss, since log files won't always be read.  
+examples of email situation: packet rejected because of bad i.p. address
+(perhaps the computer was switched), expired certificate (that'll happen) 
+(about-to-expire certificate warnings may be even more useful).
+
+<li> in gcserver.c, it would be nice to have the server notify the client 
+somehow as to the status of the retraction request (that it was not handled
+due to bad retract times, or to report on packets retracted.)
+
+<li> in packets.c, have send_packet() deal intelligently with error codes.
+
+<li> for retract_util: simplify it, and add "panic-button mode", which allows
+instant retraction of all packets sent in the last 12 hours, 1 hour, or 1 
+minute, etc.  
+
+<li> in packets.c, implement bail_to_phone(), which uses a modem connection
+as a backup to the current network connection.
+
+<li> in gcserver.c, someone has expressed a desire to see a more sophisticated
+assessment of alarm level.  (current dummy function alarm_level())
+
+<li> in gc_ssl.c: have some checks of peer authenticity within the callback
+functions, instead of the current dummy function.  the problem is that we 
+cannot see our own certificate information within this callback function.
+(i think).
+
+<li> in gccli.c: have error messages be more specific about where the 
+client failed: in SSL handshake, because they had the wrong I.P. address, etc.
+The server could possibly also write to the client that they don't have
+an acceptable address, since the connection is established.  
+
+<li> in gccli.c: seeding the random number generator (by the call to 
+RAND_load_file in gc_ssl.c) takes a while in some systems.  for the server, 
+this is o.k., but for the client routines, it would be nice to have some 
+way of seeding it once in the calling program, instead of every time the
+routine is called.  with C, this wouldn't be *too* hard, although it would
+make calls to the gc_client code less self-contained.  the main problem is that
+you would need to hang on to C structures in the calling program -- it's 
+messy in C, and, i believe, impossible in Fortran.  but if there's some clever
+way to do this, it would be nice.  (refer to the code for RAND_load_file
+in <openssl-source-top>/crypto/rand/randfile.c ).
+
+<li> Robustness checks; make sure code can handle wacky datagram
+field values; wide variety of stress-testing.  --> some stress testing has been
+done, esp. for overloading the server with client requests.  this was done
+after the switch to TCP but before the ssl code was added. (July 2000)
+
+<li> More elegant emailing system.
+
+<li> Fix day of week in time_t in timeconv.c
+
+<li> Improve same-packet check.
+
+<li> Lots more...
+
+</ul>
+
+last modified by corrinne mills on August 31, 2000.  
+<a href="mailto:cmills@superk.bu.edu">email me </a>
+with questions or suggestions.  

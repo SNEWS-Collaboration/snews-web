@@ -1,0 +1,128 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<body
+bgcolor="fffaf0"
+text="000000"
+link="0000ff"
+alink="ff00ff"
+vlink="040080"
+>
+
+<HTML><Title>Working group job list</Title>
+<Head>
+<H1> <center>Working group job list</center> </A></H1>
+</Head>
+
+
+Here's a list of jobs that need doing for the coincidence code, ordered
+roughly according to some linear combination of importance and ease of
+implementation.  See the <a
+href=http://hep.bu.edu/~schol/workshop/summary2.ps>
+workshop summary</a> for additional notes.
+
+
+<ul> 
+
+<li><strong>Secure socket implementation:</strong> This is quite
+important; we need to implement secure PGP-based connections for the
+information passed by socket.  -> <font COLOR=\"\#FF0000\"> Done; August 
+2000, email to working group soon. </font> openssl has been
+integrated into the (now TCP instead of UDP) code; certificate authentication
+has been added as well.
+
+<p>some ssl information:
+
+<UL>
+<p><li><a href="http://www.openssl.org/">the main page of OpenSSL</a>
+ has a faq, and limited documentation.
+<li>i highly reccomend this
+<a href="http://www2.psy.uq.edu.au/~ftp/Crypto/ssl.html#HDR0">
+programmer's reference </a>
+as a place to start.
+<li><a href="http://www2.psy.uq.edu.au/~ftp/Crypto"> another faq. </a> 
+  this one is an excellent introduction to OpenSSL in general.
+<li> many of these have additional links on them i've found useful-- they're
+worth poking around.  
+<li> my <a href="http://www.people.fas.harvard.edu/~cmills/openssl/">
+	intro to openssl </a> page.  
+</UL>
+
+<p> <li> <strong> PGP signing of alarm
+messages:</strong> The easiest fake is simply a simulated message to the
+astronomer mailing list.  To avoid this, we ought to make sure that the
+messages are PGP-signed, so that astronomers will know that they have
+come from a legitimate source.  -> <font COLOR=\"\#FF0000\"> Done; see Alec's email in the archive.</font><P>
+
+<li> <strong>Implementation of multiple servers:</strong> currently
+things are set up for a single server.  The client sends its message to
+a single place.  Ideally, we'd like to have each client attempt to send
+a message to each of several servers.  This should be fairly
+straightforward to implement: serv_ip_addr will contain a list of
+servers, and send_packet can loop through the list sequentially ->
+<font COLOR=\"\#FF0000\">Done, Dec 1999.</font> But we still need to think about how will we will
+deal with multiple alarms from multiple servers.
+<p>
+
+<li> <strong> Alarm retraction utilities:</strong>
+ A very useful thing would be for any individual experiment to retract
+its alarm after determining it was a fake, i.e. removing it from the
+queue, so that there will be no coincidence with a subsequent
+(time-stamped) alarm from another experiment.  
+ -> <font COLOR=\"\#FF0000\">Done, June 2000.
+</font>  This is implemented with a third packet type, which tells the 
+servers to retract packets from a given experiment, within a specified range of
+time stamps.
+<P>
+
+<li><strong> Anti-coincidence check (ping for alive-or-dead) and timeout
+</strong>  As was agreed on during the last meeting, it would be
+valuable to use "anti-coincidence" information to reduce the rate
+of bogus alarms, i.e. if there's a coincidence, all experiments
+are queried as to their alive-or-dead status, and the coincidence
+condition is modified to require a signal in all experiments 
+(or some reasonable fraction of experiments) which
+should have seen a signal.
+
+<p>This will take some thought, and some work, to implement, since it
+requires two-way communication; the client must become a server as well
+and the server must act as client.  We have to decide how to do this.
+Another complication is the fact that different experiments may take
+different times to produce an alarm, so some kind of timeout has to be
+implemented.
+
+<p> <strong>Update--</strong> there is the beginnings of an anti-coincidence
+server in anti_server.c and gccli.c(in the anti_client routine, which
+would be called by gc_server).  there is an anti-coincidence check-type
+packet in packets.h.  this is just the germ of the structure that we'd need --
+a lot more needs to be done with this.  
+
+<p>
+<li><strong> Consistency check (events/kton)</strong>
+
+This is essentially the same problem as the above, just some additional
+information exchanged.
+<p>
+
+<li> <strong> Tests of timing, other tests: </strong> How can 
+we tell if the individual clocks are in coincidence?  
+
+<p>
+<li> A number of minor jobs; look <a
+href=http://cyclo.mit.edu/snnet/wg/coinccode/todo.html>here</a>.
+
+</ul>
+
+<hr>
+
+<p>
+Currently, this is being worked on by 
+<a href="mailto:cmills@fas.harvard.edu">corrinne mills </a>.
+my own working notes on potential code changes can be found in the 
+code by grepping in the source code for the tag "note:" (colon incl.),
+which i use to mark things i want to change/improve.
+
+<p>
+Page last modified by corrinne mills   
+Thu Aug 31 15:33:35 EDT 2000
+
+

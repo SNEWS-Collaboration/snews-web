@@ -1,0 +1,272 @@
+<h1>Planned Downtime Entry Form</h1>
+
+<form method="POST" enctype="multipart/form-data">
+<p><em>Entry number:</em><br>
+<input type="text" name="entry" value="<!-- DEFAULT ENTRY NUMBER -->">
+<input type="radio" name="modstatus" value="New" checked="checked"> New
+<input type="radio" name="modstatus" value="Modify"> Modify
+<input type="radio" name="modstatus" value="Delete"> Delete
+
+
+<hr>
+
+<p><em>Name of person entering record:</em><br>
+<input type="text" name="name" value="">
+
+<p><em>E-mail:</em><br>
+<input type="text" name="email" value="">
+
+<p><em>Experiment:</em><br>
+<select name="expt" size="6">
+<option value="ANONE (The Almost Never Off Neutrino Experiment)">ANONE
+ (The Almost Never Off Neutrino Experiment)
+</option><option value=" AMANDA"> AMANDA
+</option><option value="KamLAND">KamLAND
+</option><option value="LVD">LVD
+</option><option value="SNO">SNO
+</option><option value="Super-Kamiokande">Super-Kamiokande
+</option></select>
+
+<p><em>Short descriptive comment (e.g., "Calibration", "Power
+Outage", etc.):</em><br>
+<input type="text" name="comment" value="">
+
+<hr>
+
+<p><h3>Start of Downtime: (must be <font COLOR="#FF0000">UTC!</font>):</em><br>
+
+<table>
+<tr>
+<td><center>&nbsp; Year: &nbsp;<br>
+<select name="startyear" size="8"><option value="1999">1999
+</option><option value="2000">2000
+</option><option value="2001">2001
+</option><option value="2002">2002
+</option><option value="2003">2003
+</option><option value="2004">2004
+</option><option value="2005">2005
+</option><option value="2006">2006
+</option><option value="2007">2007
+</option><option value="2008">2008
+</option></select>
+<br></center></td>
+<td><center>&nbsp; Month: &nbsp;<br>
+<select name="startmonth" size="8"><option value="January">January
+</option><option value="February">February
+</option><option value="March">March
+</option><option value="April">April
+</option><option value="May">May
+</option><option value="June">June
+</option><option value="July">July
+</option><option value="August">August
+</option><option value="September">September
+</option><option value="October">October
+</option><option value="November">November
+</option><option value="December">December
+</option></select>
+<br></center></td>
+<td><center>&nbsp; Day: &nbsp;<br>
+<select name="startday" size="8"><option value="1">1
+</option><option value="2">2
+</option><option value="3">3
+</option><option value="4">4
+</option><option value="5">5
+</option><option value="6">6
+</option><option value="7">7
+</option><option value="8">8
+</option><option value="9">9
+</option><option value="10">10
+</option><option value="11">11
+</option><option value="12">12
+</option><option value="13">13
+</option><option value="14">14
+</option><option value="15">15
+</option><option value="16">16
+</option><option value="17">17
+</option><option value="18">18
+</option><option value="19">19
+</option><option value="20">20
+</option><option value="21">21
+</option><option value="22">22
+</option><option value="23">23
+</option><option value="24">24
+</option><option value="25">25
+</option><option value="26">26
+</option><option value="27">27
+</option><option value="28">28
+</option><option value="29">29
+</option><option value="30">30
+</option><option value="31">31
+</option></select>
+<td><center>&nbsp; Hour (UTC): &nbsp;<br>
+<select name="starthour" size="8"><option value="00">00
+</option><option value="01">01
+</option><option value="02">02
+</option><option value="03">03
+</option><option value="04">04
+</option><option value="05">05
+</option><option value="06">06
+</option><option value="07">07
+</option><option value="08">08
+</option><option value="09">09
+</option><option value="10">10
+</option><option value="11">11
+</option><option value="12">12
+</option><option value="13">13
+</option><option value="14">14
+</option><option value="15">15
+</option><option value="16">16
+</option><option value="17">17
+</option><option value="18">18
+</option><option value="19">19
+</option><option value="20">20
+</option><option value="21">21
+</option><option value="22">22
+</option><option value="23">23
+</option></select>
+<br></center></td>
+<td><center>&nbsp; Minute: &nbsp;<br>
+<select name="startmin" size="4"><option value="00">00
+</option><option value="15">15
+</option><option value="30">30
+</option><option value="45">45
+</option></select>
+<br></center></td>
+</tr><table>
+<p><hr>
+
+<p><h3>End of Downtime: (must be <font COLOR="#FF0000">UTC!</font>):</em><br>
+<table>
+<tr>
+<td><center>&nbsp; Year: &nbsp;<br>
+<select name="endyear" size="8"><option value="1999">1999
+</option><option value="2000">2000
+</option><option value="2001">2001
+</option><option value="2002">2002
+</option><option value="2003">2003
+</option><option value="2004">2004
+</option><option value="2005">2005
+</option><option value="2006">2006
+</option><option value="2007">2007
+</option><option value="2008">2008
+</option></select>
+<br></center></td>
+<td><center>&nbsp; Month: &nbsp;<br>
+<select name="endmonth" size="8"><option value="January">January
+</option><option value="February">February
+</option><option value="March">March
+</option><option value="April">April
+</option><option value="May">May
+</option><option value="June">June
+</option><option value="July">July
+</option><option value="August">August
+</option><option value="September">September
+</option><option value="October">October
+</option><option value="November">November
+</option><option value="December">December
+</option></select>
+<br></center></td>
+<td><center>&nbsp; Day: &nbsp;<br>
+<select name="endday" size="8"><option value="1">1
+</option><option value="2">2
+</option><option value="3">3
+</option><option value="4">4
+</option><option value="5">5
+</option><option value="6">6
+</option><option value="7">7
+</option><option value="8">8
+</option><option value="9">9
+</option><option value="10">10
+</option><option value="11">11
+</option><option value="12">12
+</option><option value="13">13
+</option><option value="14">14
+</option><option value="15">15
+</option><option value="16">16
+</option><option value="17">17
+</option><option value="18">18
+</option><option value="19">19
+</option><option value="20">20
+</option><option value="21">21
+</option><option value="22">22
+</option><option value="23">23
+</option><option value="24">24
+</option><option value="25">25
+</option><option value="26">26
+</option><option value="27">27
+</option><option value="28">28
+</option><option value="29">29
+</option><option value="30">30
+</option><option value="31">31
+</option></select>
+<td><center>&nbsp; Hour (UTC): &nbsp;<br>
+<select name="endhour" size="8"><option value="00">00
+</option><option value="01">01
+</option><option value="02">02
+</option><option value="03">03
+</option><option value="04">04
+</option><option value="05">05
+</option><option value="06">06
+</option><option value="07">07
+</option><option value="08">08
+</option><option value="09">09
+</option><option value="10">10
+</option><option value="11">11
+</option><option value="12">12
+</option><option value="13">13
+</option><option value="14">14
+</option><option value="15">15
+</option><option value="16">16
+</option><option value="17">17
+</option><option value="18">18
+</option><option value="19">19
+</option><option value="20">20
+</option><option value="21">21
+</option><option value="22">22
+</option><option value="23">23
+</option></select>
+<br></center></td>
+<td><center>&nbsp; Minute: &nbsp;<br>
+<select name="endmin" size="4"><option value="00">00
+</option><option value="15">15
+</option><option value="30">30
+</option><option value="45">45
+</option></select>
+<br></center></td>
+</tr><table>
+<p><hr>
+
+<p><h3>Downtime grade:</h3></p>
+<p>Grading corresponds to the following rough levels:</br>
+<dl>
+<dt><img src="ballred.gif" alt="[*]">  Red: Detector is completely dead.
+</dt><dt><img src="ballyellow.gif" alt="[*]">  Yellow: Detector is mostly 
+sensitive to a supernova burst but alarm is offline (e.g. during calibrations).
+</dt><dt><img src="ballgreen.gif" alt="[*]">  Green: Detector is on but alarm 
+is offline.
+</dt>
+</dl>
+<input type="radio" name="grade" value="Red" checked="checked">Red
+<input type="radio" name="grade" value="Yellow">Yellow
+<input type="radio" name="grade" value="Green">Green
+
+<hr>
+
+<p><input type="reset"><input type="submit" name="Action" value="Submit">
+
+<hr>
+
+<address>Problems, questions, suggestions?
+Send e-mail to schol@mit.edu</address>
+
+<p>
+<a href="http://www.nsf.gov">
+<img src="nsf.gif" align=center alt="[NSF]" border=0>
+</a>
+SNEWS is funded by National Science Foundation award PHY-0303196.
+
+
+<!-- Hidden form element for CGI use -->
+<input type="hidden" name="key" value="process">
+
+</form>

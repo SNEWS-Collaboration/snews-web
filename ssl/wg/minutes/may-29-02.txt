@@ -1,0 +1,155 @@
+Note: I have added several people present at the meeting to this SNEWS
+working group mailing list.  If you do not want to be on the list,
+please let me know.  Also, if you need the password for the working
+group web page and other info, let me know.
+
+Minutes of SNEWS Meeting at Neutrino 2002
+=========================================
+
+Attendees: Glenn Horton-Smith, Marek Kowalski, Per Olof Hulth, Marco Selvi,
+Clarence Virtue, Chris Waltham, Rex Tayloe, Art McDonald, Alex Murphy,
+Carlo Vigorito, Pietro Antonioli, Walter Fulgione, John Beacom, Alessandra
+Di Credico, Mark Vagins, Alec Habig
+
+Thanks to the help of Georg Raffelt we were able to meet over lunch
+at Neutrino 2002.
+
+Experiment Updates:
+-------------------
+
+* Super-K: as everyone knows, SK is currently down but should be back
+online by the end of the year.  Mark reported that the new PMT density
+will cause loss of perhaps 15% of SN events, but sensitivity of the
+alert system to Galactic supernovae will be practically unaffected.
+
+* SNO: Clarence reported that the trigger is now set to 35 events above
+4 MeV in 2 seconds.  Livetime is now effectively better than 90% for
+supernovae.  Response time should be less than 20 minutes.  Background
+is well understood.  One remaining physical background is spallation
+events; these occur about every 2 weeks and can be clearly tagged.  NCDs
+will be added some time next year (exact schedule still unclear).
+
+* LVD: Pietro reported that LVD is running with a livetime greater
+than 99.5 %, and alarms are being sent to SNEWS.  Active mass is now 1
+kton.
+
+* KamLAND: Glenn Horton-Smith reported for Nikolai Tolich who could
+not be present.  Nikolai has implemented a SN trigger which lowers
+the threshold to 0.5 MeV for 3 minutes when a cluster of events is
+found.  Livetime is now about 90%.
+
+* Borexino: Alessandra DiCredico reported.  Filling should
+begin in the fall of this year and they should start to run
+at the beginning of next year.
+
+* AMANDA: now running with a SN trigger.  Soon they should have
+24 hour connectivity from Iridium.
+
+* Mini-BooNE: a supernova trigger should be possible at approximately
+12 MeV threshold.  A first pass at a supernova trigger was made; rates
+are a little higher than expected but they are in the very early
+stages of getting things running.  They have about 15% dead time from
+the muon veto.
+
+* OMNIS: (post-meeting update from Alex Murphy, now at Edinburgh)
+Current plans center on 2 kT of lead with scintillator layers, plus a
+1/2 kt of lead perchlorate.  Alex is also looking into deploying an
+OMNIS-like detector to help with cosmic ray rejection for dark matter
+experiments at Boulby.
+
+SNEWS Code Status:
+-----------------
+
+Version 2.1 is currently running on kaboom and gsboom, and is robust
+and stable.  A few minor bugs were flushed out by the high rate test.
+
+A completely new version, 3.0, has been completed by Ronnie Misra (as
+an MIT M. Eng. thesis project).  This has significant additional
+functionality: two way communication (for "anti-coincidence"),
+inter-server communication, and additional security enhancements.
+It's now in a form ready to be put into use (although it will have a long
+term test before it replaces the current tested version).
+
+High Rate Test and Automation Proposal:
+--------------------------------------
+
+I presented the results of last year's "high rate test", and
+summarized the current proposal for an automated SNEWS alert for
+astronomers.  The high rate test data were analyzed by the subgroup
+only, as per the privacy agreement; the results were okayed by the
+advisory board to be shown.
+
+The summary (slides from the meeting) can be found at:
+
+http://www-lns.mit.edu/~schol/snnet/nu2002.pdf
+
+(use the SNEWS working group password; if you do not know this,
+please call or email me).
+
+Here is the very brief summary of this talk:
+
+  -- In addition to verifying that the software works, the high rate
+   test showed no correlations between experiments (no shocker!), and
+   coincidence rates were as expected from the individual experiment
+   rates.
+  -- The proposal for automated involves a gold/silver scheme: the
+   alert only goes out for "gold-plated" coincidences; others get
+   human-checking.  For a gold alert, there must be no history of
+   previous high rates for any of the experiments involved.
+
+Here I will note only some of the comments, suggestions and points of
+discussion from the meeting (refer to above link for background info).
+
+ * How exactly does one upgrade a silver alarm to gold?  For the case of
+individual alarms not flagged as "good", the alert can be
+automatically upgraded by an individual experiment retagging its
+alarm.  For the other silver cases (alarms not geographically
+separated, history of high rates), after checking, the individual
+experiments can send their own alerts for a truly gold-plated signal.
+
+ * Doug Cowan suggested having a continuous scale where criteria are
+applied with different weights to decide whether the alarm should be
+automated or not.
+
+ * It's not really feasible for the server to track in detail dead time
+from each experiment, so the past-high-rate based alarm suppression
+may sometimes fail if, for instance, an experiment dead for the
+previous several intervals suddenly starts up with a high rate.
+However, a variety of time windows including short ones should help
+suppress such a possibility.
+
+ * Walter suggested having a "high rate mode" like the high rate test
+(using carefully tagged high rate alarms from each experiment) as part
+of normal running mode.  This will be very useful for monitoring
+purposes.  This suggestion will be incorporated into the proposal.
+
+ * Art suggested running in silver-only mode for some time before
+going to a gold-enabled state.  There were no objections, and this
+will be incorporated into the proposal.
+
+ * Another suggestion was to add regular fake silver alerts.
+We agreed that such fake alerts should be carefully tagged.
+This suggestion will be incorporated into the proposal.
+
+ * The security audit part of the proposal was emphasized by Art; he
+stressed that we need not just one, but regular audits.  Such audits
+are available commercially, but are expensive.  As yet it is not clear
+how we can accomplish this in an inexpensive way; a possibility, also
+discussed at previous meetings, is to enlist the help of experts at
+national labs.  Art volunteered to get in touch with Los Alamos people
+he knows.  LNGS, Kamioka people will also investigate.
+
+I will incorporate a number of the suggestions into the proposal.
+I will make the revised proposal available within a few days.
+
+Other Notes:
+-----------
+
+On the morning of the meeting, the snnet open discussion email list
+received a bogus email saying "SN alert".  As it turns out this was
+sent from the meeting!  However it was not signed with the SNEWS PGP
+signature (nicely illustrating why we require this).  This list, which
+is a simple alias, can be converted to a major-domo-style mailing list
+(which will suppress spam, too).
+
+

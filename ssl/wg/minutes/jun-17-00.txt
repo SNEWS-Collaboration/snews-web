@@ -1,0 +1,227 @@
+Minutes of SNEWS meeting at Neutrino 2000
+=========================================
+
+Thanks to all who came to the meeting, and special thanks to Clarence
+(and helpers) for organizing the dinner, venue and other details.
+
+These minutes were written without notes, so please email to point out errors
+or omissions!  Skip to the end for an overall summary of the meeting.
+
+Experiment updates
+------------------
+
+-- Yoshiyuki Fukuda reported on the supernova burst search processing
+upgrades for Super-K.  He has implemented an "express-line" for data to be
+processed by the supernova monitor.  This plucks the data off for analysis
+immediately after it is written by the acquisition, skipping the usual
+"reformatting" step; this saves 5-10 minutes.  A further improvement sends an
+alarm if a burst is found after 100 events have been processed, so that
+alarms can be sent out within a couple of minutes.  This last upgrade will be
+implemented by late June.
+
+-- Reda Tafirout reported on SNO's monitor and alarm system (there were also
+posters at the conference from Reda and Jaret).  The event builder of the daq
+sends data to a "dispatcher" as well as to offline processes.  The dispatcher
+parcels out the data to supernova monitor as well as online event displays
+and other monitoring tools.
+
+The dispatcher loses some events if the event rate goes above about 1
+kHz; however there is no *burst trigger* inefficiency.  (The data is also
+analyzed offline for bursts and checked against the online monitor results.)
+
+The supernova monitor has 3 levels: level 1 is the burst trigger, level 2
+does additional background reduction, and level 3 is where human intervention
+happens.  He also showed the bursts which have been accumulated so far.
+Bursts so far have been tagged as various kinds of background: electrical
+breakdown, PMT HV breakdown, flashers, "neck" events, calibration-associated
+etc.  A few remaining background bursts are associated with cosmic ray muon
+spallation events.
+
+Standard SNO background-reduction cuts are applied to the events in the
+bursts at the level 2 step.  For the final burst cut
+(allowing bursts to go to level 3), they require at least
+20% of the events in the burst to survive the cuts (i.e. 20% "physics
+content").  This results in a few or fewer surviving bursts per month.  This
+cut could be tuned to change the level 3 burst rate.
+
+Time for human response was usually (85% of the time) less than
+20 minutes.  Distance sensitivity is about 20 kpc.  The burst trigger is 50
+events in 2 seconds with an Nhit threshold which varies according to the
+current background conditions.
+
+-- Piera Luisa Ghia gave the LVD update.  Three towers have now been
+installed, bringing the total mass up to 1 kton.  Data-taking has been in
+progress on two towers since 1994; the third will be in operation by
+autumn of 2000.  Uptime for stellar collapse is >=98% and the background rate
+is 2 events per minute.  The energy threshold is 7 MeV for the surface
+counters and 4 MeV for the inner counters (which represent about 1/2 the
+total mass).  The energy threshold is lowered to 0.5 MeV for 1 ms after a
+primary trigger.  Shielding will be improved soon.  The online monitoring
+system gives an alarm within about 5 minutes via email.
+
+-- I gave a status report on MACRO.  Essentially, there's no change: MACRO's
+wfds were removed in May, but the detector will continue to run until the end
+of December, with both supernova monitors plus the "metamonitor" 
+(which combines alarms from the two independent SN systemts) online.
+
+-- Steve Barwick and Christian Spiering reported on the status of AMANDA.
+New strings were installed last austral summer to finish "Amanda II"; the new
+PMTs (with new low radioactivity glass) have particularly low rates, which is
+good for supernova sensitivity.  New rate monitor hardware has been installed
+with better time resolution than before.  Work is being done on monitor
+software.  Overall sensitivity with the current configuration is about 10
+kpc; time resolution will improve.  The satellite coverage for communications
+is still about 8 hours per day.
+
+Kopke and Weinheimer from Mainz have done some triangulation studies to
+evaluate how well it may be possible to get the neutrino burst time from
+AMANDA data, given a general model of the pulse shape (assumed known), and
+also given a fit to to the Super-K data: the answer is about 14 milliseconds
+for the general known pulse shape, but worse by a factor of a few for the
+Super-K fit.  However results for ICECUBE are more promising.  They will post
+their memo (currently an internal report) to the working group.
+
+-- Dick Boyd talked on the status of OMNIS.  The current planned site is at
+the CARUS lab (formerly WIPP) in Carlsbad, NM.  The "OMNISita" detector, to
+study background and develop the data acquisition, is under development,
+consisting of 10 tons of old Palo Verde liquid scintillator and some PMTs and
+electronics from Los Alamos (they still need 340 tons of lead to make up 2/3
+of 1/8 of OMNIS).
+
+-- John Beacom reported briefly on the new paper (Beacom, Boyd and
+Mezzacappa) hep-ph/0006015: the idea is to use the sharp cutoff of neutrino
+luminosity (nearly simultaneous for all flavors) from the formation of a
+black hole t=0 for a time of flight neutrino mass measurement.  They
+estimate, for a Galactic center collapse, around 2 eV mass sensitivity for
+electron antineutrinos with Super-K, and about 6 eV sensitivity for nu_mus
+and nu_taus using a detector like OMNIS.  
+
+-- Barry Barish reported on LIGO, and proposed that LIGO join SNEWS, initially
+as a passive participant.  The gravitational wave core collapse signal is at
+present poorly understood.  However, LIGO's distance sensitivity exceeds
+Galactic, so it may be possible to learn what SN signals look like over the
+first years of operation-- LIGO will then be able to act as input to SNEWS.
+
+Barry also proposed also exploring what physics can be done with combined
+gravitational wave and neutrino signals (neutrino mass?)-- this is
+a very interesting and mostly unexplored field.
+
+
+SNEWS update
+------------
+
+I reported on the SNEWS status: the test server is still running on kaboom at
+the Kamioka site.  The coincidence requirement for an alert is still very
+simple: a 2-fold coincidence within 10 seconds.  Super-K, MACRO and LVD
+participate.  The coincidence currently results only in an email alert to a
+small group of subgroup people.
+
+Pietro Antonioli has set up a new server (gsboom) at LNGS; I've upgraded
+the client code for multiple servers, but haven't yet installed it
+for MACRO and Super-K.
+
+The biggest jobs on the to-do list are:
+
+-- implement the more complex coincidence requirements, such as the
+"anti-coincidence" (i.e. require positive signal from all (or most)
+experiments which should have been live), and events/kton consistency
+requirements.
+
+-- implement the secure socket connection and other security features.
+
+This work will get done this summer.
+
+Issues:
+-------
+
+There was very productive discussion on a number of issues requiring advisory
+board decision.  Many of these have been discussed and roughly agreed on
+previously.
+
+First, the non-controversial issues: the advisory board/working group/
+subgroup structure is pretty much agreed on, as is the privacy agreement
+(i.e. only subgroup members have access to real alarms).  Downtime
+coordination is also universally agreed on and we identified the experimental
+reps who will be responsible for maintaining the information for their
+experiment on the downtime web page:
+
+SK: Fukuda
+SNO: Van de Water
+LVD:  Fulgione
+MACRO: Sioli
+AMANDA: ??
+
+I also brought up the issue of timing verification with a traveling
+calibration system as something to think about for future discussion and
+decision of the advisory board.
+
+Automation/data exchange/privacy: these issues are inter-related.  The basic
+question was: what, specifically, do we need to do before we go to an
+automated alert for astronomers?  What do we need to convince ourselves of
+and/or convince the astronomers of?  Do we need upgraded coincidence
+conditions or is OK to go automated with the current setup?  
+
+These questions are intimately related to the privacy issue: if, as we have
+agreed, the alarms sent to kaboom are to be kept confidential, then it's not
+clear how much and which information can be freely circulated for this
+decision.
+
+The answer, after some discussion, was basically:
+
+The subgroup (whose members officially have access to all alarm information)
+needs to get together, *sharing the alarm information within the subgroup
+only*, to come up with a specific proposal for the advisory board.
+
+A specific suggestion from Barry was that we should try a high-alarm rate
+test, where each experiment lowers the alarm threshold to make sure that we
+understand the nature of the background.  We should also test that the
+coincidence works.  It was agreed to set up a test as part of the subgroup
+study.  Alarms which are known to be background (e.g. spallation, flashers)
+should be tagged as such, but still used in the test.  An interesting
+suggestion from Art was to see if there are any coincidences of known
+background events (e.g. spallations)... just in case there's any wacky
+physics going on.
+
+As for security, and convincing others that SNEWS is secure: Art suggested
+that we look into getting a national lab expert(s) involved in some sort of
+official verification that our system is secure, as well as maintenance of
+security.  We could also talk to GRB and SETI folks to see how they deal with
+the problem.  (We need to be a bit careful... announcing to the community
+that our system is certified secure could be inviting hackers to the
+challenge!)
+
+
+Overall summary of the meeting:
+------------------------------
+
+News from experiments:  
+  * Super-K is improving alarm speed
+  * SNO now has many months of experience characterizing alarms,
+      and can set the rate to 1/month
+  * LVD will be at 1 kton in the fall
+  * MACRO will continue running until the end of the year
+  * AMANDA has upgraded hardware and is working on supernova alarms w/10 kpc
+        sensitivity
+  * An OMNIS prototype is underway
+  * LIGO is on board as a passive participant
+
+
+Downtime and privacy agreements were "blessed" by the advisory board.
+
+The main question:
+
+What do we need to do to convince ourselves that it's OK to go automated (and
+how can we maintain the privacy requirements while doing so?)
+
+was basically answered as:
+
+The subgroup needs to get together to perform a high rate test, compile the
+results (circulating information only within the subgroup), and come up with
+a specific proposal for the advisory board based on this information.  We
+also need a security certification of some kind.
+
+We will get to work over the summer...
+
+
+
+

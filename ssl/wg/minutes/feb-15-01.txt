@@ -1,0 +1,168 @@
+SNEWS Working Group Meeting at SNII in Marina del Rey
+=====================================================
+
+February 15-16, 2001
+
+Present (on at least one day): Pietro Antonioli, Barry Barish, Dick
+Boyd, Walter Fulgione, Szabi Marka, Ronnie Misra, Kate Scholberg, Reda
+Tafirout, Nicolai Tolich, Mark Vagins, Clarence Virtue.
+
+News from Experiments:
+----------------------
+
+-- Super-K's supernova watch "expressline"  (which bypasses certain
+stages of the data pipeline to do a prompt burst search and provide
+an alert within <~ 5 minutes), has been running for some time.  A bug
+was recently fixed and it's now been in continuous operation for more
+than a month.
+
+ Super-K will be off for ~3 months starting at the beginning of July for
+its long-planned upgrade (the shutdown will be preceded by a
+"calibration fest" in June.)  During draining and filling, the supernova
+monitor will be on as much as possible (e.g. at night), with
+phototubes watching whatever water is in the tank.
+
+-- SNO is coming to the end of its pure D20 phase.  They plan to add
+salt sometime around the end of April, after a planned pt calibration.
+Reda gave a talk at the workshop detailing the supernova burst search
+analysis; the final alarm rate is easily within the <~ 1/week range.  Alarm
+response is still manual.
+
+-- With the completion the third tower, LVD has reached 1 kton of
+active mass.  They have also installed a new DAQ, which the detector
+to run in a more modular way, such that it's not necessary to shut
+down entirely for calibrations, problems, etc.  Alarms to SNEWS
+were turned off in December for the new DAQ's shakedown period,
+but they expect to come back online for SNEWS within a couple of
+weeks.  At that time, they will also upgrade to version 2.0 of
+coinccode.
+
+-- MACRO was shut down entirely in December.
+
+-- Nikolai Tolich from Stanford joined us as a new KamLAND rep.  He's
+working on KamLAND's trigger.  KamLAND's PMTs are now completely
+installed and oil filling should start in the fall.
+
+-- Dick Boyd reported on OMNIS: they're now setting up a test module
+with 58 tons of lead.  See also the talk at this workshop.
+
+-- LIGO: the first interferometer is in operaton at Hanford and the
+second one in Louisiana is now turning on.  They expect the first
+coincidence data between the two in September, then first real data in
+mid-2002.  Szabi Marka is now working on the fast alarm channe.  Adam
+Burrows is also working on the expected signal, about which very
+little is known.  Right now the trigger is based simply on excess
+power in the right frequency range, but refinements based on expected
+time evolution of the signal should be possible.  Relative timing
+between gravitational and neutrino signals also needs to be understood
+(gravitational waves will probably come first, but it's not known for
+sure).
+
+SNEWS News:
+----------
+
+ -- As reported in previous messages, version 2.0 of the code was
+released: this includes multiple server capability (each client simply
+loops over servers), plus work by Corrinne Mills last summer on:
+
+   * secure sockets
+   * alarm retraction utility
+   * multiple platform builds
+
+I'll upgrade the server once the Super-K and LVD clients
+are ready.
+
+ -- In addition, there will be some reorganization: new servers gsboom
+and mitboom will be added to the network, and the repository will get
+moved to mitboom.
+
+ -- The next upgrade will be done by Ronnie Misra.  The main added
+functionality will be two-way communication (to allow
+"anticoincidence" and consistency information exchange), inter-server
+communication (to suppress duplicate alarms), plus improvements in
+security and robustness.  He gave a talk detailing how he will
+implement this.
+
+The dominant feature of his new design is the use of multithreading
+and IPC to implement the two-way communication: the idea is to have a
+separate process running in the background that deals with the SNEWS
+messaging, while the regular data collection/burst searcher program
+keeps running independently. This setup avoids any interruption of
+data collection during conversation between client and server.  He's
+also working on a multi-server protocol, and improving security.
+For instance, digital signing will authenticate the data itself,
+rather than just the connection.
+
+Ronnie will post his M. Eng. thesis proposal with the details of the
+redesign.  Please send him any comments or suggestions.
+
+Automation
+----------
+
+-- The plan for getting to automation is the following:
+
+The subgroup will get together to perform a high rate test, and then
+prepare a report for the advisory board members of the experiments
+involved in the test.  These advisory members will then make the decision
+to go ahead or not, based on the report.
+
+SNO, LVD and Super-K are now ready to go ahead with this test.  Presumably,
+the procedure can be repeated whenever a new experiment is to be added
+to the automated coincidence.
+
+Here's the proposed specific format for the test:
+
+ * Each experiment supplies a plot of rate vs P, where P is some
+software-twiddlable parameter(s) (multiplicity threshold, etc.), and
+where the rate ranges between ~1 per minute and 1 per day.
+
+ * The subgroup then calculates expected coincidence rates
+for different values of the individual experiment parameters.
+
+ * Then, during some specified period of time (~ 2 weeks),
+we set the thresholds and count coincidences, to see
+if the behavior is as we expect.
+
+This checks that the coincidence software works, too, and
+should help to shake out any problems.
+
+We should set rates such that we get a total of ~100 or so
+coincidences during the test (we can widen the time window if necessary).
+
+I showed some sample curves sent by Fukuda-san at Super-K.  The
+Super-K "dials" are multiplicity in 20 seconds and Rmean (mean distance
+between event vertices).  It's possible to dial in alarm rates between
+1/hour and 1/day, and it may be possible to go to higher rates by
+twiddling the "pre-multiplicity" thresholds.
+
+SNO and LVD can also easily produce similar plots: SNO needs a few days,
+LVD a couple of weeks.
+
+We reserved the last 2 weeks of March as the time to exchange data and
+arrange the test times and parameters.  April is probably good time
+for the test.  (It will definitely have to be before the SK shutdown).
+
+Szabi suggested that the high rate test be arranged to coincide with a
+LIGO "engineering run"-- he'll look up the schedule.
+
+There was also a suggestion that the subgroup
+look at the time series of SK and LVD alarms already sent to kaboom
+over the last 1.5 years or so, along with the list of SNO alarms that would
+have been sent,  to include in the report to the advisory board.
+
+We also set the goal of having an automated alert to astronomers
+following the Super-K turn-on in the fall.
+
+Astronomer Alert News
+---------------------
+
+Leif Robinson of Sky & Telescope has retired as editor in chief, but
+will still remain involved in SNEWS.  Rick Feinberg, the new S&T
+editor in chief, is interested in keeping up the SNEWS connection.  A
+new persion, Roger Sinnott, has been designated as contact person and
+Astro-Alert mailing list maintainer.
+
+They're also going to revive work on the amateur astronomer test.
+
+
+

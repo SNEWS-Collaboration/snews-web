@@ -1,0 +1,113 @@
+SNEWS working group video meeting minutes,  January 10, 2000 
+============================================================
+
+-- News from experiments: the news from Super-K (Mark), MACRO (Alec) ,
+LVD (Pietro) and SNO (Art and Clarence) was all pretty much the same:
+everything running stably, everyone survived Y2K.
+
+SNO reports that they will be ready to send alarms within a month
+or so; there are no fundamental objections in the collaboration
+for automated alarms some time after that.  Some work still needs
+to be done to expand the alarm distribution.
+
+AMANDA is undergoing a SN hardware upgrade now (Adam Bouchta is at the
+South Pole), which will include time resolution improvement, although
+it's not yet clear how much.
+
+-- SNEWS work:
+   
+   * Pietro has installed the new "gsboom" server machine at LNGS,
+although the coincidence server code is not yet running on it.
+
+   * I have upgraded the client code such that each client will loop
+through a list of servers and send email to each.   Individual
+experiments should upgrade their alert client software.  (New code is
+available in the repository on kaboom).  We still have to decide how
+to deal with simultaneous coincidence alarms issued by more than one
+server.
+
+   * Alec has implemented PGP signing of alert messages, so that
+astronomers can be sure that the alerts come from us.  He's still
+working on the secure socket implementation, which is a bit trickier.  
+We haven't yet consulted any security experts.
+
+   
+-- Clarence reported on a discussion with NRC timing expert Rob
+Douglas.  The specific plan for inter-experiment time calibration is
+starting to crystallize.  Some highlights:
+
+  *  We need 3 main gizmos:  an external GPS receiver, a frequency
+standard (preferable a Rb oscillator) for time transport inside
+the laboratories, and a time interval counter.  Rob suggested
+some specific models for each.
+  * Rob recommends an initial flurry of calibrations--
+perhaps once a month, for 8 months or so, spanning both hot and cold
+weather -- followed by a regular, less frequent calibration routine
+(say, a couple of times a year).
+  * If we want credibility with the international astronomical community,
+we may want to make calibration stop(s) at BIPM in Paris.
+
+(More detailed minutes of this discussion will be posted to timing
+group mailing list).
+
+-- A coordinated downtime website is now ready for action.  Designated
+reps from each experiment can now view a table of downtime and enter
+their own experiment's downtime.  (The only thing I have left to do is
+allow entry of times in the local timezone of each experiment;
+currently times must be entered as UTC).  SNO and Super-K have both
+approved downtime coordination at recent collaboration meetings.
+
+-- Funding possibilities for SNEWS: I am pursuing the idea of a DOE
+funding proposal, to be submitted on a fairly short timescale.  This would
+cover hardware (the most significant of which would probably be the
+timing calibration equipment) and travel, but not personnel.  I'm
+working on a draft and will circulate it shortly.  Another possibility
+is NSF funding, which may be a good resource for the outreach and
+astronomical community connection side of SNEWS; Bob Svoboda has
+expressed interest in this.  Pietro may also have some access to LNGS
+funding, and NRC may be able to contribute as well.
+
+-- AAS talk summaries:
+  
+  * Alec will be giving a general SNEWS talk.   
+      Here's a rough outline:  
+         -- science of SNEWS, motivation
+         -- description of what we can do
+         -- what astronomers should be thinking about
+
+He will stress that we cannot provide angular information yet.  We
+also can't provide a firm date for automated alerts (which will have to be
+decided by the advisory board) but "sometime in 2000" is probably fair
+to state.
+ 
+  * Clarence will give a talk about timing verification. He will
+describe the motivation-- the desire to have excellent timing for data
+for physics (both astrophysics and neutrino physics) as well as
+triangulation -- and the plan for implementation.
+         
+We also considered what we'd like to accomplish via discussions with
+astronomers at this meeting.  Leif Robinson from Sky&Telescope will be
+there to talk about the amateur connection.  It would be good to take
+to opportunity to discuss putting into action his idea for testing the
+amateurs' talents by running test alerts based on predicted variable
+objects.  Another possibility is to try to determine *background rate*
+as well as signal detection efficiency, i.e. we could issue some test
+alerts for which there is *no* corresponding variable object, to see
+whether any bogus objects are found.  (One worry related to false
+alerts has been that issuing non-"gold" alerts could lead to amateurs
+or small telescope observers could find bogus novae or whatever, and a
+false alert would "snowball"...we may be able to quantify how
+reasonable this fear is.)
+
+
+-- Tentative date for next meeting: Feb 14, 10 am EST.  Art suggested
+that we invite some astronomers: e.g. Leif Robinson, John Bahcall, Bob
+Kirshner.
+  
+
+
+
+
+
+ 
+    

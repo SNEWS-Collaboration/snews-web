@@ -1,0 +1,66 @@
+Video meeting minutes, March 16, 2000
+=====================================
+
+It was a pretty short meeting today.
+
+-- News from experiments: 
+     * Super-K:  another threshold lowering is happening at the end
+of the month.  
+     * MACRO: a new run coordinator (Sioli) will be responsible for 
+downtime coordination.
+     * SNO:  steady progress with the data-taking and supernova monitoring.
+The May collaboration meeting is a goal for sending alarms to the network.
+     * LVD:  there will be 1 kton active mass by the end of the month.
+They are also working on an interface for the timing calibration
+test system and the detector (e.g. LED system).
+     * AMANDA:  6 new strings were added.  Andrea Silvestri has
+completed his diploma thesis on supernova detection.  The Mainz
+collaborators have completed a triangulation study.  These documents
+can be made available to SNEWS members.
+
+    We have a new SNEWS representative for LIGO, a Caltech postdoc
+named Szabolcs Marka, who called in from Livingston by speaker phone.
+He'll report on the status of LIGO at the next meeting.
+
+-- SNEWS work:  not too much to report.  The gsboom server
+is up and running, and the LVD people have upgraded their client
+to the new version which will talk to both servers.  I will upgrade
+the MACRO and Super-K clients within the month.   
+
+-- Leif Robinson reported that they have upgraded the amateur astronomer
+website to include finder charts: if SNEWS sends S&T an error box, amateurs
+will be able to download from the S&T website the corresponding star catalog
+information.  This will make use of the latest Hipparcos data (the "Tycho 1",
+and "Tycho 2" catalogs), including stars down to 11.5 magnitude.
+
+They are also still working on the amateur test; this summer may be
+a good time.
+
+-- I had an email conversation with Guy Jonkmans, who is interested
+in doing a survey of existing early supernova light TOO proposals
+for major observatories, which could be a useful thing.
+
+-- Mark V. has been in touch with the ROTSE people (who have made early GRB
+observations using very wide field telescopes with automated pointing); he'll
+report more next time.
+
+-- A SNEWS proposal to DOE has been submitted, requesting funding
+mostly for a traveling time calibration system, as well as a few other
+things (total about $45K).  We will hear in a few months.  LVD people
+will be submitting a parallel proposal.
+
+-- I have written up a note listing agenda items that need to be decided on
+and/or blessed by the advisory board (concerning automation, privacy and
+downtime coordination.)  Clarence reported that Art is willing to organize an
+advisory board phone conference some time before the next meeting.
+
+-- Proposed date for the next video meeting is May 12.  This time, we will
+attempt to change the time, and try to formally rotate the bad times between
+the different continents, so that the same people aren't always stuck with
+the worst time.
+
+-- Walter Fulgione also proposed that we have a face-to-face meeting
+at Neutrino 2000.
+
+
+

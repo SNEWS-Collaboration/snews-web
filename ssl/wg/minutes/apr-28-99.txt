@@ -1,0 +1,129 @@
+Hi all,
+
+Thanks for calling in to the meeting.  Here are some minutes
+(from my memory; I hope I haven't missed anything.)
+
+Kate.
+
+============================================================
+
+-- Art McDonald reported on the status of SNO: the news sounds extremely
+good.  The connector breakdown problem was identified as having to do
+with too-highly-degassed water and flushing with nitrogen has greatly
+diminished it.  Water fill is very nearly completed, and within a week
+they'll be able to start full supernova studies.  They expect to be able
+to contribute real alarms within some months.
+
+-- LVD, MACRO and Super-K are all online now (status more or less the
+same as previously reported), sending automated alarms.  There's not yet
+any actual alert to astronomers.  
+
+-- Also, there's no direction information as yet (either individual
+experiment or triangulation).  It's not yet decided whether the
+experiments will eventually send their individual direction information
+via the network.
+
+-- Alex Murphy reported on a possible collaboration between MINOS and
+OMNIS, to use the MINOS far detector as the active mass for neutron
+detection.  They're going to have meeting in early May.  Stay tuned.
+
+-- We discussed the privacy agreement.  Everyone more or less agrees
+with the general format.  Art M. suggested that we refine the wording to
+make people more comfortable, emphasizing the reasons for wanting
+privacy (people don't want their data analyzed), and making more
+explicit prohibitions.  We should make it into a document (some kind of
+memorandum of understanding) that we can present to our collaborations
+to be blessed.  Mark V. suggested that subgroup members should sign a
+physical piece of paper stating that they agree to the privacy
+conditions.
+
+-- We discussed the new organization on kaboom: working, repository and
+real alarm areas, and passwords for the working and web areas were
+dispensed.  Passwords will be changed regularly.  Everybody is OK with
+using cvs as a code development sharing tool.  I'll be posting info on
+the working group page about working with cvs later today (along with
+more code docs).
+
+-- We went through the job list on the web pages.  Several people expressed
+interest in helping out.  Some notes on the individual items (and issues
+that came up while discussing them):
+
+  * Secure sockets:  should be straightforward.  
+
+  * PGP signing of alarm messages:  straightforward to implement.
+
+Art M brought up: we ought to make sure that astronomers will be happy
+with the credibility of our alarms; this includes security (which is
+important), but goes beyond that to include general reliability.
+Perhaps we should seek some kind of formal acceptance by the
+astronomical community, after a series of tests and perhaps some kind of
+review procedure?  The AAS meeting may be a good venue (organization
+for sessions for the January meeting is happening now.)
+
+ * Alarm retraction: straightforward to implement.  May need some work
+on the part of the individual experiments to incorporate into the
+individual alarm systems.  Art M. pointed out that this means that we
+have a second level of human-checked alarm; astronomers may opt to wait
+for confirmation.  This is probably inevitable.
+
+ * Multiple servers: straightforward to implement.  We can have multiple
+servers either for 1. extra security check for alarms, or 2. redundancy
+in case a server is down (but not both? Should it be an AND or an OR?).
+
+ * Anti-coincidence and consistency check: slightly tricky to implement,
+but do-able.  An important question is: how do we define our coincidence
+criterion?  Right now, the configuration is simple: 3 experiments, no
+consistency check, 2/3 coincidence for alarms.  But what about, say, 4
+experiments, which get pinged for alive-or-dead.  Do we require all
+experiments which say they are live to have a consistent signal? 3/4?
+
+To refine our coincidence criteria, we may need a lot more
+inter-experiment discussion.  But, this is really a second-order
+problem; to first order all experiments (LVD, SNO, MACRO and Super-K)
+have the same sensitivity in terms of numbers of supernova candidate
+stars.  In any case, there's no reason not to go ahead and do the
+technical implementation of the post-coincidence experiment query.
+
+Another point: for any individual experiment the "I am alive" criterion
+must mean "I would have been sensitive to a signal in the Galaxy during
+the time period".  This is the responsibility of the individual
+experiments, and may be some work (but then so is an online monitor).
+
+  * We need to think about how to do the timing tests; it's not
+completely obvious how to proceed.  In principle, if experiments have
+GPS or equivalent it should "just work".  But it's not clear how to test
+the whole system, starting from light in the detectors.  Art M. knows an
+atomic clock expert who may be able to lend experience; others may also
+have thought about this problem.
+
+  * Art M. suggested that we need a generally well-defined test plan.
+
+  * Mark V. will implement some preliminary triangulation code.
+
+  * We also ought to think about keeping track of how good network
+connections are, over the next year or so, to decide if we need to
+upgrade the system to dedicated phone lines.
+
+-- We all agree that SNEWS is OK for our name.  Let's make it official.
+
+-- Preliminary time of next working group meeting: May 26, 10 am EDT.
+SNO and Super-K both have collaboration meetings in early June and it
+would be a good thing to have a formal privacy agreement by then.  Since
+teleconference is a difficult format for non-native-English speakers, let's
+make the effort to have a videoconference next time. 
+
+
+From Art:
+
+Your minutes are very timely and complete. 
+
+May I suggest two changes. Whereas the regassing of the water with nitrogen has
+greatly diminished the breakdown problems, and we will start running with the
+full detector this week, what we will be doing for the first while will be
+studying the detector properties, including the stability of data rates. I
+suggest that your words "start full supernova studies" should be replaced with
+"begin to study the detector properties in preparation for supernova detection 
+work."
+
+Secondly, it is Clarence Virtue who knows the atomic clock expert and will be
+investigating the timing synchronization questions with him.

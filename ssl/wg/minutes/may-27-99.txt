@@ -1,0 +1,107 @@
+Dear working group,
+
+Thanks to all for attending the video meeting.  Here are some
+minutes; apologies in advance for any omissions or garblings.
+
+Represented experiments:  SNO, Super-K, MACRO, LVD, AMANDA, OMNIS 
+
+News from experiments:
+---------------------
+
+  -- Alex Murphy reported on a meeting between the OMNIS and MINOS
+collaboration.  He said that the outcome was quite positive; the MINOS
+collaboration is willing not only to consider alternative analyses,
+but even to consider modification of their detector design.  There is
+some possibility of inserting Gd-loaded sheeting in the air gaps
+between the scintillator/iron planes.  Cost would be in the $100,000
+range, to be installed by the start of running in 2002.
+
+  -- SNO running is going well; the connector problem remains quashed.
+They are sealing against radon.
+
+  -- AMANDA will report on a new SNMP (their supernova rate monitor
+hardware) analysis at the upcoming ICRC conference.  They are working
+on an SNMP hardware upgrade.  Also 6 new strings will be deployed this
+summer.
+
+  -- SK, LVD, MACRO:  no change in status.  There will be no Super-K
+upgrade down-time this summer.
+
+
+Privacy agreement:
+-----------------
+
+  There were a couple of suggestions for modification:  
+
+    -- Art M. proposed adding an additional group (an "advisory board"
+for lack of a better name) consisting of senior level members from
+each experiment, whose function is to "authorize" the members of the
+subgroup, decide the high-level security issues, and make it all
+official.  Everyone agreed that this is a good idea.
+
+    -- Another suggestion was to keep a cap on the number of members
+of the working group, to keep it down to a manageable size (although
+this is not yet a problem.)
+
+I'll modify the draft according to these suggestions and post it
+shortly.  SNO, LVD and Super-K are all having collaboration meetings
+at the beginning of June, which is a good opportunity to have
+the privacy agreement approved by the different experiments, and for
+an advisory board to be formed.
+
+Time synchronization tests:
+--------------------------
+  I gave a short talk on the "LED time bomb" possibility described in
+my previous email.    There were several comments and suggestions.
+
+ -- There are really two things we'd like to test:  
+
+1. Whether each experiment is tagging the event times right,
+and
+
+2.  whether the whole alarm coincidence system is working, starting
+from light in the detector, to the individual software burst monitors,
+all the way to the coincidence server and alarm.
+
+For #1, you only need a single LED time bomb that could be 
+shuttled around from experiment to experiment.  Also, a simple
+light signal, e.g. a single LED, would be sufficient here.
+
+#2 is harder -- to test several experiments at a time, we need at
+least two and preferably more bombs.  It's also trickier to set up,
+because to test the whole system, you need some kind of stellar
+collapse simulation in each detector plausible enough to pass the
+software tests (e.g.  position uniformity tests for SK and MACRO).
+Both LVD and AMANDA reported that they are not currently well set up
+to split LED signals.  So rigging this test may require hardware
+tinkering and/or software twiddling on the part of all experiments --
+but may be doable.
+
+Of course, we could do these two tests separately; for a test
+of #2, you only really only need timing good to ~seconds.
+So maybe we could have several cheap time bombs for #2 and
+a single shared high stability time bomb for #1?
+
+  -- Clarence V. has spoken to his NRC contact, Rob Douglas at NRC,
+whose timing expertise we may be able to draw on.  One point was that
+a single timing test isn't enough; we will have to keep checking
+whether things stay in synch.  Experience will show what a reasonable
+interval is.  We could also look into whether it's possible to borrow
+an atomic clock from NRC (a single clock would be good enough for
+individual experiment timing tests.)  He may have other good ideas.
+ 
+  -- Adam B. pointed out that the time window for a coincidence test
+with AMANDA is only a 3-month period during the austral summer (Dec-Feb).
+We should consider this when scheduling multi-experiment tests.
+
+  -- Ludwig dB. of Duke U. pointed out (by email later) that the
+relativistic effect on an airplane is ~0.1 microsecs/day.  If we're
+lucky enough to get a clock good enough for this to be a problem, we
+may need to make corrections!
+
+Next meetings:
+-------------
+
+We agreed that another video meeting in about 2 months would
+be a good idea.  We should also aim for a physical meeting in
+the fall.

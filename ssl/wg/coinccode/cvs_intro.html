@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<body
+bgcolor="fffaf0"
+text="000000"
+link="0000ff"
+alink="ff00ff"
+vlink="040080"
+>
+
+<HTML><Title>Using CVS</Title>
+<Head>
+<H1> <center>Using CVS</center> </A></H1>
+</Head>
+
+<P>CVS, or Concurrent Versions System, is an effective system allowing
+multiple people to work on the same coding project.  It's widely
+available and pretty standard.
+
+<P>Here is an <a href=http://www.loria.fr/~molli/cvs/doc/cvs_toc.html>
+online manual</a>. You can download the whole manual as postscript
+<a href=http://www.loria.fr/~molli/cvs/doc/cvs.ps>here</a>.
+
+<h3> Setting things up </h3>
+
+<p>On Unix systems, do
+
+<pre>
+setenv CVSROOT :ext:snrep@kaboom.icrr.u-tokyo.ac.jp:/home/snrep/repository
+</pre>
+This tells cvs where the repository lives.
+
+<p> You will also need to do
+<pre>
+setenv CVS_RSH ssh
+</pre>
+to tell cvs to use secure shell for transmission (necessary to
+kaboom),
+and
+<pre>
+setenv CVS_SERVER "env LOGNAME=yourusername cvs"
+</pre>
+to tell cvs who you are for the purpose of making commits.
+
+
+<h3> Checking out and committing</h3>
+
+<p> Here's a very quick survey of the most common commands;
+please consult the manual for more information.
+
+<p> After you have cvs set up, you can "check out" a version
+of the code from the repository to work on it.  The module
+containing both server and client code is the 
+<strong>coinccode</strong> module.
+
+<pre>
+cvs checkout coinccode
+</pre> 
+will create a version of the module in your working directory.
+
+<p> After making a modification, to enter the change into the
+repository ("commit" it), do
+
+<pre>
+cvs commit <filename>
+</pre>
+
+<p> To update the module to the most recent files in the repository, do
+
+<pre>
+cvs update
+</pre>
+in the directory to be updated.
+
+<p>If you wish to be notified of commits to the repository, you can
+get an automatically generated email message by checking out
+the CVSROOT module, adding your email address to snrep.list and
+committing.
+
+<p> 
+
+
+
+
+
+
+
+
+
+

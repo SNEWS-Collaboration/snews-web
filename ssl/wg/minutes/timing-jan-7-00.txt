@@ -1,0 +1,144 @@
+Notes from discussion with Rob Douglas:
+
+The overall idea is to develop a robust traveling time calibration
+system that could move from one laboratory to the next to check the
+timing, using a consistent, reliable system.
+
+The proposed system has three components:
+
+1. GPS receiver for surface tests
+2. Time reference signal (stable oscillator)
+3. Time interval counter
+
+Also needed: 2 laptops, one for outside and one for inside.
+
+All of these must be robust and portable.  Another major item on the
+budget will be travel expenses for personnel who will carry the
+equipment, train onsite personnel, and perform calibrations.
+
+Rob Douglas gave general suggestions as well as advice for specific
+equipment to consider.  (There may also be funding available from NRC
+to buy some or all of these, since the problem we have -- of
+determining time accuracy of systems remote from a clear GPS view --
+is a general one they have an interest in developing general solutions
+for).
+
+GPS receiver: 
+
+The purpose of this is to verify the external time systems (usually
+GPS based) of the respective laboratories.  It is important that this
+equipment be robust for traveling.
+
+Rob suggests a NovaTel Millenium system, which costs about $9000 US.
+The uses two frequencies for ionospheric corrections, and has way
+better precision than we need (~20 ns).  It can do even better with
+further calibration (local multipath corrections).  It has other bells
+and whistles, too, such as convenient output that geodesists can use
+to determine precise positions.  Rob prefers this particular model
+because they have experience with it at NRC and they know it to be
+very reliable; also it is designed for portability.  However, many
+other models would be fine, too.
+
+2. For the time transfer standard (the "alarm clock", formerly known
+as the "time bomb"), Rob suggests a rubidium oscillator.  (Ovenized
+crystals may not be quite good enough).
+
+His specific recommendation is a Datum MRT.  This contains an "FRK" Rb
+oscillator.  Cost is about $15000 for the fanciest model, with nifty
+features like a pps output.  However there are ways to save money:
+a used one of these costs about $2500, and the bare Rb oscillators can be had
+separately for as little as $500 (used).  The used ones are sold under
+warranty.
+
+Some other information about these oscillators:
+
+  -- The Datum MRK weighs 30 lb, most of which is battery...
+with better batteries, this weight could be reduced?
+
+  -- The bare Rb oscillator weighs aobut 2.9 lb, and is about 4" on a side
+
+  -- Power requirement (dependent on external temperature) is less
+than 30 W (less than a laptop).
+
+  -- Frequency stability is somewhat sensitive to pressure: df/f
+~5e-13 per mbar.  Pressure differences are potentially a problem for
+Sudbury, for which there is a 300 mbar pressure change going
+underground (compare to 100 mbar change for a big weather change) but
+it should still be OK. (SK and LNGS would have less of a problem).
+
+ -- There's also some sensitivity to magnetic fields: df/f ~
+3e-11/gauss, so we would have to be careful about getting too close to
+major powered machinery... at very high fields (such as would be
+dangerous for someone wearing a pacemaker), there can be permanent
+magnetization of the shielding and persistent frequency shifts.  This
+is probably not a problem for us.
+
+ -- Other portable Rb clock models are available... Rob prefers those
+without tricky microprocessors inside, which allow less flexibility
+and sometimes give unreliable output.
+
+ -- Rb clock lifetimes are about 5 years of continuous running.  Bulbs
+can be replaced for about $500.  However we don't have to operate them
+continuously, so this isn't much of an issue for us.
+
+
+Time Interval Counter: 
+
+A possibility previously discussed was to have the time standard be
+internal to the time interval counter (TIC models are available with
+both ovenized crystal and Rb internal oscillators).  However Rob
+recommends against this because it would give us less flexibility; he
+prefers a TIC with an external input so that it can act as a slave to
+an external time standard, such as a separately purchased Rb clock.
+
+A promising model is the Stanford Instruments SR620, which is
+available for about $5000 ($9000 with ovenized crystal internal
+oscillator, $14850 for Rb).
+
+Computers: 
+
+A laptop with serial port connections to be used for data acquisition
+will be needed.  Any old one with a 486 chip or better will do fine.
+We need two-- one for work on the surface, and a second one 
+to bring inside the laboratories.  
+
+Other knickknacks:
+
+A few other odds and ends will be needed (partly dependent on
+what specific stuff we get):  carrying cases, batteries, connectors,
+etc.
+
+Travel:
+
+A significant part of the cost may be travel, particularly in
+the initial stages of the program.
+
+Rob suggests an initial "flurry" of calibration measurements, after
+which we can (we hope) demonstrate to the community that laboratory
+timing is reliable.  The flurry should include data taken during both hot
+and cold weather.  Then, we can make measurements at regular, but
+longer intervals.  Possible schedule: once per month for 8 months or
+so, spanning winter and summer, followed by a regular check every 6
+months or so.  We don't want to wait too long between checks or people
+will forget details of the procedures.
+
+We should develop a standard procedure to follow.  For the
+first few checks, personnel at each site can be trained in the
+procedure by traveling expert(s).  After that, there should be a
+regular review (every year or so?)  to check that procedures are
+consistent.
+
+Rob suggests that the international astronomical community may feel
+more comfortable with the results if one of the stops on the round of
+checks is at the BIPM in Paris, for GPS receiver calibration.  He
+thinks they will be happy to do this for free.  This check need not be
+done for every round, but perhaps at the beginning and the end of the
+"flurry" would be good.  BIPM is more comfortable with dealing with
+pps signals.
+
+A stop at NIST for a good technical calibration might be worthwhile.
+They may charge for this service (apparently suggesting to them that
+USNO might do it instead might help here!)
+
+
+

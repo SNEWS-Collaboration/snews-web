@@ -1,0 +1,128 @@
+Hi all,
+
+Thanks to all for the meeting; here are the minutes.  Apologies in advance
+for any errors or omissions.
+
+News for experiments: 
+--------------------
+
+* AMANDA: Adam Bouchta reported.  They have some analysis, written up and
+presented at the latest ICRC, showing good signal to noise out to 10 kpc.
+Mainz has joined the effort and will be working on the new DAQ; a new student
+will be working on the new online trigger.  New strings will be deployed this
+austral summer.  They are working on improving accessibility; currently they
+are still at 10 hours/day but there is some possibility of an Iridium phone
+(which however has some problems).
+
+   * SNO: Art McDonald and Clarence Virtue reported.  They continue to work
+on understanding background and improving calibrations.  They are now pretty
+much in a steady-running mode, >80% livetime.  Hardware threshold is now at
+about 2.5 MeV.  They are working on understanding various sources of stray
+light which could cause supernova triggers: flashers (spontaneous and
+blasting-induced) and static-electricity-induced sparking; all of these are
+well distinguishable from real events.  They have a prompt real-time
+supernova monitor operating in low-priority mode (with higher priority given
+to writing data to tape), plus a fully efficient offline search.  They are
+still working on determining efficiencies, developing an interface for
+operators, etc.  SNO remains live for supernova during calibrations (although
+the prompt alarm system may not be).
+
+ * Super-K: Mark Vagins reported from UCI (unfortunately Mozumi could not
+connect this time).  Work is now in progress towards improving promptness of
+the alert.  Currently, there is a delay before the supernova monitor sees the
+data, due to various processing steps (such as the low-threshold fast vertex
+fit).  The plan is to bypass some of these steps and do a prompt burst search
+on a dedicated machine, which could result in an alert with about a 5 minute
+delay.  Timescale is 1-2 months for these changes to be implemented.  Super-K
+remains in continuous running mode; there is some chance of a 3-month
+downtime for an upgrade next summer, but that may be postponed until summer
+2001.
+
+ * LVD: Pietro Antonioli reported.  They are completing the 3rd tower which
+will bring the liquid scintillator mass up to 1 kton.  They are also
+improving the DAQ, and building in more modularity, to improve sensitivity
+during calibrations and livetime.  They has have a new preprint on SN burst
+analysis from the time period of the recent GRB burst.
+
+ * OMNIS: Alec Murphy reported.  The WIPP site in New Mexico is now being
+fitted out as an underground laboratory.  Work on the proposed 10 kton Fe or
+Pb detector continues.  Theoretical calculations of cross-sections on Pb and
+Fe proceed and predicted yields are more or less consistent with original
+estimates.  Thought is also going into non-SN neutrino physics for OMNIS.  On
+the experimental side, a second prototype is going into operation shortly at
+OSU.
+
+ * MACRO: I reported.  Status has not changed.  MACRO is currently running
+with very high livetime, with dual SN detection systems.  We will continue to
+run at least until the official MACRO shutdown date of May 1, 2000.
+
+Down-time Coordination
+----------------------
+
+I reported.  It's clearly to everyone's benefit to try to arrange major
+down-time to be as non-overlapping as possible.  My suggestion for doing this
+is to have the SNEWS group maintain a (secure) website where scheduled
+down-time of greater than 3 hours or so duration is reported as soon as it is
+planned.  Each experiment can designate a representative whose job it is to
+keep this up to date.  Experiments can then check the site before scheduling
+calibrations and maintenance.  It's intended to be "first come first serve",
+but flexible in the case of conflict.  For instance, if two or more
+experiments want to schedule something at the same time, coordination can
+happen between the reps and/or advisory board members.
+
+We could also grade the down-time (red for dead, yellow for calibrations
+during which there's still some sensitivity, and green for live,
+according to Y. Suzuki's suggestion).  We may also
+want to post major unscheduled downtime, e.g. power
+failures of known long duration.
+
+This kind of arrangement will require collaboration approval;
+timescale is a few months.
+
+
+Timing Tests
+------------
+
+Clarence Virtue has been working on the idea of the traveling atomic clock
+time standard; he's been trying to get Rob Douglas of NRC involved.  Rob
+Douglas will be running a time standards course in Ottawa on Oct 13 that
+Clarence and his student Mike Schwendener (and possibly I) will attend, which
+could be a good opportunity to get something going.  Super-K is doing an
+atomic clock test (for extra checks of K2K beam timing; it probably won't be
+a regular thing); I'll try to find out more to see if any experience can be
+lent.
+
+Secondary Server
+----------------
+
+Pietro suggested setting up a secondary coincidence server at LNGS.
+Some code changes would be necessary.  I'm willing to help work on this,
+if a secure and dedicated machine can be provided.
+
+Security Issues
+---------------
+
+We had a general discussion of security issues.  Various jobs need to be done
+to make our coincidence server really secure.  The first step an
+implementation of secure sockets and PGP-signed messages.  Alec volunteered
+to do this.  However, it may require a good deal more work, plus the
+knowledge and experience of real security experts, to truly verify that we're
+safe from hackers.  We may need to have an official security expert whose
+responsibility it is to make sure our system is secure.  Nobody has any
+particular candidates in mind, but we should think about trying to recruit
+someone, perhaps from one of our experimental collaborations, soon.
+
+
+AAS Meeting
+-----------
+
+John Bahcall is organizing a supernova session for the AAS meeting in
+January.  There will also be some neutrino experiment talks.  Art suggested
+that a SNEWS talk is definitely in order.
+
+
+Next SNEWS Videocon
+-------------------
+
+Tentative date is November 17, 10 am EST.
+See you then.

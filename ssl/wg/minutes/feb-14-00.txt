@@ -1,0 +1,85 @@
+SNEWS Video Meeting Minutes, February 14, 2000
+==============================================
+
+-- News from experiments:
+
+  * Super-K (Mark V.) reports that another threshold-lowering is planned,
+for March-April.   He hopes to implement the "express-line" 
+at that time, to reduce the delay with which Super-K alarms are reported.
+
+ * MACRO's main news (from Alec) is that although partial decommissioning will
+happen on May 1 (some trigger electronics and waveforms will be removed),
+data taking for stellar collapse will continue until the end of the year.
+ 
+ * Everything stable for LVD (Pietro)
+
+ * SNO (Art) just finished some substantial optical calibrations at the
+beginning of February, and steady running has restarted.  The supernova alert
+is now being expanded beyond the small group of experts, and now includes the
+detector operators.
+
+ * OMNIS (Alex M.) should hear on the status of their DOE funding proposal
+soon.
+
+-- Alec reported on the AAS meeting, which was very successful: 
+he gave a SNEWS talk, Clarence Virtue gave a timing talk and
+Leif Robinson gave an amateur astronomer talk at the "Next Galactic
+Supernova" parallel session.  Experiment spokespeople gave plenary talks.
+See Alec's longer report in the mailing list archives.
+
+-- We discussed the DOE proposal draft that I circulated yesterday, 
+and there were a number of good comments.
+
+  * Mark pointed out that we need to justify the 10 microsecond requirement;
+the main argument for trying to do better than milliseconds is that we don't
+really know what might be in the signal that might require good timing;
+also, it's not much more expensive to get 10e-12 frequency stability than
+10e-9, so we might as well go with the best we can.
+
+ * LVD and SNO people are willing to help with SNEWS shifts.
+
+ * Pietro suggested that we could include a mention that LVD will submit an
+independent proposal for INFN/LNGS funds for a duplicate timing calibration
+system.  According to Rob Douglas (which I heard after the meeting), the same
+may be true for NRC.
+
+ * As for the issue of what sort of communication devices and/or computers we
+want: most people already have laptops and LVD people have their own
+equipment; the same equipment can be used for SNEWS shift.  SNO people are
+going to have a meeting tomorrow to discuss what sort of thing they think is
+appropriate.
+
+ * Pietro pointed out that LNGS now has a GPS, and not just a standalone
+atomic clock (he'll try to find some documentation on the system).
+
+ * As for the author list on the proposal: since some people (e.g. LVD
+members) may not want to be directly included on a DOE request for funding
+(which could cause problems for their own funding agencies), it's probably
+better not to include everyone directly.  However it would be fine to include
+a separate list of SNEWS collaborators which can include everyone in the
+working group who wishes to be on the list.
+
+-- Art suggested that the advisory board needs to get together for a phone
+conference sometime soon, to make decisions on various issues, most of which
+have already been discussed at the videocons.  They need an agenda which
+should include such issues as: what's needed before deciding on an automated
+alert (e.g. security checks), schedule for implementation, downtime
+coordination, privacy agreements, etc.  I'll prepare something on a short
+timescale.
+
+-- Leif Robinson from Sky&Telescope, who joined us at BU, discussed the
+AstroAlert service set up by them: check out
+http://www.skypub.com/news/astroalert/astroalert.html 
+There are now some 2000
+subscribers to the supernova neutrino list.
+
+Leif also described his plan to send out a test alert to subscribers
+based on a predicted nova event, some time in the next month.
+
+-- On the astronomical alert side, Bob Svoboda from LSU (who unfortunately
+couldn't join this time) is interested in getting the LSU observatory
+involved.  He proposes that we write an NSF proposal, which may be able to
+focus on educational outreach.  Mark will also look into the Rotse/Fenton
+Hill ideas.
+
+-- Tentative date for the next meeting:  March 13.

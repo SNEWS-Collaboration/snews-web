@@ -1,0 +1,86 @@
+Date: Sat, 13 May 2000 15:53:25 -0400
+From: Kate Scholberg <schol@budoe.bu.edu>
+To: snnetwg@budoe.bu.edu
+Subject: Videocon minutes, May 12, 2000
+
+Video meeting minutes, May 12, 2000
+===================================
+
+It was a pretty short meeting yesterday, since many people could not attend.
+
+News from experiments:
+---------------------
+
+* Super-K: Mark reported on Fukuda-san's work to set up an "express line" for
+the data.  Super-K currently has a fairly long alert time delay due to several
+steps of processing before the supernova monitoring software is run on the
+data.  In the new scheme, the regular data stream will be bypassed so that a
+prompt burst search can be done within minutes.  This will be implemented for
+actual running very soon.
+
+* MACRO: Alec reported no change for supernova watch, although the waveform
+digitizers were decommissioned on May 3, marking the end of MACRO's monopole
+search data-taking.  MACRO will run in "zombie mode" (supernova/muons only)
+until the end of December of this year.
+
+* SNO: Clarence reported progress made on SNO's supernova monitoring and
+alert setup.  Previously, the SN monitor software alerts were sent to
+detector operators only.  A new system dials out to a group of people and
+sets up a phone conference; those receiving the alert can then discuss the
+data.  The response time should be less than 20 minutes.  They are
+accumulating experience with typical sorts of false alarms, and they propose
+to set the threshold such that only deep-inelastic scattering events (which
+occur at the rate of ~1/month) trigger it.
+
+* OMNIS:  Here's the emailed report from Alex.
+
+"The OMNIS project is still progressing. Further to our recent R&D
+funding success, the WIPP, which manages the saltmine where we wish to
+locate, has agreed to tunnel out news drifts large enough to allow us a
+more expansive, but more efficient, detector design. They have also
+created office space, computer connections, and 6 pcs for the use of
+underground scientists within the caverns. The Leptontown meeting,
+sponsored by the DOE at the request of NSF to explore the future of
+underground science, will be held in Carlsbad June 12-14."
+
+Mark clarified that the "recent R&D funding success" is money from NSF.
+
+SNEWS news:
+----------
+
+-- Alex reported by email that the recent AAVSO meeting went well:
+
+"The talk I presented at the AAVSO meeting in Huntsville, Al, was
+well receieved, and was also very enjoyable to attend. NASA made us feel
+very welcome with excellent hospitality, and VIP tours of the Marshall
+Space Flight Center. The transparencies, and a preliminary version of the
+write-up for the JAAVSO are available at:
+
+http://www.physics.ohio-state.edu/~asmurphy/aavsotalk/"
+
+-- We will have a summer student at BU, Corrinne Mills (a Harvard undergrad),
+whose main job will be to finish up as many as possible of the remaining
+SNEWS coding jobs (the ones listed on the job web page.)  She'll be starting
+mid-June.
+
+-- Clarence relayed a message from Art that he's been working on setting
+up an advisory board conference call for next week.
+
+-- No response yet about the DOE proposal; it is probably ending up
+in the next funding cycle.
+
+
+Next meeting:
+------------
+
+The next SNEWS meeting will be a face-to-face one at Neutrino 2000.  Not
+everyone will be able to attend, but some reasonable fraction of SNEWS
+members expect to be there.
+
+Clarence has looked into some possible times.  We tentatively selected June
+17, in the evening, 8-10 pm.  This is during one of the public lectures,
+which goes from 8-9 pm.  Other possibilities: June 19, same time (another
+lecture overlap; this is an excursion day too), or the last day of the
+conference.
+
+

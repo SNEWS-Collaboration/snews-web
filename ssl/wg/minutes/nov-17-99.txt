@@ -1,0 +1,165 @@
+Dear SNEWSers,
+
+Thanks to all for the meeting.  Here are the minutes.
+
+Kate.
+
+============================================================
+
+News and status reports:
+------------------------
+
+ -- Super-K (Mark Vagins and Yoshiyuki Fukuda): All running, no change in
+status.
+
+ -- MACRO (Alec Habig): PMT gains have just been reset.  MACRO will continue
+to run until at least May 2000.  It's not clear how long it will run after
+that.
+
+ -- LVD (Pietro Antonioli, Carlo Vigorito): Tower 3 is being completed, which
+will bring the total mass up to 1 kton.  There will be no streamer tubes at
+first, but this is not a problem for supernova burst detection since muons
+are vetoed using scintillator coincidences.
+
+ -- AMANDA (Adam Bouchta): Mainz University has joined the supernova effort.
+A new SN DAQ, which will serve 470 PMTS, is being readied for the new season;
+it's been tested in the lab.  It will be installed at the South Pole in
+December and it's expected to be up and running by February.  The new time
+resolution is unclear, but it might be as good as 1 millisecond.  They have
+done some preliminary studies of template matching, i.e.  how well they can
+extract time information in the AMANDA using a given Super-K time profile;
+they may be able to time the pulse to 10 ms or so.
+
+ -- SNO (Art McDonald and Clarence Virtue): It's "steady as she goes": the
+data continues to roll in and they are fine-tuning and doing calibrations.
+Radioactive background levels still looking very good.  Uptime is better than
+80%.  Clarence reported on the supernova monitor: it will report on a burst
+within a few minutes.  Currently, the alarm is emailed to a list of a few
+experts, but within a week or too, the system will be modified to alert the
+detector operators in the case of an alarm, and they are preparing a set of
+instructions.  The issue of alarms for SNEWS and automation will be brought
+up at the next collaboration meeting (Dec 11-13).  They expect that within a
+few months a SNEWS alert sent after human-checking will be approved, and
+automated alerts may follow after that.
+
+ -- OMNIS:  Alex Murphy could not connect unfortunately (primarily my
+fault for not scheduling earlier).  Here's his emailed report:
+
+> As to the report, as I said, we have successfully applied for $100,000
+> from the university (no overhead too... it really is that much) for a
+> postdoc for 2 years. Also included in that money is funds for a
+> consultant electrician (we know who we want... and just to sort out how
+> to make the electronics cheaply but *reliably*), and for some minor
+> equipment. maybe another prototype, DAQ, and/or a few 100 T of lead. The
+> postdoc position is open immediately, and we welcome applications! Also
+> as I said before, the postdoc is to persue the traditional nuclear
+> physics aspects of our group, giving me more time to focus on the OMNIS
+> proposal.
+>
+> As to the status of OMNIS... Dick Boyd and David Cline are going to
+> Washington on, I think, Dec 17th, to meet with Peter Rosen and a few
+> others. This is in preparation for an NSF proposal which would be a line
+> item (hence, minimum time of review is greater than 1 year). The CARUS (aka
+> WIPP) is playing a supportive role, and their engineers and graphic
+> people have made/are making some wonderful technical drawings and also
+> artistic views (as one might see in Scientific American etc) of what OMNIS
+> might look like. Technically the former is much more needed than the
+> latter, but the pretty pictures will fill a hole that we've had until this
+> date in trying to advertise!
+>
+> Measurements of the intrinsic radioactivity of lead and steel have been
+> shown to be within our acceptable limits (lead rather better than
+> steel...) and so we continue to see no major technical hurdles to impede the
+> project.
+
+
+Coordinated Downtime
+--------------------
+
+For Super-K and SNO, the scheme outlined at the last meeting (website with
+entries maintained by reps at each experiment) is to be approved at the next
+collaboration meetings (Dec 2-4 and Dec 11-13 respectively), but it will
+probably be no problem.  For LVD it's already OK.  I will set up the website
+over the next week.
+
+Timing Tests
+------------
+
+Clarence reported on the meeting we had at NRC in October with timing
+calibration expert Rob Douglas (Clarence, Mike Schwendener and myself in
+attendence), and subsequent work.  The plan has evolved somewhat.
+There are now three parts to the timing test plan:
+
+ 1. Surface GPS systems
+ 2. Time transport underground
+ 3. Time stamp of light in the detectors.
+
+For #1, Rob Douglas suggested a traveling GPS system that can be moved from
+lab to lab (cost $3000-5000 Cdn).  He has some NRC that could be used for
+this.
+
+For #2, we would need a time interval counter (TIC), which would be moved
+from the surface to the underground lab to measure frequency variations of
+the signal; it would then be brought back to the surface for a "closure"
+measurement.  Cost is about $10000 Cdn.
+
+For #3 (the "alarm clock"), we could possibly use an LED driven by
+a pps signal; #2 and #3 could maybe be combined.
+
+Such a system could be tested at SNO on a 2-3 month timescale, depending on
+resources available; also depending on resources it could also be tested at
+other labs in parallel.  It may well be possible to have a true
+inter-experiment test by June 2000.
+
+Pietro reported that the director of LNGS is supportive of the SNEWS project
+and the timing test idea, and passed on a suggestion by Walter Fulgione to
+form a timing subgroup for SNEWS, to deal with technical issues.  We agreed
+that this was an excellent idea.
+
+Security Work
+-------------
+
+Alec will be working on two major improvements to security:
+
+  1.  PGP signing of alarm messages from the coincidence server.
+  2.  Secure socket implementation for the actual datagrams.
+
+
+AAS meeting
+-----------
+
+Alec reported on the AAS meeting, which will have a series of plenary talks
+on neutrino observatories, plus a special session on "The Next Galactic
+Supernova", organized by Bob Kirshner and John Bahcall.  This will have three
+10-15 minute talks.
+
+-- The SNEWS Network (Alec),
+-- Optical Confirmation of a Neutrino Detected Supernova (Leif Robinson)
+-- Verification of Inter-experiment Timing for SNEWS (Clarence).
+See http://hep.bu.edu/~snnet/aas for the abstracts.
+
+Art suggested that SNEWS be mentioned in one of the neutrino plenary talks,
+preferably the first one.
+
+
+Schedule for work to do
+-----------------------
+
+There are various jobs to do, and the AAS meeting (Jan 11-15) is a good
+final deadline for getting them done.  Here's the list of jobs,
+timescales and volunteers:
+
+Deadtime coordination web setup:  next week (Kate)
+Security coding: December (Alec)
+Second server at LNGS: December (Pietro, Kate, Alec)
+Timing tests: next few months (timing group)
+
+(BTW there are still various coding jobs to do; things are
+set up so that anyone can work on it, and contributions are very welcome
+if anyone is interested).
+
+Next meeting
+------------
+
+We agreed on Jan 10 (before the AAS meeting) as the next videocon date.
+We should also start thinking about having a face-to-face meeting.

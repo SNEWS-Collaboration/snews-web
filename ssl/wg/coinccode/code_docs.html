@@ -1,0 +1,217 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<body
+bgcolor="fffaf0"
+text="000000"
+link="0000ff"
+alink="ff00ff"
+vlink="040080"
+>
+
+<HTML><Title>Code Documentation</Title>
+<Head>
+<H1> <center>Code Documentation</center> </A></H1>
+</Head>
+
+<P>Here is a brief description of the client/server code written by
+Alec Habig, Kate Scholberg, and corrinne mills.  It is written in standard C.  
+As usual, the best way to learn about it is to read the code (we hope
+we've put in reasonable in-code documentation!), but reading this
+overview first may be helpful.  A book by W. Richard Stevens, <i>Unix
+Network Programming</i>, is strongly recommended to code developers.
+
+<P>The coincidence code has client and server parts, to implement a
+socket connection using a TCP protocol.  The server process,
+<strong>gcserver</strong>, sits and waits for a connection.  The
+client process establishes a connection with, and relays information to,
+the server, and can be invoked by calling any of the routines 
+<strong>gccli</strong>, <strong>gcpingcli</strong>, and i
+<strong>gcretcli</strong>. <strong>gccli</strong> relays alarm information 
+to the server when a supernova alarm condition is detected.  
+<strong>gcpingcli</strong> checks the connection with the server.  
+<strong>gcretcli</strong> tells the server to retract an alarm message 
+previously sent.  Each routine can connect to more than one server. 
+
+<h3>Programs</h3>
+These four executables can be built from the Makefile built by gc_config.
+<ul>
+<li> <strong>gcserver</strong> is the server programs (see 
+	<strong>server code</strong>). 
+<li> <strong>testgcli</strong> is the fortran test client program.
+<li> <strong>ctestgcli</strong> is the C test client program. <br>
+	both test client programs can run each of the three client routines.
+	See <strong>client code</strong> for more information.
+<li> <strong>retract_util</strong> is a command line user interface 
+	to the alarm retraction routine.
+</ul>
+
+<h3>Files</h3>
+
+Both client and server files can be obtained and modified via cvs from
+the <strong>coinccode</strong> module
+in the snrep repository on kaboom; please see the cvs information <a
+href=cvs_intro.html>here</a>. 
+<P>
+<ul>
+
+<li> <strong>gcserver.c</strong>  is the server program.
+
+<li> <strong>gccli.c</strong> contains the three client 
+programs: <strong>gccli</strong> to send alarm packets, 
+<strong>gcretcli</strong> to send retraction packets, and 
+<strong>gcpingcli</strong> to send ping packets.  There is source for calling
+each of these, from either Fortran or C, in <strong>gccli.c</strong>.
+
+<li> <strong>testgcli.f</strong> is a test client program,
+for calling gccli, gcretcli, or gcpingcli from a simple Fortran program.
+
+<li> <strong>ctestgcli</strong> is a test client program in C.
+
+<li> Both client and server will need to link against
+  <strong>error, packets, open_sockets, gc_ssl</strong> and
+<strong>timeconv</strong> objects;
+in addition the server also needs to link against
+<strong>alarmQueue</strong>.
+
+<li> Compilation is currently handled with a Makefile generated from the 
+<strong>Makefile.in</strong> included in the module, by the perl script 
+<strong>gc_config</strong>, using the shell script <strong>configure</strong> 
+which is generated from <strong>configure.in</strong> by autoconf.  
+<strong>configure</strong> also requires the script 
+<strong>config.guess</strong> in order to guess at the system type.
+(these are included in the module since not all systems have autoconf)  See the
+included <a href="https://cyclo.mit.edu/snnet/wg/coinccode/readme.html">README</a> 
+for more information on configuring and building, which has gotten a 
+bit more complicated with the addition of the ssl code as well as the 
+change to a configure system instead of different Makefiles.  
+
+<li> <strong>Include</strong> files can be found in the include subdirectory.
+
+<li> <strong>retract_util.c</strong> is the source code for the 
+	alarm retraction utility.
+
+<li> a <a href="https://cyclo.mit.edu/snnet/wg/coinccode/readme.html">
+README</a> containing some information on installation 
+is now included in the module.
+
+</ul>
+
+<p> At present, we're dealing with differences between different
+platforms using #ifdefs.  If you make a platform-dependent change to
+the code, please use this convention.
+
+<p> The test version is compiled by default.  The real version
+needs extra compilation flags.
+
+<h3> Setup in the snnet account on kaboom</h3> 
+
+<p>On kaboom, a checked
+out version of the code and compiled executables can be found in
+/home/snnet/coinccode.  The running test version (and some other files that
+go along with it) can be found in /home/snnet/gcalert.  Output goes to
+/home/snnet/gcalert/gcalert.out (test junk output there only).
+
+<p>Some useful files in this area: (not in the repository; you will
+need to create versions of some of them in your test area if you are running
+your own test server.)
+
+<ul>
+<li> <strong>good_addresses.dat:</strong> list of authorized IP
+addresses.
+<li> <strong>serv_ip_address.dat:</strong> the server IP address list.
+The client will try to connect to all the servers in this list.
+Modify to run a test server on your machine.
+<li> <strong>gcserv:</strong> startup script.
+<li> <strong>checkgc:</strong> script to check if server is running 
+(run by cron on kaboom).
+<li> <strong>send_alert.sh, send_info.sh:</strong> alert emailing scripts.
+</ul>
+
+<h3>Server Code</h3>
+
+<strong>gcserver</strong> maintains a queue of alarms, kept in a
+linked list data structure.  
+
+<p>When an alarm is received, it decodes it
+and checks that its time stamp is reasonable.  Next, it inserts the
+alarm into the queue according the time stamp, cleans up the queue to
+get rid of any old alarms, then searches the queue for a coincidence.
+Before searching, it also writes alarms to disk, so that for the case
+of a crash, it can retrieve the list of alarms at startup.  For the case
+of a sufficiently high level coincidence, it runs the email scripts.
+
+<p>When a retraction packet is received, it decodes it and checks that
+the start time for retraction is before the end time.  Then, it retracts all
+alarms from the specified experiment, within the time range given, inclusive.
+(that means that if start time = end time, only the packet with 
+start time = end time = time stamp will be retracted.  this allows
+a client to retract only one, specific packet, or a range of them.) The 
+revised queue is written to the disk, so that in case of a crash, the server
+does not reread in the false alarms, and find a coincidence with them.  
+
+<p> The main routine is in <strong>gcserver.c</strong>; socket
+routines are in <strong>open_sockets.c</strong>; routines
+for encoding and decoding packets are in <strong>packets.c</strong>;
+time conversion utilites are in <strong>timeconv.c</strong>; alarm
+queue routines are in <strong>alarmQueue.c</strong>, ssl routines are
+in <strong>gc_ssl.c</strong>, and error routines are in 
+<strong>cerror.c</strong> and <strong>serror.c</strong>.
+
+<h3>Client Code</h3>
+<strong>gccli</strong> currently takes 4 arguments:
+<UL>
+<LI> The UT time of the burst, in a 3-integer format:
+DDMMYY,HHMMSS,nanosecond ticks.
+<LI> The "level" of the burst;
+possibly to indicate the typical Poissonian background
+rate of the alarm, a shortword.
+<LI> The "significance" of the burst; another
+measure of the certainty of the alarm, possibly
+the estimated distance to the supernova, a longword.
+<LI> Experiment number (currently 1 for MACRO,
+2 for Super-K, 3 for SNO, 5 for LVD; others will be assigned as
+more experiments join), a shortword.
+
+</UL>
+The exact contents of "level" and "significance" have not yet
+been decided; they can be left dummy for now (value of 1 for
+"level", 0 for "significance").
+
+<p><strong>gcretcli</strong> currently takes three arguments:
+<UL>
+<LI> The experiment number (same as in <strong>gccli</strong>) whose
+alarm packets are to be retracted.
+<LI> The earliest packets to be retracted, specified by their UT time stamp, in
+a 3 integer format: DDMMYY, HHMMSS, nanosecond ticks.
+<LI> The latest packets (by UT time stamp, same format) to retract.
+</UL>
+
+<strong>gcpingcli</strong> currently takes two arguments:
+<UL>
+<LI> The UT time of the ping (3-integer format like stated above).
+<LI> The experiment number (same as in <strong>gccli</strong>) sending the 
+ping packet.  
+</UL>
+
+<p>Each of these three routines returns an integer value: 0 for
+successful send, -1 or the standard error number (errno), if it is defined,
+for send failure.  <strong>Note that the return values have changed!</strong>
+
+<h3> Suggested improvements </h3>
+
+There are many minor (and major) improvements that could be made to
+the code, to improve efficiency and elegance (not counting
+bugs!). <a href=todo.html>Here</a> is a list.
+
+<p>
+<hr>
+<p>
+Last modified by corrinne mills on August 25, 2000.  i am currently working on
+this code; 
+<a href="mailto:cmills@superk.bu.edu"> email me</a>
+with questions or suggestions.
+<p>
+
+
+
+

@@ -1,0 +1,124 @@
+	Hello, All,
+
+
+	Here are the minutes of the international supernova network
+meeting held during Neutrino '98 in Takayama, Japan. 
+
+	In attendance: John Bahcall, Barry Barish, Mark Chen, Peter Doe,
+Steve Elliot, Giorgio Giacomelli, Alec Habig, Jaret Heise, Guy Jonkmans,
+Albrecht Karle, Art McDonald, Piero Monacelli, Hamish Robertson, 
+Oscar Saavedra, Kate Scholberg, Yoichiro Suzuki, Yoji Totsuka,
+Mark Vagins, Chris Waltham, and Dave Wark 
+ 
+
+	Art McDonald called the meeting to order at 18:40 (JST) on Friday,
+June 5th.  The participants (listed above) introduced themselves. 
+
+	Kate Scholberg summarized the current status of the network -
+MACRO has been online (feeding supernova signals to KABOOM, the current SN
+network computer) since March 1998, and Super-Kamiokande has been online
+since May 1998.  The two experiments are therefore now running in
+coincidence, though at this stage coincident SN alerts are not being
+broadcast yet.  This should change sometime during the summer after the
+initial shakedown period is over. 
+
+	A general (brief) discussion on the dynamics of neutrino
+generation in supernovae ensued.  Are we sure how are the pulses observed
+by the current and future participating detectors going to look?  Good,
+theoretically-backed detector performance studies are needed using the
+most up-to-date gravitational collapse models available. 
+
+	John Bahcall characterized the response time of the Hubble Space
+Telescope in the case of a target of opportunity - 
+A response in 7 days or less is almost certain, but a minimum of 2 days is
+needed to slew on target. This is unfortunately too slow to catch the
+earliest light which we are hoping to intercept. 
+
+	However, apart from the HST, John B. assured us that Schmidt
+telescopes with 6-degree-wide fields of view could be used on a much
+shorter time scale to search a portion of the sky indicated by an early
+alert, with the hope of pinpointing the event. 
+
+	A general discussion followed on how our alert would go out to the
+community.  The IAU telegram and the existing Gamma-Ray Burst Network were
+brought up.  Most likely an early alarm issued by the supernova network
+would be used to alert/target a second level search with wide-field scopes
+and/or orbiting all-sky devices.  This second layer (which would then
+presumably be out of our hands) would issue its own refined targeting
+information once the earliest light was observed, allowing narrow-field
+instruments to be used productively. 
+
+	This lead to talk about how to get the astronomical community on
+board with us. John B. offered to use his considerable contacts towards
+this end. 
+
+	There was then a discussion about coordinating downtime on the
+participating SN network experiments.  Although minor, unscheduled
+experiment drop-outs are inevitable from time to time, perhaps major
+detector renovations and calibration periods could be synchronized so as
+to minimize overlap with sufficient communication between experimental
+groups. 
+
+	Barry Barish then raised the topic of a gravity wave fast alarm
+network which he is currently involved in setting up.  The participating
+experiments will exchange complete waveforms of their relevant signals,
+and the experiments will be polled every half-hour to see who is online. 
+Barry proposed using this as a model of cooperation between the
+experiments in the fledgling SN network, advocating that we should figure
+out just what we are *technically* capable of in the absence of political
+constraints and go from there. 
+
+	At this point Art brought up the idea of a workshop to discuss
+these and other matters at length, proposing Sudbury as a prospective
+location for such a meeting. 
+
+	It was accepted that such a meeting was a good idea, since we
+obviously were not going to be able to address all of the important issues
+during the current gathering.  Kate S. and Alec Habig offered to host a
+workshop at Boston, sometime in August or September (based on what the SN
+folks decided via e-mail was the best time).  Mark Vagins offered to play
+host at Irvine for the next such meeting, which would likely be held
+sometime during the coming winter months. 
+
+	It was generally agreed upon that holding an international
+supernova network workshop at Boston in the summer and one at Irvine in
+the winter was the path to follow.  Ideally each meeting would be attended
+by less than thirty active participants (including theorists and
+astronomers). Each experiment in the network would be represented by a
+local expert who would have the responsibility of coordinating their
+experiment's signal with the network. 
+
+	(At this point Peter Doe volunteered and was approved as SNO's
+official network representative.)
+
+	Topics suggested for the workshop(s) included SN modeling, both
+theoretical and in terms of detector response;  ways to get astronomers
+involved; potential for increasing the power of triangulation timing by
+ganging nearby detector signals together; and so on. 
+
+	Mark V. then talked about his triangulation studies and computer
+simulations based on the comparison of burst arrival times at different
+detectors - 
+Using a straightforward model of neutrino arrival times and detector
+responses, for a supernova 8 kpc distant, Super-K, SNO, and MACRO in
+coincidence tend to define a swath in the sky. If the galactic plane is
+used to constrain the allowed region of the sky then a target box
+approximately 20 degrees by 10 degrees results, which is approximately
+0.3% of the entire sky.  Adding a fourth detector (in this case an
+upgraded AMANDA) into the mix yields a point-like target box about 10
+degrees by 5 degrees at 8 kpc.  This is approximately 0.1% of the sky.  At
+4 kpc with four detectors the box shrinks to 4 degrees by 2.5 degrees. 
+Surely this last represents an optimistic case!
+
+	Albrecht Karle told us a little about AMANDA's status and plans
+for the future.  There was then some discussion as to whether we might be
+able to influence the community's choice of where to build the next big
+neutrino detector (we seem to have plenty of them between 36 and 47
+degrees north latitude), after which it was time to adjourn the meeting. 
+
+
+					Respectfully submitted,
+					    -Mark Vagins	        
+
+	
+
