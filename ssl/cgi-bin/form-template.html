@@ -25,6 +25,7 @@
 </option><option value="LVD">LVD
 </option><option value="SNO">SNO
 </option><option value="Super-Kamiokande">Super-Kamiokande
+</option><option value="None">None (server testing)
 </option></select>
 
 <p><em>Short descriptive comment (e.g., "Calibration", "Power
@@ -33,17 +34,12 @@ Outage", etc.):</em><br>
 
 <hr>
 
-<p><h3>Start of Downtime: (must be <font COLOR="#FF0000">UTC!</font>):</em><br>
+<p><h3>Start of Downtime:</em><br>
 
 <table>
 <tr>
 <td><center>&nbsp; Year: &nbsp;<br>
-<select name="startyear" size="8"><option value="1999">1999
-</option><option value="2000">2000
-</option><option value="2001">2001
-</option><option value="2002">2002
-</option><option value="2003">2003
-</option><option value="2004">2004
+<select name="startyear" size="8"><option value="2004">2004
 </option><option value="2005">2005
 </option><option value="2006">2006
 </option><option value="2007">2007
@@ -98,7 +94,7 @@ Outage", etc.):</em><br>
 </option><option value="30">30
 </option><option value="31">31
 </option></select>
-<td><center>&nbsp; Hour (UTC): &nbsp;<br>
+<td><center>&nbsp; Hour: &nbsp;<br>
 <select name="starthour" size="8"><option value="00">00
 </option><option value="01">01
 </option><option value="02">02
@@ -132,19 +128,27 @@ Outage", etc.):</em><br>
 </option><option value="45">45
 </option></select>
 <br></center></td>
+<td><center>&nbsp; Time Zone: &nbsp;<br>
+<select name="startzone" size="8"><option value="UTC">UTC
+</option><option value="America/Montreal">America/Montreal
+</option><option value="Asia/Tokyo">Asia/Tokyo
+</option><option value="US/Eastern">US/Eastern
+</option><option value="US/Central">US/Central
+</option><option value="US/Mountain">US/Mountain
+</option><option value="US/Pacific">US/Pacific
+</option><option value="Europe/Rome">Europe/Rome
+</option><option value="Europe/Zurich">Europe/Zurich
+</option><option value="Antarctica/South_Pole">Antarctica/South_Pole
+</option></select>
+<br></center></td>
 </tr><table>
 <p><hr>
 
-<p><h3>End of Downtime: (must be <font COLOR="#FF0000">UTC!</font>):</em><br>
+<p><h3>End of Downtime:</em><br>
 <table>
 <tr>
 <td><center>&nbsp; Year: &nbsp;<br>
-<select name="endyear" size="8"><option value="1999">1999
-</option><option value="2000">2000
-</option><option value="2001">2001
-</option><option value="2002">2002
-</option><option value="2003">2003
-</option><option value="2004">2004
+<select name="endyear" size="8"><option value="2004">2004
 </option><option value="2005">2005
 </option><option value="2006">2006
 </option><option value="2007">2007
@@ -199,7 +203,7 @@ Outage", etc.):</em><br>
 </option><option value="30">30
 </option><option value="31">31
 </option></select>
-<td><center>&nbsp; Hour (UTC): &nbsp;<br>
+<td><center>&nbsp; Hour: &nbsp;<br>
 <select name="endhour" size="8"><option value="00">00
 </option><option value="01">01
 </option><option value="02">02
@@ -257,13 +261,18 @@ is offline.
 <hr>
 
 <address>Problems, questions, suggestions?
-Send e-mail to schol@mit.edu</address>
+Send e-mail to schol@phy.duke.edu</address>
 
 <p>
 <a href="http://www.nsf.gov">
-<img src="nsf.gif" align=center alt="[NSF]" border=0>
-</a>
-SNEWS is funded by National Science Foundation award PHY-0303196.
+<img src="nsf.gif" align=center alt="[NSF]" border=0></a> <small>SNEWS is
+based on work supported by the National Science Foundation under grants
+PHY-0303196 and PHY-0302166.</small>
+
+<p><small><i>Any opinions, findings, and conclusions or
+recommendations expressed in this material are those of the author(s)
+and do not necessarily reflect the views of the National Science
+Foundation.</i></small>
 
 
 <!-- Hidden form element for CGI use -->

@@ -1,4 +1,4 @@
-#!/usr/bin/python2.2
+#!/usr/bin/python
 
 # cLQRecord class
 # Blake Stacey (bstacey@mit.edu)
@@ -86,7 +86,7 @@ class cLQRecord:
 
         sTime = self.EndDay + " " + self.EndMonth + " " + self.EndYear \
                 + " " + self.EndHour + "h" + self.EndMin
-        return int(time.mktime(time.strptime(sTime, "%d %b %Y %Hh%M")))
+        return int(time.mktime(time.strptime(sTime, "%d %B %Y %Hh%M")))
     
     def EpochStartTime(self):
         # return the starting time in epoch seconds
@@ -94,7 +94,7 @@ class cLQRecord:
 
         sTime = self.StartDay + " " + self.StartMonth + " " + self.StartYear \
                 + " " + self.StartHour + "h" + self.StartMin
-        return int(time.mktime(time.strptime(sTime, "%d %b %Y %Hh%M")))
+        return int(time.mktime(time.strptime(sTime, "%d %B %Y %Hh%M")))
     
     def __init__(self, sPathName):
         # initialization routine (constructor)
