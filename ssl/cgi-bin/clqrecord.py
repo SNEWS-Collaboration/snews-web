@@ -72,7 +72,7 @@ class cLQRecord:
         sRow = sRow + "<td>" + self.EndMonth + "</td>"
         sRow = sRow + "<td>" + self.EndDay + "</td>"
         sRow = sRow + "<td>" + self.EndHour + ":" + self.EndMin + "</td>"
-        sRow = sRow + "<td><img src=\"" + self.BallFiles[self.Grade] + \
+        sRow = sRow + "<td><img src=\"/images/" + self.BallFiles[self.Grade] + \
                "\"></td>"
         sRow = sRow + "<td>" + self.Comment + "</td>"
         sRow = sRow + "</tr>"
