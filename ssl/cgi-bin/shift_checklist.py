@@ -1,4 +1,4 @@
-#!/usr/bin/python2.2
+#!/usr/bin/python
 
 # Shift checklist, based on Blake's downtime script
 
@@ -24,13 +24,14 @@ import time
 
 
 # Note my trademark usage of excessive Hungarian notation.
-sHomeDir = "/var/www/ssl/snnet/"
-sDBDir = "/var/www/ssl/snnet/cgi-bin/db/"
-sSnnetURL = "https://cyclo.mit.edu/snnet"
-sCgiURL = "https://cyclo.mit.edu/snnet/cgi-bin/shift_checklist.py"
+sHomeDir = "/wwwhosts/snews.bnl.gov/web/ssl/"
+sDBDir = sHomeDir + "cgi-bin/db/"
+sTableDir = sHomeDir +  "downtime/"
+sSnnetURL = "https://snews.bnl.gov"
+sCgiURL = "https://snews.bnl.gov/cgi-bin/downtime.py"
 sTemplateFile = "shift_template.html"
 sFormFile = "shift_checklist-template.html"
-sShiftLogFile = "/var/www/ssl/snnet/cgi-bin/logfile.html"
+sShiftLogFile = sHomeDir + "cgi-bin/logfile.html"
 sShiftEmailFile = "remindme"
 
 SENDMAIL = "/usr/sbin/sendmail"
