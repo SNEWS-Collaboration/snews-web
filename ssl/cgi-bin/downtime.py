@@ -1,4 +1,4 @@
-#!/usr/bin/python2.2
+#!/usr/bin/python
 
 # Downtime tracking script
 # Blake Stacey (bstacey@mit.edu)
@@ -51,8 +51,10 @@ from clqrecord import cLQRecord
 sHomeDir = "/var/www/ssl/snnet/"
 sDBDir = "/var/www/ssl/snnet/cgi-bin/db/"
 sTableDir = "/var/www/ssl/snnet/wg/downtime/"
-sSnnetURL = "https://cyclo.mit.edu/snnet"
-sCgiURL = "https://cyclo.mit.edu/snnet/cgi-bin/downtime.py"
+#sSnnetURL = "https://cyclo.mit.edu/snnet"
+sSnnetURL = "https://snews.phy.bnl.gov"
+#sCgiURL = "https://cyclo.mit.edu/snnet/cgi-bin/downtime.py"
+sCgiURL = "https://snews.phy.bnl.gov/cgi-bin/downtime.py"
 sTemplateFile = "template.html"
 sFormFile = "form-template.html"
 sTableFile = "table-template.html"
