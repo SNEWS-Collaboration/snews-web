@@ -13,13 +13,24 @@
 
 \begin{probdesc}{1}{How Big is a Neutrino Detector?}
 The sizes of neutrino detectors are often measured in {\em kilotons.}
-One kiloton is a thousand tons or two million kilograms, so a
-ten-kiloton water-based detector contains twenty million kilograms of
-water in its tank (when it is completely filled).  For the following,
-it may be useful to know that the density of water is about 1 gram per
-cubic centimeter, or 1 kilogram per liter.  Also, according to the way
-the metric system was defined, it takes 1000 ($10^3$) liters to make
-up one cubic meter.
+One kiloton is a thousand tons or one million kilograms, so a
+ten-kiloton water-based detector contains one million kilograms of
+water in its tank (when it is completely filled).  (The infamous
+sea-going vessel HMS {\em Titanic} had a mass of about 26 kilotons.)
+For the following, it may be useful to know that the density of water
+is about 1 gram per cubic centimeter, or 1 kilogram per liter.  Also,
+according to the way the metric system was defined, it takes 1000
+($10^3$) liters to make up one cubic meter.
+
+\begin{enumerate}
+\item[(a)] Suppose we want to build a 50-kiloton water-based neutrino
+  detector.  As a first estimate to the size our tank must be, imagine
+  that the tank will be built in the shape of a cube.  How many meters
+  long must the side of the cube be to hold 50 kilotons of H$_2$O when
+  it is completely filled?
+
+\item[(b)]
+\end{enumerate}
 
 \end{probdesc}
 
@@ -78,11 +89,12 @@ second.
   \begin{equation}
     E = \frac{hc}{\lambda}
   \end{equation}
-  where $h$ is {\em Planck's constant,} a number which experiments show
-  is roughly .  (Don't worry about the units too much
-  for this problem.)  What is the wavelength of the photon whose energy
-  you calculated in part (b)?  In which part of the electromagnetic
-  spectrum does this photon fall---can you see it with the naked eye?
+  where $h$ is {\em Planck's constant,} a number which experiments
+  show is roughly $6.626\times10^{-34}$ joule-seconds.  (Don't worry
+  about the units too much for this problem.)  What is the wavelength
+  of the photon whose energy you calculated in part (b)?  In which
+  part of the electromagnetic spectrum does this photon fall---can you
+  see it with the naked eye?
 
 \item[(d)] Astrophysicists estimate that a Type II supernova can release
   joules of energy.  Using Einstein's equation, find how many
@@ -98,7 +110,7 @@ second.
 \begin{tabular}{cccc}
 \hline\hline\\
 Shape & Characteristic Length & Surface Area & Volume \\
-\hline\\
+\hline
 Cube & Side $a$ & $8a^2$ & $a^3$\\
 Sphere & Radius $r$ & $4\pi r^2$ & $\frac{4\pi}{3}r^3$\\
 Cylinder & Height $h$, Radius $r$ & $2\pi r^2  + 2\pi rh$
@@ -109,27 +121,47 @@ Cylinder & Height $h$, Radius $r$ & $2\pi r^2  + 2\pi rh$
 \end{table}
 
 \begin{table}[!h]
-\begin{tabular}{ccccc}
+\begin{tabular}{cccccc}
 \hline\hline\\
-Particle & Mass (kg) & Mass (MeV/$c^2$) & Charge & Spin \\
-\hline\\
-Electron & $9.109\times10^{-31}$ & $0.511$ & $-1$ & $\frac{1}{2}$\\
-Proton & $$ & $$ & $+1$ & $\frac{1}{2}$\\
-Neutron & $$ & $$ & $+1$ & $\frac{1}{2}$\\
-Photon & $$ & $$ & $0$ & $0$\\
-Neutrino & $\approx 0$ & $\approx 0$ & $0$ & $\frac{1}{2}$\\
+Particle & Symbol & Mass (kg) & Mass (eV/$c^2$) & Charge & Spin \\
+\hline
+Electron &$e^-$& $9.109\times10^{-31}$ & $5.11\times10^5$ 
+  & $-1$ & $\frac{1}{2}$\\
+Proton & $p$ & $1.673\times10^{-27}$ & $9.38\times10^8$ 
+  & $+1$ & $\frac{1}{2}$\\
+Neutron & $n$ &  $1.675\times10^{-27}$ & $9.40\times10^8$ 
+  & $+1$ & $\frac{1}{2}$\\
+Photon & $\gamma$ & $0$ & $0$ & $0$ & $0$\\
+Electron Neutrino & $\nu_e$& $\approx 0$ & $< 2.5$ & $0$ & $\frac{1}{2}$\\
+Muon Neutrino & $\nu_\mu$ & $< 3\times10^{-31}$ & $< 1.7\times10^5$ 
+  & $0$ & $\frac{1}{2}$\\
+Tau Neutrino & $\nu_\tau$ & $< 3\times10^{-29}$ & $< 1.8\times10^7$ 
+  & $0$ & $\frac{1}{2}$\\
 \hline\hline\\
 \end{tabular}
 \caption{Basic properties of common particles.  Charges are given
 in multiples of the fundamental charge unit, $1.602\times10^{-19}$ coulombs.}
 \end{table}
 
+\begin{table}[!h]
+\begin{tabular}{cccc}
+\hline\hline\\
+Object & Mass (kg) & Radius (km) & Distance (km) \\
+\hline
+Earth & $5.9736\times10^{24}$ & 6,400 & --- \\
+Moon & $7.348\times10^{22}$ & 1738 & 384,400\\
+Jupiter & $1.899\times10^{27}$ & $71,492$ & 620 to 920 million \\
+Sun & $1.9891\times10^{30}$ & $6.960\times10^5$ & $149.6$ million \\
+\hline\hline\\
+\end{tabular}
+\caption{Masses and distances from Earth for various astronomical bodies.}
+\end{table}
 
 \begin{table}[!h]
 \begin{tabular}{cccc}
 \hline\hline\\
 Fuel & Main Product & $T$ (10$^9$ K) & Duration (yr)\\
-\hline\\
+\hline
 H & He & 0.037 & $8.1\times10^6$\\
 He & O, C & 0.19 & $1.2\times10^6$\\
 C & Ne, Mg & 0.87 & $9.8\times10^2$\\
