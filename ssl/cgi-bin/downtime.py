@@ -48,13 +48,19 @@ import time
 from clqrecord import cLQRecord
 
 # Note my trademark usage of excessive Hungarian notation.
-sHomeDir = "/var/www/ssl/snnet/"
-sDBDir = "/var/www/ssl/snnet/cgi-bin/db/"
-sTableDir = "/var/www/ssl/snnet/wg/downtime/"
+
+#sHomeDir = "/var/www/ssl/snnet/"
+#sDBDir = "/var/www/ssl/snnet/cgi-bin/db/"
+#sTableDir = "/var/www/ssl/snnet/wg/downtime/"
 #sSnnetURL = "https://cyclo.mit.edu/snnet"
-sSnnetURL = "https://snews.phy.bnl.gov"
 #sCgiURL = "https://cyclo.mit.edu/snnet/cgi-bin/downtime.py"
+
+sHomeDir = "/wwwhosts/snews.bnl.gov/web/ssl/"
+sDBDir = sHomeDir+"cgi-bin/db/"
+sTableDir = sHomeDir+"wg/downtime/"
+sSnnetURL = "https://snews.phy.bnl.gov"
 sCgiURL = "https://snews.phy.bnl.gov/cgi-bin/downtime.py"
+
 sTemplateFile = "template.html"
 sFormFile = "form-template.html"
 sTableFile = "table-template.html"
