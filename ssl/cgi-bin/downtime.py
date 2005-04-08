@@ -435,7 +435,7 @@ def ProcessForm(form):
     # send an e-mail to snews-downtime with the new entry's specs
     hListAll = open(sDBDir + "list.all", "a")
     p = os.popen("%s -t -i" % SENDMAIL, "w")
-    p.write("To: schol@phy.duke.edu\n")
+    p.write("To: snews-downtime@snews.bnl.gov\n")
     #p.write("To: bstacey@mit.edu\n")
     p.write("Subject: snews-downtime entry %d\n" % iEntryNum)
     p.write("\n")
