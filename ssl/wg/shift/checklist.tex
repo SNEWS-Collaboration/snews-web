@@ -1,0 +1,106 @@
+\documentclass{article}
+
+\begin{document}
+
+\title{SNEWS Shift Manual}         
+\maketitle
+
+\section{Shift Checks}      
+
+Twice per day (morning and evening) perform the following checks
+and make the corresponding entries in the online shift log page at\\
+\texttt{https://snews.bnl.gov/wg/shift/}.
+
+\begin{itemize}
+
+\item Check that the server is running on bnlboom1:
+  
+\begin{verbatim}
+bnlboom1:~> ps -u snalert
+  PID TTY          TIME CMD
+15976 ?        00:00:00 sh <defunct>
+15984 ?        00:00:00 gcserv
+15985 ?        00:00:00 gcserver.csh
+15986 ?        00:00:00 gcserver
+ 6778 ?        00:00:00 sshd
+ 6781 pts/2    00:00:00 tcsh
+\end{verbatim}
+There should be three processes in memory, as listed above.
+
+\item Check the server log file, \texttt{/home/snalert/gcalert/out/gcserver.out}.  Are there any unusual error messages or alarm records?
+If any experiment is giving an unusually high rate of alarms, the
+shifter should contact that experiment's subgroup member.
+
+\item Note anything unusual in the online logbook, and contact
+the relevant people if anything unusual is found.  
+
+\item Send a ping message from your experiment's client machine, using
+the \texttt{cping} utility, $e.g.$
+
+\begin{verbatim}
+cping all 0 0 0 1
+\end{verbatim}
+
+The arguments of \texttt{cping} are: server, ddmmyy, hhmmss, ns,
+experiment.  If the first argument is ``all'', it will read
+\texttt{serv\_ip\_addr.dat} (recommended).  Note that your working
+directory must have this file (and must also have the client
+certificates).
+If ddmmyy, hhmmss, ns are all zero, it will send the
+current UTC according to your
+computer's clock (recommended).  Put your experiment's number as the last
+argument.  To cause the server to dump the contents of the queue
+to the log, add 100 to the experiment number.
+
+After sending the ping, check that it showed up in the log. 
+
+
+\item Check that your communications equipment is running,
+batteries charged, etc.
+
+\item If it is your last shift: send email reminder to the
+next shiftworker.
+
+\end{itemize}
+
+\newpage
+
+\section{Contact List}      
+
+
+See \texttt{https://snews.bnl.gov/wg/contact\_list.html} for 
+alert contact info.\\
+\vspace{0.05in}
+
+\noindent
+\textbf{Alec Habig}
+
+\noindent
+Email: habig@neutrino.d.umn.edu\\
+Office: 218-726-7214\\
+Home: 218-724-9158\\
+Cell: 218-290-4706\\
+Soudan: 218-753-6611\\
+
+\vspace{0.05in}
+
+\noindent
+\textbf{Kate Scholberg}
+
+\noindent
+Email: schol@phy.duke.edu\\
+Office: 919-660-2962\\
+Home: 919-402-1606 \\
+Cell: 919-698-2620\\
+
+\vspace{0.05in}
+
+\noindent
+\textbf{Brett Viren} (SNEWS sysadmin)
+
+\noindent
+Email: bv@bnl.gov\\
+Office: 516-632-8085\\
+
+
+\end{document}
