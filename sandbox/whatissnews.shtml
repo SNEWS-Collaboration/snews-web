@@ -1,0 +1,60 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <title>What is SNEWS?</title>
+   <link rel="stylesheet" href="snews.css" type="text/css">
+</head>
+<body>
+	<!-- #include virtual="navbar.html" -->	
+	<center> <h1>SNEWS:</h1></center>
+
+<center>
+<h1> SuperNova Early Warning System</h1></center> 
+<center>
+<h4>
+<img SRC="logo.gif" height=241 width=391></h4></center>
+
+<p><br>World-wide, several detectors
+currently running or nearing completion are sensitive to a core collapse
+supernova neutrino signal in the Galaxy. The neutrino signal emerges promptly
+from a supernova's core, whereas it may take hours for the first photons
+to be visible. Therefore, the detection of the neutrino burst from the
+next Galactic supernova can provide an early warning for astronomers. Putting
+several detectors in coincidence can provide the astronomical community
+with a very high confidence early warning of the supernova's occurrence.
+In addition, the SNEWS alarm may be able to serve as a trigger for detectors
+which are not able to trigger on a supernova signal by themselves, allowing
+extra data to be saved.</p>
+
+<p>The SNEWS project involves an international
+collaboration of experimenters representing current supernova neutrino
+detectors. In addition, gravitational wave detectors will be involved.
+The goal of SNEWS is to provide the astronomical community with a prompt
+alert of the occurrence of a Galactic core collapse event. We are also
+engaged in cooperative inter-experiment work, such as downtime coordination
+and inter-experiment timing verification, designed to optimize global sensitivity
+to a core collapse supernova signal.
+</p>
+
+<p>For more information, see <a href="http://www.astronomy.com/asy/default.aspx?c=a&id=3232">Francis
+Reddy's article</a> in <i>Astronomy</i> Magazine Online and the <a href="http://stacks.iop.org/1367-2630/6/114">technical
+report</a> in the <i>New Journal of Physics</i>.
+</p>
+
+<p><a href="http://www.nsf.gov"><img SRC="nsfblack.gif" ALT="[NSF]" NOSAVE BORDER=0 height=59 width=59 align=CENTER></a>&nbsp;
+SNEWS is based on work supported by the National Science Foundation under
+grants PHY-0303196 and PHY-0302166.
+</p>
+
+<p><em>Any opinions, findings, and conclusions
+or recommendations expressed in this material are those of the author(s)
+and do not necessarily reflect the views of the National Science Foundation.</em>
+</p>
+
+<p>Logo Above: The Greek <i>nu</i>
+superimposed upon a photo of Supernova 1987A (photo courtesy of <a href="http://hubblesite.org/newscenter/newsdesk/archive/releases/1994/22/image/a" target="_top">HubbleSite</a>).
+</p>
+
+</body>
+</html>
