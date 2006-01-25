@@ -6,7 +6,7 @@
    <link rel="stylesheet" href="snews.css" type="text/css">
 </head>
 <body>
-	<!-- #include virtual="navbar.html" -->	
+	<!--#include virtual="navbar.html" -->	
 	<center> <h1>SNEWS:</h1></center>
 
 <center>
