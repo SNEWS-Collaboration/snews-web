@@ -1,0 +1,363 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath,amssymb,fullpage,graphics,graphicx,yuniorlab}
+\usepackage{problemset,url}
+
+\begin{document}
+
+\title{SNEWS Word Problems}
+\author{}
+\date{}
+\maketitle
+
+{\em Note to teachers:}  I have not been explicit with the
+``significant figures'' in these calculations.  Astronomical
+measurements are frequently imprecise:  we might be happy to measure a
+star's mass to within five solar masses, for example.  In constructing
+these problems, I have opted to stress concepts, rather than
+arithmetic.  I would advise grading on a partial credit system, giving
+several points to a student if he or she can manipulate the necessary
+equation in the proper way, even if the arithmetic in the end has a
+mistake or two.  If ``sig figs'' are a large part of your curriculum
+(as I know they were in my day), you may wish to grade them more heavily.
+
+\section{Exercise Solutions}
+
+\begin{probdesc}{1}{How Big is a Neutrino Detector?}
+
+\begin{enumerate}
+\item[(a)] 
+We can find the volume with a little dimensional analysis, a good
+exercise in scientific notation:
+\begin{eqnarray}
+50{\rm\ kilotons} &=& \frac{10^6 {\rm\ kg}}{1 {\rm\ kiloton}}
+  \times \frac{1 {\rm\ L}}{1 {\rm\ kg}}
+  \times \frac{1 {\rm\ m}^3}{10^3 {\rm\ L}} \nonumber\\
+&=& 5 \times 10^1 \times 10^6 \times 10^{-3} {\rm\ m}^3 \nonumber\\
+&=& 5 \times 10^4 {\rm\ m}^3.\nonumber
+\end{eqnarray}
+``To a first approximation'', as the scientists say, we guess that the
+tank is cubic.  Therefore, to find the length of its side, we take the
+cube root:
+\begin{equation}
+\boxed{a = \sqrt[3]{5\times10^4 {\rm\ m}^3} \approx 36.8 {\rm\ m}.}
+\end{equation}
+
+\end{enumerate}
+
+\end{probdesc}
+
+\begin{probdesc}{2}{How Strong is the Signal?}
+All the parts of this problem can be solved using the given equation
+for intensity:
+\begin{equation}
+I(R) = I_0 \left(\frac{R_0}{R}\right)^2.
+\end{equation}
+
+\begin{enumerate}
+\item[(a)] Here, we're told that $I_0 = 1 \frac{\rm J}{{\rm m}^2 \rm
+  s}$, that $R_0 = 10$m and that we wish to know the intensity at $R =
+  30$m.  Plug the distances we know into the equation:
+\begin{eqnarray}
+I(30 {\rm\ m}) &=& I_0 \left(\frac{10 \rm\ m}{30 \rm\ m}\right)^2
+  \nonumber\\
+&=& I_0 \left(\frac{1}{3}\right)^2 \nonumber\\
+&=& \frac{I_0}{9} \nonumber\\
+&=& \frac{1}{9}\frac{\rm J}{{\rm m}^2 \rm s},\nonumber
+\end{eqnarray}
+or in decimal form,
+\begin{equation}
+\boxed{I(30 {\rm\ m}) \approx 0.11 \frac{\rm J}{{\rm m}^2 \rm s}.}
+\end{equation}
+
+
+\item[(b)] This part may be a little trickier, because we're not told
+  what $I_0$ is.  However, knowing algebra means we don't {\em have}
+  to know $I_0$.  What we are told is that
+\begin{equation}
+I(R) = \frac{1}{100} I_0.
+\end{equation}
+We can plug this information into the intensity equation, like so:
+\begin{equation}
+I(R) = I_0\left(\frac{R_0}{R}\right)^2 = \frac{1}{100} I_0.
+\end{equation}
+Whatever $I_0$ is, it is surely a number greater than zero (otherwise,
+the supernova would be invisible!).  Therefore, we can divide both
+sides by the unknown quantity:
+\begin{equation}
+\left(\frac{R_0}{R}\right)^2 = \frac{1}{100}.
+\end{equation}
+Taking the square root of both sides, we find that
+\begin{equation}
+\frac{R_0}{R} = \frac{1}{10}.
+\end{equation}
+Cross-multiplying now shows that
+\begin{equation}
+\boxed{R = 10R_0 = 10 \rm\ megaparsecs.}
+\end{equation}
+\end{enumerate}
+\end{probdesc}
+
+\begin{probdesc}{3}{Temperature Scales}
+The key formula here is
+\begin{equation}
+K = C + 273.15 = \frac{F + 459.67}{1.8}.
+\end{equation}
+
+\begin{enumerate}
+\item[(a)] Well, there's no guarantee exactly what you find a
+  comfortable room temperature, but lots of people seem to agree on
+  around $72^\circ$F.  In kelvins, this is
+\begin{equation}
+\frac{72 + 459.67}{1.8} \approx 295.4 K.
+\end{equation}
+Subtract 273.15 $K$ to get the Celsius equivalent temperature, about
+$22^\circ$C.
+
+\item[(b)] Again, just subtract 273.15 $K$:
+\begin{equation}
+5500^\circ C - 273.15^\circ C = 5226.85\ K.
+\end{equation}
+\end{enumerate}
+
+\end{probdesc}
+
+\begin{probdesc}{4}{Stellar Masses}
+Over the last several decades, scientists have discovered that the
+mass of a star is the single most important factor in determining how
+long it will ``live'' and in what fashion it will ``die''.
+Frequently, masses for distant stars are given as multiples of our
+Sun's mass.
+
+\begin{enumerate}
+\item[(a)] First, we multiply the mass of the sun (given in the data
+  table) by 15:
+\begin{equation}
+15 M_{\rm Sun} \approx 2.98 \times 10^{31} {\rm\ kg}.
+\end{equation}
+This answers part (i); to solve part (ii), divide the previous result
+by the mass of the Earth:
+\begin{equation}
+2.98\times 10^{31} {\rm kg} \times
+\frac{1 M_{\rm Earth}}{5.9736\times10^{34} \rm\ kg}
+\approx 5.0\times10^6 M_{\rm Earth}.
+\end{equation}
+
+\item[(b)] 70 Jupiter masses is about $1.33\times10^{29}$ kg.  Dividing
+  this by $M_{\rm Sun}$ (the same value we used in part (a)) shows that
+  70 Jupiter masses is about 0.067 solar masses.
+\end{enumerate}
+\end{probdesc}
+
+\begin{probdesc}{6}{Half-Lives}
+Here, all the problems can be solved using the half-life decay equation,
+\begin{equation}
+N(t) = N_0 \cdot \left(\frac{1}{2}\right)^{t / \tau}.
+\end{equation}
+It may be a useful hint to know that $N(t)$ and $N_0$ can be in any
+units we wish:  grams, atoms, moles, etc.  If we measure $N_0$ in
+grams, $N(t)$ will be in grams.  Likewise, as long as $t$ and $\tau$
+are in the same units---seconds, years, or what have you---we don't
+need to be picky about what units to use.  It is not necessary to
+convert everything to seconds first!
+
+\begin{enumerate}
+\item[(a)] {\em Radium decay.}  We're told that the decay process for
+  radium obeys the rule
+  \begin{equation}
+    ^{226}{\rm Ra} \rightarrow ^4{\rm He} + ^{222}{\rm Rn}.
+  \end{equation}
+  Here, $\tau = 1602$ years, and we're told that the time period $t$
+  is 1000 years.  Any decent calculator can handle the tough work:
+\begin{equation}
+N(t) = 10 {\rm\ g} \cdot \left(\frac{1}{2}\right)^{\frac{1000}{1602}}
+  \approx 6.49 {\rm\ g}.
+\end{equation}
+Radioactive decay ``burns up'' 3.51 g of radium, leaving 6.49 g
+behind.  (Remember, this process takes a thousand years!)  A little
+chemistry can tell us how much radon is released.  We know that every
+atom of radium which decays releases one atom of radon, and the
+Periodic Table informs us that one mole of radium has a mass of
+226.0254 grams.  Furthermore, at ``standard temperature and pressure''
+(273.15 $K$ and 1 atmosphere), one mole of any gas takes up 22.4
+liters of space.  Using these facts, a little dimensional analysis
+shows that
+\begin{equation}
+3.51 {\rm\ g\ Ra} \cdot
+\frac{1 \rm\ mol\ Ra}{226.0254 \rm\ g\ Ra} \cdot
+\frac{1 \rm\ mol\ Rn}{1 \rm\ mol\ Ra} \cdot
+\frac{22.4 \rm\ L\ Rn}{1 \rm\ mol\ Rn} = 0.348 \rm\ L\ Rn.
+\end{equation}
+
+
+\item[(b)] {\em Carbon-14 dating.} Here, we're given that $\tau =
+  5,730$ years.  The ``tricky'' part is that we don't know $N_0$ {\em
+  or} $N(t)$, but (like the intensity problem earlier) we know their
+  ratio.  The archaeologist measures that
+\begin{equation}
+N(t) = 0.80 N_0.
+\end{equation}
+Substituting this into the half-life equation, we find that
+\begin{equation}
+0.80 N_0 = N_0 \left(\frac{1}{2}\right)^{\frac{t}{\tau}}.
+\end{equation}
+Just like in the intensity problem, we can divide both sides by $N_0$:
+\begin{equation}
+0.80 = \left(\frac{1}{2}\right)^{\frac{t}{\tau}}.
+\end{equation}
+We can solve for $t/\tau$ using logarithms:
+\begin{equation}
+\frac{t}{\tau} = \log_{\frac{1}{2}} 0.80.
+\end{equation}
+Multiplying both sides by $\tau$ now shows that
+\begin{equation}
+t = \tau \log_{\frac{1}{2}} 0.80,
+\end{equation}
+which works out to about 1845 years.  This is a little {\em younger}
+than the coins claimed to be, but remember that they could have been
+put in the box when they were several years old already.
+
+What about the experimental error?  The archaeologist could only
+determine the carbon-14 content to within 2\%.  Supposing that the
+real value were 78\%, then the box would be
+\begin{equation}
+t = \tau \log_{\frac{1}{2}} 0.80 = 2054
+\end{equation}
+years old.  Likewise, you can work out that if the real value were
+82\%, the box would only be 1640 years old.  This gives an estimate of
+the error involved---and an indication of how tricky getting accurate
+measurements can be!
+
+\item[(c)] {\em Supernova light curve.}  We're told that nickel-56 has
+  a half-life of 6.077 days, and again we're given the ratio of $N(t)$
+  and $N_0$.  This time,
+\begin{equation}
+N(t) = \frac{1}{64} N_0.
+\end{equation}
+Using the half-life equation,
+\begin{equation}
+\frac{1}{64} N_0 = N_0 \left(\frac{1}{2}\right)^{\frac{t}{\tau}},
+\end{equation}
+and dividing both sides by $N_0$,
+\begin{equation}
+\frac{1}{64} = \left(\frac{1}{2}\right)^{\frac{t}{\tau}}.
+\end{equation}
+Here, it's helpful to know the powers of two.  You can easily check
+that $2^6 = 64$.  Turing this upside down, we see that
+\begin{equation}
+\left(\frac{1}{2}\right)^6 = \frac{1}{64}.
+\end{equation}
+Therefore, $\frac{t}{\tau} = 6$, and
+\begin{equation}
+\boxed{t \approx 36.5 \rm\ days.}
+\end{equation}
+
+\item[(d)] {\em Bonus.}  Since we just showed that in 36.5 days the
+  nickel-56 would be down to $\frac{1}{64}$ of its original amount, if
+  {\em all} the light came from nickel-56, then the supernova would
+  only be $\frac{1}{64}$ as bright.  Observing that it remains half
+  its original brightness after 80 days means that some other elements
+  are responsible.
+\end{enumerate}
+\end{probdesc}
+
+\begin{probdesc}{7}{Einstein's Equation}
+According to Einstein's Special Theory of Relativity, matter and
+energy are interchangeable.  It is possible to convert an amount of
+mass into pure energy, which may take the form of light or other
+electromagnetic radiation.  The exact rule is given by Einstein's
+famous equation,
+\begin{equation}
+E = mc^2.
+\end{equation}
+Here, $c$ is the speed of light, roughly $3\times10^8$ meters per
+second.  If $m$ is given in kilograms and $c$ in meters per second,
+then $E$ will have units of joules.
+\begin{enumerate}
+\item[(a)] Here, $m = 1$ kg.  According to Einstein's equation, then,
+\begin{equation}
+\boxed{E = (1 {\rm\ kg}) \cdot \left(3\times10^8 \frac{\rm m}{\rm
+    s}\right)^2 = 9\times10^{16} \rm J.}
+\end{equation}
+
+
+\item[(b)] Each photon should carry away half the energy of the
+  original electron-positron pair, but since the electron and the
+  positron have the same mass, each of the two photons should have the
+  ``mass-energy'' of one electron.  Here, it's helpful to use the
+  fourth column of the particle-data table, which gives masses in
+  terms of eV/$c^2$.  The table tells us that an electron has a mass
+  of $5.11\times10^5$ eV/$c^2$.  By Einstein's equation, we would
+  multiply this by $c^2$ to get the energy, but this just cancels the
+  $c^2$ already there!  Knowing that $1 {\rm MeV} = 10^6 {\rm
+  eV}$, we can immediately say that the mass-energy of one electron is
+  0.511~MeV.  Consequently, each photon has an energy of 0.511~MeV.
+
+  You can find the same result by using the mass in kilograms and
+  multiplying by $c^2 = 9\times10^{16} \frac{{\rm m}^2}{{\rm s}^2}$.
+  Remember that $1 {\rm\ eV} = 1.602\times10^{-19} {\rm J}$.
+
+\item[(c)] According to the quantum theory Max Planck helped found,
+  the wavelength of a photon is inversely proportional to its energy.
+  Typically, we use the Greek letter $\lambda$ ({\em lambda}) to stand
+  for the wavelength.  Planck's equation says that
+  \begin{equation}
+    E = \frac{hc}{\lambda}
+  \end{equation}
+  where $h$ is {\em Planck's constant,} a number which experiments
+  show is roughly $6.626\times10^{-34}$ joule-seconds.  There are (at
+  least) two ways to solve this part: we can either plug the value of
+  $E$ we found earlier into Planck's equation, or we can combine
+  Planck's equation with Einstein's.  The two approaches should give
+  identical answers.
+
+  To demonstrate the latter approach, first set the two formulas for
+  $E$ equal to each other:
+  \begin{equation}
+    mc^2 = \frac{hc}{\lambda}.
+  \end{equation}
+  We can multiply both sides by $\lambda$ to get
+  \begin{equation}
+    hc = \lambda m c^2,
+  \end{equation}
+  and we can divide both sides by $c$ to find
+  \begin{equation}
+    h = \lambda m c.
+  \end{equation}
+  Moving the $mc$ to the other side shows that
+  \begin{equation}
+    \lambda = \frac{h}{mc}.
+  \end{equation}
+  Plugging in all the values we've been given, the wavelength works
+  out to
+  \begin{equation}
+    \boxed{\lambda \approx 2.42 \times 10^{-12} {\rm m}.}
+  \end{equation}
+  This is far too small see with the naked eye; in fact, it is a {\em
+  gamma ray}, with a wavelength about 100 times smaller than the
+  diameter of a hydrogen atom.
+
+
+\item[(d)] Astrophysicists estimate that a Type II supernova can
+  release $10^{44}$ joules of energy.  We can turn this into a mass
+  measurement by using Einstein's equation in reverse:
+  \begin{equation}
+    m = \frac{E}{c^2} \approx 1.11\times10^{27} {\rm\ kg.}
+  \end{equation}
+  We suppose that the original star had a mass roughly twenty times
+  that of the Sun:
+  \begin{equation}
+    M = 20 M_{\rm Sun} \approx 3.9782\times10^{31} {\rm\ kg.}
+  \end{equation}
+  This is much larger than the mass $m$ which went into making the
+  supernova.  To see exactly how much larger, we compute the ratio:
+  \begin{equation}
+    \frac{m}{M} = 
+    \frac{1.11\times10^{27} \rm\ kg}{3.9782\times10^{31} \rm\ kg}
+    \approx 2.79\times10^{-5}.
+  \end{equation}
+  In everyday notation, the ratio is 0.0000279, or 0.00279\%.
+\end{enumerate}
+\end{probdesc}
+
+
+\end{document}
