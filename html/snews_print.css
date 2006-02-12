@@ -1,0 +1,24 @@
+
+
+.Navigation {
+	display: none;
+}
+
+body {
+	color: #000;
+	background: #fff;
+}
+
+*:link {
+	color: #333;
+}
+
+*:visited{
+	color: #111;
+}
+
+
+#Contents{
+	float: none;
+	width: 100%;
+}
