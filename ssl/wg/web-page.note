@@ -1,0 +1,17 @@
+Wed Feb 15 14:17:33 2006, Brett Viren
+
+List of files used to store data by CGI scripts.  These need to be
+writable by the user running apache (www-data).
+
+downtime.py:
+web/ssl/cgi-bin/db/
+web/ssl/cgi-bin/db/list.all
+web/ssl/cgi-bin/db/lastquery_*.dat
+
+Removed db/ from CVS entirely.
+
+shift_checklist.py:
+web/ssl/wg/shift/logfile.html
+web/ssl/wg/shift/remindme
+
+These were/are not in CVS.
