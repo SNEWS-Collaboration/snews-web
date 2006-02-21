@@ -16,7 +16,8 @@ a:hover {
 
 body {
 	font-size: 1em;
-	font-family: georgia, serif;
+	font-family: sans-serif;
+	/* font-family: georgia, serif; */
 	color: #ccc;
 	background: #000;
 	/* margin: 0px; */
@@ -25,6 +26,10 @@ body {
 .PTitle {
 	text-align: center;
 }
+
+h2 + h3 {
+	margin-top: -1em;
+} 
 
 .Navigation {
 	position: absolute;
@@ -101,6 +106,19 @@ div.figure_right {
 	padding: 10px;
 }
 div.figure_right p {
+	text-align: center;
+	font-style: italic;
+	text-indent: 0;
+}
+
+div.figure_left {
+	float: left;
+	border: thin silver solid;
+	margin: 5px 5px 5px 5px;
+	padding: 10px;
+}
+
+div.figure_left p{
 	text-align: center;
 	font-style: italic;
 	text-indent: 0;
