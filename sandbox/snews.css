@@ -1,0 +1,129 @@
+/* snews.css */
+/* CSS file for SNEWS public web pages */
+
+
+*:link {
+	color: #fff;
+}
+
+*:visited{
+	color: #f60;
+}
+
+a:hover {
+	color: #f00;
+}
+
+body {
+	font-size: 1em;
+	font-family: sans-serif;
+	/* font-family: georgia, serif; */
+	color: #ccc;
+	background: #000;
+	/* margin: 0px; */
+}
+
+.PTitle {
+	text-align: center;
+}
+
+h2 + h3 {
+	margin-top: -1em;
+} 
+
+.Navigation {
+	position: absolute;
+	float: left;
+	width: 20%;
+	height: auto;
+	line-height: 125%;
+	font-family: sans-serif;
+	font-size: 1em;
+	background: #222;
+	color: #ccc;
+	margin: 10px 10px 10px 10px;
+	padding: 0 5px 1em 5px; /* the H3 thing at the top makes me add 1em at the bottom */
+	border: 2px solid #555;
+}
+
+.Navigation ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.Navigation li {
+	border: 2px solid #000;
+	margin: 4px 4px 4px 4px;
+}
+	
+
+#Contents {
+	position: relative;
+	float: right;
+	margin-left: .5em;
+	width: 75%;
+	/* float: right; */
+	/* top: 0; */
+	/* border-left: 2px solid #333; */
+}
+
+div.figure {
+	margin: 0.5em;
+	padding: 0.5em;
+}
+div.figure p{
+	text-align: center;
+	font-style: italic;
+	font-size: smaller;
+	text-indent: 0;
+}
+
+IMG#headimg {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.floatright {
+	float: right;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	border: none;
+}
+
+.floatleft {
+	float: left;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	border: none;
+}
+
+div.figure_right {
+	float: right;
+	border: thin silver solid;
+	margin: 5px 5px 5px 5px;
+	padding: 10px;
+}
+div.figure_right p {
+	text-align: center;
+	font-style: italic;
+	text-indent: 0;
+}
+
+div.figure_left {
+	float: left;
+	border: thin silver solid;
+	margin: 5px 5px 5px 5px;
+	padding: 10px;
+}
+
+div.figure_left p{
+	text-align: center;
+	font-style: italic;
+	text-indent: 0;
+}
+
+ul.spaced_list{
+	line-height: 150%;
+}
