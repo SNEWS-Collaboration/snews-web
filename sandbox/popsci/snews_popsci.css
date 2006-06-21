@@ -1,0 +1,47 @@
+.Breadcrumbs{
+	font-size: 0.9em;
+}
+
+div.Breadcrumbs {
+	padding: 5px;
+	border: 1px solid gray;
+}
+
+ul.navbar{
+	text-align: center;
+	list-style-type: none;
+	line-height: 3em;
+}
+
+.navbar li {
+	display: inline;
+	border: 1px dotted gray;
+	padding: .25em;
+	margin: 1em;
+
+}
+
+.navbar a{
+	text-decoration: none;
+	border-right: 1px dotted gray;
+	padding-right: .75em;
+	margin-right: .75em;
+}
+
+h2, h3 {
+	text-align: center;
+}
+
+.spectrum{
+	text-align: center;
+	font-style: italic;
+}
+
+q {
+	 font-style: italic; 
+}
+
+.notquote  {
+	font-style: normal;
+
+}
