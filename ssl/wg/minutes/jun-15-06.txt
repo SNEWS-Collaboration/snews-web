@@ -1,0 +1,75 @@
+Date: Fri, 23 Jun 2006 10:32:51 -0400 (EDT)
+From: Kate Scholberg <schol@phy.duke.edu>
+To: SNEWS working group <snews-wg@snews.bnl.gov>, snnet@snews.bnl.gov
+Subject: [Snews-wg] Minutes from Nu2006 meeting
+
+Hi all,
+
+Here are minutes from last Thursday's meeting in Santa Fe.  Thanks to
+all who attended and to the conference organizers for facilitating it.
+
+Slides presented are available on the working group page,
+https://snews.bnl.gov/wg/minutes/nu2006
+
+(If you need the password, please let me know)
+
+Kate
+
+============================================================
+
+-- I gave a brief update: slides at
+https://snews.bnl.gov/wg/minutes/snews_nu2006.pdf
+ We are in a smoothly running mode with 4 experiments: SK, SNO, LVD,
+and AMANDA/IceCube.  All experiments now have automated input.  The
+latest operational mode incorporates "individual" alert mode, which is
+allows an individual experiment to forward a confirmed (human-checked)
+alarm via the SNEWS infrastructure.  To do: expansion of the
+astronomer network.
+
+-- Mark Vagins suggested that the alert mailing list subscriber list be
+visible to subscribers.  This can easily be configured. 
+
+-- Takeda-san reported on SK status: slides at
+https://snews.bnl.gov/wg/minutes/takeda_nu2006.pdf
+SK full reconstruction took place over last winder and filling is
+nearly finished; SK-III normal running will start in mid-July.
+
+-- Clarence Virtue reported on SNO status: slides at 
+https://snews.bnl.gov/wg/minutes/virtue_nu2006.ppt
+SNO input to SNEWS is now automated. Clarence described the burst
+response team and detailed procedure.  SNO will run until the end of
+2006.
+
+-- Carlo Vigorito reported from LVD: slides at
+https://snews.bnl.gov/wg/minutes/vigorito_nu2006.ppt LVD has been
+running very stably, with 99.98% uptime in their recent run.  They
+will soon be functioning as a CNGS beam monitor.
+
+-- Kazumi Ishii reported from KamLAND: KamLAND will soon be ready for
+SNEWS input. She presented a poster on the KamLAND SN trigger at the
+conference.
+
+-- Rex Tayloe reported from mini-BooNE: slides at
+https://snews.bnl.gov/wg/minutes/tayloe_nu2006.pdf Mini-BooNE has an
+SN trigger in place which will allow SN-like events to be written and
+stored, although currently rate is too high for input to SNEWS.
+
+-- AMANDA/IceCube reps sent their regrets; no SN people attended
+Nu2006, although they have been providing alarms to SNEWS for nearly a
+year now. Here is some info (from Lutz Koepke): typical time delay
+for an alarm is 200-600 secs, and they now have 24 hour coverage
+using Iridium.
+
+
+Attendees (partial list from memory-- please send corrections and
+I will amend the minutes): 
+K. Scholberg, C. Virtue, A. McDonald, W. Fulgione, C. Vigorito,
+K. Ishii, L. Miramonti, J. Heise, Y. Suzuki, M. Vagins,
+A. Takeda, S. Fukuda, R. Tayloe, D. Finley, K. Ganezer
+
+
+
+_______________________________________________
+Snews-wg mailing list
+Snews-wg@snews.bnl.gov
+http://phyppro1.phy.bnl.gov/mailman/listinfo/snews-wg
