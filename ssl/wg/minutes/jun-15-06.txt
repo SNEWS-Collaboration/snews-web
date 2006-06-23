@@ -31,7 +31,7 @@ visible to subscribers.  This can easily be configured.
 
 -- Takeda-san reported on SK status: slides at
 https://snews.bnl.gov/wg/minutes/takeda_nu2006.pdf
-SK full reconstruction took place over last winder and filling is
+SK full reconstruction took place over last winter and filling is
 nearly finished; SK-III normal running will start in mid-July.
 
 -- Clarence Virtue reported on SNO status: slides at 
