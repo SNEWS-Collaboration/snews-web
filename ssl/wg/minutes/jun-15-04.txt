@@ -1,0 +1,93 @@
+Minutes of SNEWS Meeting at Neutrino 2004
+=========================================
+
+Thanks to all who attended the meeting, and to the Nu2004 organizers
+who were able to arrange a room.
+
+Attendees:
+
+A. Bouchta, F. Fleurot, W. Fulgione, K. Ganezer, P. L. Ghia,
+G. Gratta, A. Habig, A. Hallgren, J. Heise, A. Ianni, A. Poar,
+H. Robertson, K. Scholberg, F. Suekane, Y. Suzuki, M. Vagins,
+C. Vigorito
+
+
+Overview:
+--------
+
+My overview and news talk can be found at
+http://cyclo.mit.edu/snnet/wg/nu2004_snews.pdf
+
+PDF of the nu2004 SNEWS poster:
+http://neutrino.d.umn.edu/~habig/snews_poster.pdf
+
+Experiment Updates:
+------------------
+
+* LVD (W. Fulgione): everything smooth, active mass is 874 tons,
+livetime has been 99% over the last years.  Alarms to SNEWS are
+automated.  The alarm rate is very nicely Poissonian and they have
+selected an alarm rate of 1/week. Sensitivity is well beyond the edge
+of the Galaxy).  (Q: can alarm rate be lowered?  How much sensitivity
+would be lost?)  They are planning a re-calibration program soon, but
+since the detector is modular and calibrations can be done only on
+part of the detector at any given time, it will not affect up-time.
+
+* SNO (F. Fleurot): SNO NCD phase has begun.  Fabrice described the
+SNO supernova watch (see also conference poster).  There are 3 levels
+of selected bursts after automatic background reduction: level 2
+bursts invoke email messages to the SNO supernova group, and level 3
+bursts initiate phone and text messages.  They are currently studying
+how to integrate both PMT and NCD information for supernova watch
+background reduction.  They are also working on implementing high-rate
+suppression (like that of SNEWS) internally at SNO.
+
+The SNOboard has not yet made a final decision on the Operational Mode
+document; some details of the SNO specific procedure need to be
+defined.  However they have decided to send only POSSIBLE and never
+GOOD alarms (or OVERRIDE, after human check), and so will only be able
+to participate in a GOLD alarm as a "bystander".
+
+* Super-K (M. Vagins): SK has implemented regular LED supernova tests
+to test DAQ, and also shiftworker response.  Furthermore there have
+been recent online supernova search improvements.  Alarms to SNEWS,
+which are automated, have a rate much less than 1/week.
+
+* KamLAND (G. Gratta): the KamLAND supernova trigger is a hardware
+trigger, and is getting close to having a rate low enough (1/2-3
+weeks) to be good enough for input to SNEWS.
+
+* AMANDA: (A. Bouchta and A. Hallgren) they are working on noise
+reduction in the supernova trigger.  Iridium communication available soon.
+
+* Borexino:  supernova specific electronics is ready to go when
+Borexino is ready.
+
+* Report from Mini-BooNE, by email from Morgan Wascko:
+
+"We have a supernova event trigger built into the DAQ that requires 60 or
+more main tank PMT hits and fewer than 6 veto PMT hits.  We record these
+events at ~11Hz, and write all of them to tape.  We currently do not
+have an online cluster algorithm looking for peaks in the supernova
+event rate, or any online event reconstruction.  However, we have
+analyzed the supernova event stream for excesses around interesting
+events, like GRB 030329.  (Btw, we have not seen any excesses yet.)
+
+We also have a newly installed separate scaler system that reads out the
+instantaneous tank and veto levels used by our trigger, and records five
+second averages of these.  This system should provide a nice complement
+to the supernova data stream and could be used to help beat down
+backgrounds due to environmental fluctuations.  We'll see."
+
+Discussion:
+----------
+
+ -- As usual, how specifically to balance fear of false alert vs
+sensitivity is at issue: Should rates be dialed up as close to the
+1/week limit as possible?  Should the coincidence time window be
+reduced from 10 seconds?   Could we make a more complex coincidence
+requirement, for instance look at duration of signal?  Is the high
+rate suppression too stringent?  e.g. strange looking supernova
+signals be demoted?
+
+ -- Next face-to-face meeting: at TAUP, or perhaps LNGS or Duke.
