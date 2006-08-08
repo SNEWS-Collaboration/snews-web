@@ -481,7 +481,8 @@ if key == "process":
     ProcessForm(form)
 elif key == "table":
     try:
-        DisplayTable()
+        #DisplayTable()
+        DisplayForm()
     except:
         msg = "Unexpected error: " + sys.exc_info()[0]
         Display(msg)
