@@ -298,10 +298,10 @@ def DisplayTable():
     
     # create a list to hold our records
     record_list = []
-
+    
     # get the record files's names and store them in a list
     filename_list = os.listdir(sDBDir)
-
+    
     # loop through the filenames and try reading them
     for name in filename_list:
         # we only want to read files of the proper type
@@ -317,7 +317,7 @@ def DisplayTable():
                       + str(sys.exc_info()[0]) \
                       + " " + str(sys.exc_info()[2])
                 Display(msg)
-
+    
     # sort the record list
     # I can't quite grasp the old code's logic, so I'm sorting by
     # starting date (measured in epoch seconds)
@@ -335,11 +335,14 @@ def DisplayTable():
             continue
             
     # make the substitution
-    sSubResult = re.subn("<!-- TABLE CONTENT -->", sTable, sTableInput)
+    try:
+        sSubResult = re.subn("<!-- TABLE CONTENT -->", sTable, sTableInput)
+    except:
+        sSubResult = "ERROR!"
     
     # display the table on the user's browser
     Display(sSubResult)
-
+    
 def DisplayForm():
     # read the form template, process it and display the result
     # so we can gather user input
