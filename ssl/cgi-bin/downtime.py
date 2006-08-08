@@ -313,7 +313,9 @@ def DisplayTable():
                 record_list.append(cLQRecord(sDBDir + name))
             except:
                 msg = "Unexpected error in proccessing file " \
-                      + name + ". "
+                      + name + " " \
+                      + str(sys.exc_info()[0]) \
+                      + " " + str(sys.exc_info()[2])
                 Display(msg)
 
     # sort the record list
@@ -326,8 +328,11 @@ def DisplayTable():
     sTable = ""
     for record in record_list:
         # only use entries whose end time is later than now
-        if record.EpochEndTime() > int(time.time()):
-           sTable = sTable + record.HTML()
+        try:
+            if record.EpochEndTime() > int(time.time()):
+                sTable = sTable + record.HTML()
+        except:
+            pass
             
     # make the substitution
     sSubResult = re.subn("<!-- TABLE CONTENT -->", sTable, sTableInput)
