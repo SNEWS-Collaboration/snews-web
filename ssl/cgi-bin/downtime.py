@@ -317,7 +317,7 @@ def DisplayTable():
                       + str(sys.exc_info()[0]) \
                       + " " + str(sys.exc_info()[2])
                 Display(msg)
-                return 0
+                sys.exit(0)
 
     # sort the record list
     # I can't quite grasp the old code's logic, so I'm sorting by
