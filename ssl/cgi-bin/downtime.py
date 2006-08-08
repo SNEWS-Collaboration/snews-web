@@ -491,7 +491,8 @@ elif key == "table":
     try:
         DisplayTable()
     except:
-        msg = "Unexpected error! " + str(sys.exc_info()[0]) \
+        msg = "Unexpected error caught at top level! " \
+              + str(sys.exc_info()[0]) \
               + " " + str(sys.exc_info()[2])
         Display(msg)
 else:
