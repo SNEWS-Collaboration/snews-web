@@ -461,7 +461,12 @@ def ProcessForm(form):
 ## Execution flow begins here
 
 # evaluate CGI request
-form = cgi.FieldStorage()
+try:
+    form = cgi.FieldStorage()
+except:
+    msg = "Unexpected error: " + sys.exc_info()[0]
+    Display(msg)
+    
 
 # "key" is a hidden form element with an 
 # action command such as "process"
