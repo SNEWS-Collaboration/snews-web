@@ -312,10 +312,11 @@ def DisplayTable():
             try:
                 record_list.append(cLQRecord(sDBDir + name))
             except:
-                msg = "Unexpected error! " + str(sys.exc_info()[0]) \
-                      + " " + str(sys.exc_info()[2])
-                Display(msg)
-                return 0
+                #msg = "Unexpected error! " + str(sys.exc_info()[0]) \
+                #      + " " + str(sys.exc_info()[2])
+                #Display(msg)
+                #return 0
+                pass
 
     # sort the record list
     # I can't quite grasp the old code's logic, so I'm sorting by
