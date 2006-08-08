@@ -22,7 +22,7 @@ class cLQRecord:
         try:
             hInput = open(sPathName, "r")
         except:
-            raise "Error: unable to read file " + sPathName + " for input."
+            print "Error: unable to read file " + sPathName + " for input."
         # read the contents of the file
         sInput = hInput.read()
 
