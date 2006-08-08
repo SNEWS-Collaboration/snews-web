@@ -60,7 +60,8 @@ class cLQRecord:
             # to get this done, but for the moment it should work
             # (and on that philosophy all software around here is built).
         except:
-            raise "Error: unable to parse file " + sPathName + "."
+            #raise "Error: unable to parse file " + sPathName + "."
+            pass
             
     def HTML(self):
         # generate an HTML-formatted table row containing the data
