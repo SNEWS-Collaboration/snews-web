@@ -49,8 +49,7 @@ import time
 from clqrecord import cLQRecord
 
 # Note my trademark usage of excessive Hungarian notation.
-#sHomeDir = "/wwwhosts/snews.bnl.gov/web/ssl/"
-sHomeDir = "/home/bstacey/snews/web/ssl/"
+sHomeDir = "/wwwhosts/snews.bnl.gov/web/ssl/"
 sDBDir = sHomeDir + "cgi-bin/db/"
 sTableDir = sHomeDir +  "downtime/"
 sSnnetURL = "https://snews.bnl.gov"
