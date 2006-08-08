@@ -23,40 +23,45 @@ class cLQRecord:
             hInput = open(sPathName, "r")
         except:
             print "Error: unable to read file " + sPathName + " for input."
+            return 0
+        
         # read the contents of the file
         sInput = hInput.read()
 
-        # use regular expressions to parse the important whatsits
-        # out of the file's text
-        # explanation of regex:
-        # The field name is followed by an equal sign and the regex-speak
-        # metacharacter combination '(.*)'. Parentheses group the meta-
-        # characters so we can refer to the text they match, the . indicates
-        # we wish to match all characters except newlines, and the * tells
-        # Python we wish to match an arbitrary length of these characters.
-        # This regex matches all strings beginning with the fieldname plus
-        # an equals sign, and stuffs the rest of the line into the first
-        # group of the MatchObject returned by the re.search() method.
-        self.Entry = re.search(r"entry=(.*)", sInput).group(1)
-        self.Name = re.search(r"name=(.*)", sInput).group(1)
-        self.EMail = re.search(r"email=(.*)", sInput).group(1)
-        self.ExpName = re.search(r"expt=(.*)", sInput).group(1)
-        self.StartYear = re.search(r"startyear=(.*)", sInput).group(1)
-        self.StartMonth = re.search(r"startmonth=(.*)", sInput).group(1)
-        self.StartDay = re.search(r"startday=(.*)", sInput).group(1)
-        self.StartHour = re.search(r"starthour=(.*)", sInput).group(1)
-        self.StartMin = re.search(r"startmin=(.*)", sInput).group(1)
-        self.EndYear = re.search(r"endyear=(.*)", sInput).group(1)
-        self.EndMonth = re.search(r"endmonth=(.*)", sInput).group(1)
-        self.EndDay = re.search(r"endday=(.*)", sInput).group(1)
-        self.EndHour = re.search(r"endhour=(.*)", sInput).group(1)
-        self.EndMin = re.search(r"endmin=(.*)", sInput).group(1)
-        self.Grade = re.search(r"grade=(.*)", sInput).group(1)
-        self.Comment = re.search(r"comment=(.*)", sInput).group(1)
-        # if there were any more fields, I would look for a better way
-        # to get this done, but for the moment it should work
-        # (and on that philosophy all software around here is built).
-    
+        try:
+            # use regular expressions to parse the important whatsits
+            # out of the file's text
+            # explanation of regex:
+            # The field name is followed by an equal sign and the regex-speak
+            # metacharacter combination '(.*)'. Parentheses group the meta-
+            # characters so we can refer to the text they match, . indicates
+            # we wish to match all characters except newlines, and the * tells
+            # Python we wish to match an arbitrary length of these characters.
+            # This regex matches all strings beginning with the fieldname plus
+            # an equals sign, and stuffs the rest of the line into the first
+            # group of the MatchObject returned by the re.search() method.
+            self.Entry = re.search(r"entry=(.*)", sInput).group(1)
+            self.Name = re.search(r"name=(.*)", sInput).group(1)
+            self.EMail = re.search(r"email=(.*)", sInput).group(1)
+            self.ExpName = re.search(r"expt=(.*)", sInput).group(1)
+            self.StartYear = re.search(r"startyear=(.*)", sInput).group(1)
+            self.StartMonth = re.search(r"startmonth=(.*)", sInput).group(1)
+            self.StartDay = re.search(r"startday=(.*)", sInput).group(1)
+            self.StartHour = re.search(r"starthour=(.*)", sInput).group(1)
+            self.StartMin = re.search(r"startmin=(.*)", sInput).group(1)
+            self.EndYear = re.search(r"endyear=(.*)", sInput).group(1)
+            self.EndMonth = re.search(r"endmonth=(.*)", sInput).group(1)
+            self.EndDay = re.search(r"endday=(.*)", sInput).group(1)
+            self.EndHour = re.search(r"endhour=(.*)", sInput).group(1)
+            self.EndMin = re.search(r"endmin=(.*)", sInput).group(1)
+            self.Grade = re.search(r"grade=(.*)", sInput).group(1)
+            self.Comment = re.search(r"comment=(.*)", sInput).group(1)
+            # if there were any more fields, I would look for a better way
+            # to get this done, but for the moment it should work
+            # (and on that philosophy all software around here is built).
+        except:
+            raise "Error: unable to parse file " + sPathName + "."
+            
     def HTML(self):
         # generate an HTML-formatted table row containing the data
         # stored in this class instance
