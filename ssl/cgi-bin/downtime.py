@@ -508,7 +508,7 @@ elif key == "table":
               + " " + str(sys.exc_info()[2])
         Display(msg)
 else:
-    DisplayTable()
+    DisplayForm()
 
 # Share and enjoy.
 
