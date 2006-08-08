@@ -318,9 +318,11 @@ def DisplayTable():
                           + str(sys.exc_info()[0]) \
                           + " " + str(sys.exc_info()[2])
                     Display(msg)
+                    return 0
                 except:
                     msg = "Unexpected error in processing file!"
                     Display(msg)
+                    return 0
     
     # sort the record list
     # I can't quite grasp the old code's logic, so I'm sorting by
