@@ -491,11 +491,10 @@ elif key == "table":
     try:
         DisplayTable()
     except:
-        #msg = "Unexpected error caught at top level! " \
-        #      + str(sys.exc_info()[0]) \
-        #      + " " + str(sys.exc_info()[2])
-        #Display(msg)
-        pass
+        msg = "Unexpected error caught at top level! " \
+              + str(sys.exc_info()[0]) \
+              + " " + str(sys.exc_info()[2])
+        Display(msg)
 else:
     DisplayForm()
 
