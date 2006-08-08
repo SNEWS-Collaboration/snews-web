@@ -308,9 +308,8 @@ def DisplayTable():
         # explanation of regex: \d matches a digit 0-9, + indicates
         # that we must have at least one digit, and \. indicates a literal
         # period (we must escape the . because . is a metacharacter).
-        #if re.match(r"lastquery_\d+\.dat", name):
-        #    record_list.append(cLQRecord(sDBDir + name))
-        pass
+        if re.match(r"lastquery_\d+\.dat", name):
+            record_list.append(cLQRecord(sDBDir + name))
 
     # sort the record list
     # I can't quite grasp the old code's logic, so I'm sorting by
