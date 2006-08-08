@@ -49,7 +49,8 @@ import time
 from clqrecord import cLQRecord
 
 # Note my trademark usage of excessive Hungarian notation.
-sHomeDir = "/wwwhosts/snews.bnl.gov/web/ssl/"
+#sHomeDir = "/wwwhosts/snews.bnl.gov/web/ssl/"
+sHomeDir = "/home/bstacey/snews/web/ssl/"
 sDBDir = sHomeDir + "cgi-bin/db/"
 sTableDir = sHomeDir +  "downtime/"
 sSnnetURL = "https://snews.bnl.gov"
@@ -508,7 +509,7 @@ elif key == "table":
               + " " + str(sys.exc_info()[2])
         Display(msg)
 else:
-    DisplayForm()
+    DisplayTable()
 
 # Share and enjoy.
 

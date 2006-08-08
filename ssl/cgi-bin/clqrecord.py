@@ -14,10 +14,10 @@ import time
 class cLQRecord:
     BallFiles = {'Red': 'ballred.gif', 'Yellow': 'ballyellow.gif', \
                  'Green': 'ballgreen.gif'}
-
+    
     def ReadFromFile(self, sPathName):
-       # fill the class's data attributes with text from the file
-
+        # fill the class's data attributes with text from the file
+        
         # open the file for input
         try:
             hInput = open(sPathName, "r")
@@ -27,7 +27,7 @@ class cLQRecord:
         
         # read the contents of the file
         sInput = hInput.read()
-
+        
         try:
             # use regular expressions to parse the important whatsits
             # out of the file's text
@@ -90,17 +90,24 @@ class cLQRecord:
         # this *has* to be the most apocalyptically-titled function
         # I've ever coded.
 
-        sTime = self.EndDay + " " + self.EndMonth + " " + self.EndYear \
-                + " " + self.EndHour + "h" + self.EndMin
-        return int(time.mktime(time.strptime(sTime, "%d %B %Y %Hh%M")))
+        try:
+            sTime = self.EndDay + " " + self.EndMonth + " " + self.EndYear \
+                    + " " + self.EndHour + "h" + self.EndMin
+            return int(time.mktime(time.strptime(sTime, "%d %B %Y %Hh%M")))
+        except:
+            return 0
     
     def EpochStartTime(self):
         # return the starting time in epoch seconds
         # comparison depends upon this
-
-        sTime = self.StartDay + " " + self.StartMonth + " " + self.StartYear \
-                + " " + self.StartHour + "h" + self.StartMin
-        return int(time.mktime(time.strptime(sTime, "%d %B %Y %Hh%M")))
+        
+        try:
+            sTime = self.StartDay + " " + self.StartMonth + " " \
+                    + self.StartYear \
+                    + " " + self.StartHour + "h" + self.StartMin
+            return int(time.mktime(time.strptime(sTime, "%d %B %Y %Hh%M")))
+        except:
+            return 0
     
     def __init__(self, sPathName):
         # initialization routine (constructor)
