@@ -42,6 +42,7 @@ import math
 import re
 import os
 import os.path
+import sys
 import time
 
 # This module is one I coded myself
@@ -474,7 +475,11 @@ except:
 if key == "process":
     ProcessForm(form)
 elif key == "table":
-    DisplayTable()
+    try:
+        DisplayTable()
+    except:
+        msg = "Unexpected error: " + sys.exc_info()[0]
+        Display(msg)
 else:
     DisplayForm()
 
