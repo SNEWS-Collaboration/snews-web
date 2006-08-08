@@ -312,17 +312,18 @@ def DisplayTable():
             try:
                 record_list.append(cLQRecord(sDBDir + name))
             except:
-                try:
-                    msg = "Unexpected error in proccessing file " \
-                          + name + " " \
-                          + str(sys.exc_info()[0]) \
-                          + " " + str(sys.exc_info()[2])
-                    Display(msg)
-                    return 0
-                except:
-                    msg = "Unexpected error in processing file!"
-                    Display(msg)
-                    return 0
+                continue
+                #try:
+                #    msg = "Unexpected error in proccessing file " \
+                #          + name + " " \
+                #          + str(sys.exc_info()[0]) \
+                #          + " " + str(sys.exc_info()[2])
+                #    Display(msg)
+                #    return 0
+                #except:
+                #    msg = "Unexpected error in processing file!"
+                #    Display(msg)
+                #    return 0
     
     # sort the record list
     # I can't quite grasp the old code's logic, so I'm sorting by
