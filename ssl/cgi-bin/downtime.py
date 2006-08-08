@@ -332,7 +332,7 @@ def DisplayTable():
             if record.EpochEndTime() > int(time.time()):
                 sTable = sTable + record.HTML()
         except:
-            pass
+            continue
             
     # make the substitution
     sSubResult = re.subn("<!-- TABLE CONTENT -->", sTable, sTableInput)
