@@ -483,7 +483,7 @@ elif key == "table":
     try:
         DisplayTable()
     except:
-        msg = "Unexpected error! "
+        msg = "Unexpected error! " + str(sys.exc_info()[2])
         Display(msg)
 else:
     DisplayForm()
