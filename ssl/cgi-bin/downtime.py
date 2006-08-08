@@ -321,10 +321,10 @@ def DisplayTable():
     sTable = ""
     for record in record_list:
         # only use entries whose end time is later than now
-        if record.EpochEndTime() > int(time.time()):
-            #sTable = sTable + record.HTML()
-            pass
-    
+        #if record.EpochEndTime() > int(time.time()):
+        #   sTable = sTable + record.HTML()
+        pass
+            
     # make the substitution
     sSubResult = re.subn("<!-- TABLE CONTENT -->", sTable, sTableInput)
     
