@@ -13,7 +13,8 @@ if ($year == ""){
 
 print "<body bgcolor=\"\#eee8f8\"><HTML><Title>SNEWS Shift Schedule</Title>\n";
 print "<P><center><h2>SNEWS Shift Schedule</h2></center>\n";
-print "<P><center><h4>2004</h4></center>\n";
+# Modified without testing
+print "<P><center><h4>$year</h4></center>\n";
 
 for ($month=1;$month<=12;$month++)
 {
