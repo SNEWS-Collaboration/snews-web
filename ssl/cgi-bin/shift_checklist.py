@@ -2,16 +2,6 @@
 
 # Shift checklist, based on Blake's downtime script
 
-# clqrecord.py -- a class for holding an entry read from disk
-# template.html -- a file defining the properties of all the web pages
-#                  this program generates
-# form-template.html -- a pattern for the form our program shows
-# table-template.html -- a pattern for the results table we create
-#                        when a command is executed successfully
-# ballred.gif, ballyellow.gif, ballgreen.gif, PythonPowered.gif --
-# small graphics files to spruce up the web pages
-# Note that the Python program gains readability over the Perl ancestor
-# at the cost of adding extra files.
 
 # Modules we import for needed functionality
 import cgi
