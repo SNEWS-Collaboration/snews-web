@@ -50,10 +50,10 @@ from clqrecord import cLQRecord
 
 # Note my trademark usage of excessive Hungarian notation.
 sHomeDir = "/wwwhosts/snews.bnl.gov/web/ssl/"
-sDBDir = sHomeDir + "cgi-bin/db/"
+sDBDir = sHomeDir + "snews-cgi/db/"
 sTableDir = sHomeDir +  "downtime/"
 sSnnetURL = "https://snews.bnl.gov"
-sCgiURL = "https://snews.bnl.gov/cgi-bin/downtime.py"
+sCgiURL = "https://snews.bnl.gov/snews-cgi/downtime.py"
 sTemplateFile = "template.html"
 sFormFile = "form-template.html"
 sTableFile = "table-template.html"
