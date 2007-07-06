@@ -15,7 +15,10 @@ import time
 
 # Note my trademark usage of excessive Hungarian notation.
 sHomeDir = "/wwwhosts/snews.bnl.gov/web/ssl/"
+
+# This is filesystem dir so use cgi-bin and not snews-cgi
 sDBDir = sHomeDir + "cgi-bin/db/"
+
 sSnnetURL = "https://snews.bnl.gov"
 sTemplateFile = "shift_template.html"
 sFormFile = "shift_checklist-template.html"
