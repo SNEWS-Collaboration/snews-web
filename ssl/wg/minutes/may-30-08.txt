@@ -1,0 +1,135 @@
+From: Kate Scholberg <schol@phy.duke.edu>
+To: hray@fnal.gov, halzen@icecube.wisc.edu, gaisser@bartol.udel..edu, decowski@berkeley.edu, calaprice@princeton.edu, Chuck Lane <lane@duphy4.physics.drexel.edu>, nakahata@icrr.u-tokyo.ac.jp, obolen@in2p3.fr, saldanha@princeton.edu, davide.dangelo@mi.infn.it, mwurm@ph.tun.de, ghill@icecube.wisc.edu, francesco.arneodo@lngs.infn.it, snnet@snews.bnl.gov, SNEWS working group <snews-wg@snews.bnl.gov>
+Subject: [Snews-wg] SNEWS meeting minutes, Neutrino 2008
+
+Hello all,
+
+Thanks all who came to the meeting, and to the Nu2008 organizers for
+helping with the venue.
+
+Those who are not getting this email via one of the mailing lists can sign
+up for them at  http://snews.bnl.gov/mailinglists.html
+
+There are two lists:
+
+- The snnet mailing is for casual observers (quite low traffic).
+
+- The working group mailing list is for those interested in
+participating in the working group (which has phone meetings every few
+weeks).  Please email me for the password if you want to join this
+list.
+
+Kate
+
+============================================================
+
+Here are the minutes of the meeting.
+
+Attendees:
+
+F. Arneodo, F. Calaprice, A. Chavarria, D. D'Angelo, P. Decowski,
+W. Fulgione, T. Gaisser, A. Habig, F. Halzen, J. Heise, G. Hill,
+C. Lane, M. Nakahata, M. Obolensky, H. Ray, R. Saldanha, K. Scholberg,
+M. Vagins, M. Wurm, C. Virtue
+
+
+  My short SNEWS update talk will be posted on the working group page.
+
+Main points:
+  - Everything has been running very stably at the BNL server; uptime
+is essentially 100%.
+  - SNEWS had SK/SNO/AMANDA/LVD until the end of 2006, after which SNO
+finished, and we moved back to 2/3 coincidence mode.
+  - We added a backup server at the U. of Bologna in fall of 2006.  This
+receives alarms from experiments in parallel to the BNL machine, but
+alert output is only enabled if there's an outage at BNL.  So far this only
+happened a few times.
+  - We've initiated some collaboration with robotic telescope networks,
+e.g. eSTAR.
+
+There was some discussion about revisiting the idea of triangulation
+to determine signal direction.  Triangulation so far has been pretty
+much out of reach due to insufficient statistics.  However, now
+IceCube is online, which may have a large enough single-photon signal
+to measure the timing very precisely.  It will be important to find a
+consistent way to share timing information. Francis suggested that
+IceCube may be able to provide a template for other experiments to fit
+signal to.
+
+
+Experiment updates:
+
+  - Mark Vagins reported for Super-K.  SK has been running with
+  excellent supernova sensitivity and prompt alert input to SNEWS for
+  many years.  Electronics will be upgraded at the end of this summer:
+  the upgrade to "SK IV' will take about two months, during with SK
+  will be pretty much off.  The electronics replacement will be
+  followed by an extensive recalibration campaign, which will also
+  reduce supernova livetime.
+
+[Note that long planned downtime periods are posted on the SNEWS
+working group downtime page-- experiments can consult this page to
+arrange planned downtime to *not* coincide with other experiment
+downtime, so that global supernova sensitivity is optimized].
+
+  - Walter Fulgione reported on LVD status.  LVD has been operational
+  for more than 15 years, and reached full configuration at ~1 kt in
+  2000.  Duty cycle is near 100%.  Background fluctuations are well
+  studied, and they use a threshold for SNEWS which gives ~1
+  alarm/month [note correction from emailed minutes].  Sensitivity is
+  to the entire galaxy. (See ref: N. Yu Agafonova et al,
+  Astropart. Phys.  28/6 pp516-522.)
+
+  - Clarence Virtue gave a short presentation on future experiments at 
+SNOlab: SNO+ and HALO.
+
+SNO+ is a 1 kt scintillator experiment which should see a few hundred
+events at 10 kpc. SNO+ can make use of a good deal of the hardware and
+software infrastructure and experience developed for the SNO supernova
+trigger, although various modifications are needed.
+
+HALO is a lead-based detector dedicated to supernova detection, which
+will use the SNO NCD counters.  76 tons of lead are available, which
+will yield several dozen events for a Galactic supernova.  Engineering
+work is underway.  Mark and Frank suggested some potential sources of
+additional lead.
+
+  - Alvaro Chavarria reported on Borexino status: there has been a lot
+  supernova monitor progress lately.  They expect about 250 events
+  total above their very low energy threshold of 200 eV, at 10 kpc.
+  Borexino's PSD gives good sensitivity to elastic scattering on
+  protons.  There are some backgrounds, including electronic noise, but
+  they expect to reduce this to a level that will give an alarm rate
+  suitable for SNEWS.  There are three independent DAQs that will be
+  combined for a SNEWS alarm.  The first implementation of Borexino's
+  supernova alarm should be able to trigger for a supernova 30 kpc away;
+  this should improve to 60 kpc once the main electronics supernova
+  trigger comes online.  Borexino plans to join SNEWS before Sept 2008.
+
+  - Chuck Lane reported on KamLAND status.  Fiducial mass is 1 kt and
+  threshold is less than 1 MeV. A supernova trigger exists, and has
+  been running for several years.  Technical setup for SNEWS is not too far
+  from being ready.  The collaboration is busy with purification work
+  at the moment, but hopes to join SNEWS at some point.
+
+  - Francis Halzen reported on AMANDA/IceCube status.  A performance
+  paper is in the works: IceCube will have a huge statistics signal of
+  single counts. The current supernova trigger is based on AMANDA, and
+  the addition of IceCube strings to SNEWS will happen soon.  Alarm
+  rate is still a bit high, but they are continuing to work on it.
+  Communications uptime is now ~100%.
+
+  - Francesco Arneodo reported that they hope to have Icarus online soon and
+   to have everything running within a year.
+
+  - Heather Ray reported on MiniBooNE: because it's on the surface,
+  MiniBooNE will be too noisy to be an input to SNEWS, but it will have
+  a signal and can do offline analysis promptly in the case of a SNEWS
+  alert.
+
+
+
+_______________________________________________
+Snews-wg mailing list
+Snews-wg@snews.bnl.gov
+http://phyppro1.phy.bnl.gov/mailman/listinfo/snews-wg
