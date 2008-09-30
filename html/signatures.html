@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=iso-8859-1">
+	<TITLE>Verifying the SNEWS alert signature</TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 1.1.0  (Linux)">
+	<META NAME="AUTHOR" CONTENT="Alec Habig">
+	<META NAME="CREATED" CONTENT="20040328;9461100">
+	<META NAME="CHANGEDBY" CONTENT="Alec Habig">
+	<META NAME="CHANGED" CONTENT="20040328;10362200">
+	<META NAME="CLASSIFICATION" CONTENT="Verifying the SNEWS alert signature">
+	<META NAME="KEYWORDS" CONTENT="SNEWS alert signature PGP GPG">
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<P ALIGN=CENTER><SDFIELD TYPE=DOCINFO SUBTYPE=TITLE>Verifying the SNEWS alert signature</SDFIELD></P>
+<P>To help prevent hoaxes, any supernova alert from SNEWS will be
+digitally signed using <A HREF="http://keyserver.veridis.com:11371/search?q=0x68DF93F7">this public key</A>.  The
+key's ID is 68DF93F7, and its fingerprint is <FONT SIZE=2><FONT FACE="courier">0D2C
+7BC4 0032 E26D 19CE 6B1A E00D AA34 68DF 93F7</FONT></FONT></P>
+<P>Make sure that your email client can happily verify a signed email
+now, before the time when you really want to be outside looking up
+instead of configuring a computer program.  Here is an <a href="test-msg.tmp.asc">email message</a>
+you could test your system on.  Below are links to instructions for
+setting up many common email clients.  If you know of more clients
+and methods we should link to, please <A HREF="mailto:ahabig@umn.edu?subject=SNEWS signature verification documentation">let me know</A>.</p>
+<p>Also, if you are able to verify the SNEWS key with a SNEWS working group member and are satisfied that it is legitimate, please sign the key yourself and submit your signatures back to the keyservers, so that the world's "web of trust" for this key will grow.</P>
+<P><A HREF="http://www.pgp.com/products/desktop_home/index.html">PGP</A> and/or
+<A HREF="http://www.gnupg.org/">GnuPG</A> setup on your email client:</P>
+<UL>
+	<LI><P><A HREF="http://www.bretschneidernet.de/tips/secmua.html.en">A
+	good overview</A> of many clients</P>
+	<LI><P><A HREF="http://www.mutt.org/">mutt</A>: a <A HREF="http://codesorcery.net/mutt/mutt-gnupg-howto">walkthrough</A>
+	and a <A HREF="http://tldp.org/HOWTO/Mutt-GnuPG-PGP-HOWTO.html">HOWTO</A>,
+	and the <A HREF="http://www.gnupg.org/aegypten/index.html">Agypten</A>
+	project</P>
+	<LI><P><A HREF="http://kmail.kde.org/">Kmail</A>: <a href="http://docs.kde.org/en/3.1/kdenetwork/kmail/pgp.html">builtin</a> and <A HREF="http://www.gnupg.org/aegypten/index.html">Agypten</A></P>
+	<LI><P><A HREF="http://www.washington.edu/pine/">pine</A>: <A HREF="http://www.megaloman.com/~hany/software/pinepgp/">pinepgp</A>
+	and <A HREF="http://pgp4pine.flatline.de/">pgp4pine</A></P>
+	<LI><P><A HREF="http://www.mozilla.org/">mozilla</A>/<A HREF="http://channels.netscape.com/ns/browsers/default.jsp">Netscape</A>:
+	<A HREF="http://enigmail.mozdev.org/">Enigmail</A></P>
+	<LI><P><A HREF="http://ximian.com/products/evolution/">Evolution</A>:
+	<A HREF="http://www.ximian.com/support/manuals/evolution_10/encryption.html">built-in</A></P>
+	<LI><P><A HREF="http://office.microsoft.com/home/office.aspx?assetid=FX01085793">Outlook</A>:
+	Try the <A HREF="http://www.pgp.com/products/freeware.html">PGP
+	freeware client</A>, but for full functionality you might have to
+	buy their <A HREF="http://www.pgp.com/products/personal/index.html">PGP
+	Personal</A> software.  Here is a <A HREF="http://www.cryptonomicon.net/howto/pgp.html">HOWTO</A>.
+	 If you know of a good free solution, please let me know.</P>
+	<LI><P><A HREF="http://www.eudora.com/">Eudora</A>: <A HREF="http://eudoragpg.sourceforge.net/ver1.0/en/index.html">EudoraGPG</A></P>
+        <LI><P>GnuPG <A HREF="http://macgpg.sourceforge.net/">for the Mac</A>.  Look at the bottom of the page for links to how to make your favorite Mac mail client play nicely.</P>
+</UL>
+</BODY>
+</HTML>
