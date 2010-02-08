@@ -118,6 +118,7 @@ def ProcessForm(form):
 
     bpingcheck = form["bpingcheck"].value
 
+    estarcheck = form["estarcheck"].value
 
     commcheck = form["commcheck"].value
 
@@ -134,6 +135,7 @@ def ProcessForm(form):
     Output = Output + " <b>Backup server OK: </b>"+bserverok+" &nbsp"
     Output = Output + " <b>Backup server log checked: </b>"+blogcheck+" &nbsp"
     Output = Output + " <b>Backup server ping check OK: </b>"+bpingcheck+" &nbsp"
+    Output = Output + " <b>Estar check OK: </b>"+estarcheck+" &nbsp"
     Output = Output + " <b>Comm checked: </b>"+commcheck+"<br>"
     Output = Output + " <b>Notes: </b>"+notes+"<br>"
     Output = Output + "----------------------------------------------------------------<br>"
