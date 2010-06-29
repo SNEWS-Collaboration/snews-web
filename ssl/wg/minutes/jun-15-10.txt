@@ -1,0 +1,59 @@
+Minutes, SNEWS meeting at Neutrino 2010
+===========================
+
+Attendees: Gianmarco Bruno, Frank Calaprice, Mark Chen, Patrick Decowski, Alec
+Habig, Andrea Molinario, Masayuki Nakahata, Kate Scholberg, Mike
+Schumaker, Yoichiro Suzuki, Clarence Virtue, Morgan Wascko
+
+-- I gave the overall SNEWS update: slides posted.  Highlights:
+       * Everything running smoothly, currently with SK+LVD+IceCube+Borexino.
+       * The BNL MOU was refreshed in 2009.
+       * We have a new 3-year NSF grant.
+       * A recent flurry of SNEWS alert mailing list signups was precipitated by an
+internet rumor that Betelgeuse is about to blow!
+       * We have a new enabled direct connection to the eStar robotic telescope
+network.
+ 
+-- Masayuki Nakahata gave the Super-K update: SK has been running as
+   SK-IV, with new electronics and software trigger, since September
+   2008.  The SK-IV SNwatch software has been updated (it's now
+   located outside the mine) and the SNEWS alert was implemented within a
+   few months of the start of SK-IV.  There have been improvements to
+   minimize deadtime-- little supernova data will be lost during
+   calibration.
+
+-- Patrick Decowski reported on KamLAND: after purification, trigger
+rates are reduced.  An online reconstruction for a SN trigger may be
+possible.  He also mentioned ANTARES: they may be able to use SNEWS
+output in a way similar to what they do now for GRB triggers, to
+improve sensitivity.
+
+-- Frank Calaprice reported for Alvaro Chavarria on Borexino.  Update
+   info from Alvaro, by email:
+
+       * Borexino officially started sending alarms to SNEWS on July 13, 2009.
+       * They have implemented an internal notification and subsequent
+         alarm suppression system for Borexino alarms (should have
+         negligible dead time).
+       * Uptime is limited by radioactive source calibrations but
+         >90%; they are aiming for >99%.
+
+-- Andrea Molinario reported for LVD.  They have full efficiency for
+supernova neutrino burst detection up to 30 kpc, continuous monitoring
+for 18 years with very high duty cycle, and very close to 1 kton
+trigger mass for the past several years.  They have a new Galactic
+supernova rate limit.  A DAQ upgrade will be completed in July-- this
+will not affect SNEWS connectivity.
+
+-- Clarence Virtue reported on HALO: construction is proceeding well
+   and they expect to have a SN trigger in 2011.
+
+-- SNO+ is also progressing well.
+
+-- Reina Maruyama (who could not attend) sent some update slides for
+   IceCube.  79 strings are in operation and all 86 strings will be
+   completed in 2011 (AMANDA is now decommissioned).  Detector performance
+   is well understood, and the supernova system recently underwent an
+   internal review.  Distance reach is well beyond the Galaxy, and
+   physics studies indicate sensitivity to various interesting
+   physics.
