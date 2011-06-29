@@ -13,10 +13,10 @@ and make the corresponding entries in the online shift log page at\\
 
 \begin{itemize}
 
-\item Check that the server is running on bnlboom1:
+\item Check that the server is running on bnlboom2:
   
 \begin{verbatim}
-bnlboom1:~> ps -u snalert
+bnlboom2:~> ps -u snalert
   PID TTY          TIME CMD
 15976 ?        00:00:00 sh <defunct>
 15984 ?        00:00:00 gcserv
@@ -59,15 +59,15 @@ can have \texttt{cping}
 send to both servers at once by including both IPs in the 
 \texttt{serv\_ip\_addr.dat} file.
 
-\item Check the eStar connection on bnlboom1 by running\\
-\texttt{/home/snalert/gcalert/estar\_check.pl};\\ go to
-\texttt{http://www.estar.org.uk/voevent/SNEWS/gov.bnl.snews/SNEWS/} to see
-if the test message was received (click on the link in the
-shift form).  If it was received correctly, there
-should be a file corresponding to the date and time of size $2.2$K.  If the
-file does not exist, or 
-has zero size, there may be a problem.  Email Alasdair Allan, 
-\texttt{aa@astro.ex.ac.uk}, in case of problems with the eStar server.
+%\item Check the eStar connection on bnlboom1 by running\\
+%\texttt{/home/snalert/gcalert/estar\_check.pl};\\ go to
+%\texttt{http://www.estar.org.uk/voevent/SNEWS/gov.bnl.snews/SNEWS/} to see
+%if the test message was received (click on the link in the
+%shift form).  If it was received correctly, there
+%should be a file corresponding to the date and time of size $2.2$K.  If the
+%file does not exist, or 
+%has zero size, there may be a problem.  Email Alasdair Allan, 
+%\texttt{aa@astro.ex.ac.uk}, in case of problems with the eStar server.
 
 
 \item Check that your communications equipment is running,
