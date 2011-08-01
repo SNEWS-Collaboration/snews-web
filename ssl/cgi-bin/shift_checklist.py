@@ -94,7 +94,7 @@ def ProcessForm(form):
 
 
     email = form["email"].value
-#    email2 = form["email2"].value
+    email2 = form["email2"].value
 
 #    if (email == "" && email2 == ""):
 #        Display("You need to supply an email address. Please go back.")
