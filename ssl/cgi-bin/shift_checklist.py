@@ -94,15 +94,10 @@ def ProcessForm(form):
 
     email2 = form["email2"].value
     if (email2 == ""):
-
         try:
             email = form["email"].value
         except:
-            Display("You need to supply and email address. Please go back")
-            raise SystemExit
-        
-        if (email == ""):
-            Display("You need to supply an email address. Please go back.")
+            Display("You need to supply an email address. Please go back")
             raise SystemExit
 
 #    if (email == ""):
