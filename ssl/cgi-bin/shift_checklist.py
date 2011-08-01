@@ -99,9 +99,9 @@ def ProcessForm(form):
         except:
             Display("You need to supply an email address. Please go back")
             raise SystemExit
-
-#    if (email == ""):
-#        email = email2
+    else:
+        email=email2
+    
 
 #    year = form["year"].value
 #    month = form["month"].value
@@ -109,6 +109,8 @@ def ProcessForm(form):
 #    hour = form["hour"].value
 #    min = form["min"].value
 
+    
+    
     serverok = form["serverok"].value
 
     logcheck = form["logcheck"].value
