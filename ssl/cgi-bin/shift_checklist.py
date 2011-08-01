@@ -133,6 +133,7 @@ def ProcessForm(form):
 
     # Display the stuff
     Output = Output + "<b>Shifter name: </b>"+name+"&nbsp &nbsp  " 
+    Output = Output + "<b>Email will be sent to: </b>"+email+"&nbsp &nbsp  " 
 #    Output = Output + "<P>Time of check:  "+month+" "+day+" "+year+" "+hour+":"+min+"\n"
     Output = Output + "<b>Time: </b>"+ time.asctime(time.localtime(time.time()))+"<br>"
     Output = Output + " <b>Server OK: </b>"+serverok+" &nbsp"
