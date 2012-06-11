@@ -1,0 +1,64 @@
+Minutes, SNEWS meeting at Neutrino 2012
+=======================================
+
+Attendees: Frank Calaprice, Walter Fulgione, Alec Habig, Francis Halzen, Kunio Inoue,
+Kam-Biu Luk, Reina Maruyama, Christian Ott, Hamish Robertson, Kate Scholberg, Yoichiro
+Suzuki, Andrzej Szelc, Mark Vagins, Carlo Vigorito, Clarence Virtue
+
+-- I gave the overall SNEWS update: slides posted.  Everything running
+smoothly, currently with SK+LVD+IceCube+Borexino (no change in the
+operational mode since 2009).  The BNL server has been updated to a
+virtualized setup for easier failover. A backup server exists at
+Bologna for the case of BNL network downtime; we switch over to this a
+few times per year.  There has been is essentially no SNEWS server
+downtime in the past few years.
+
+-- Alec Habig reported that NOvA will have a supernova trigger when it
+   starts running.
+
+-- Andrej Szelc reported for MicroBooNE: they expect to be running in
+   about two years.  They will run in a mode that keeps a large buffer
+   of data to be kept for the case of supernova trigger.
+
+-- Carlo Vigorito reported for LVD.  They have now been online for 20 years.  For the past several years there has been very high uptime with ~1kt active mass. There has been recent work to
+improve hardware for timing for neutrino TOF measurement.  Slides are posted.
+
+-- Mark Vagins gave the Super-K update: uptime when the T2K beam is
+   not on has about 96%, and more than that when the T2K beam is on.
+   A new online SN system will be installed this summer which will
+   enable <1 min delay.
+
+-- Clarence Virtue reported for both SNO+ and HALO.  SNO+ should be
+   running at the end of 2013.  HALO is now running, with 79 tons of
+   lead and 128 of the SNO NCDs.  HV is on all channels and full detector is being
+   read out since May 8, 2012.  Participation in SNEWS is expected by the end of
+   the year.   Slides are posted.
+
+-- Kam-Biu Luk reported that Shaomin Chen will be working on supernova
+   sensitivity for Daya Bay.  They have 160 tons of scintillator at 3
+   sites.
+
+-- Reina Maruyama reported for IceCube.  IceCube is now complete with
+   a stable geometry, and two redundant data flows from the Pole
+   enable more reliable alert output.  They have made recent
+   improvements to the supernova trigger, fixing delays and remedying
+   duplicate alarm issues.
+
+-- Frank Calaprice reported for Borexino.  Borexino has 95% uptime.
+   Laura Cadonati is a candidate to take over supernova work from
+   Alvaro Chavarria.  Future purification campaigns are planned.
+
+-- Christian Ott gave a brief gravitational wave update.  The first generation
+  network (LIGO-GEO-Virgo-TAMA) ran from 2000-2010.  Next generation
+   detectors are in the works: Advanced LIGO and VIRGO, KAGRA.  Next data will
+   be in 2015/16.   These will be able to detect core collapses even for pessimistic models.  A new
+   development is a plan to move one of the LIGO interferometers to
+   India.  He pointed out that a joint neutrino-GW search will enable
+   improvement of sensitivity for both.  Slides are posted.
+
+-- Mark Vagins reported on the AstroAlert message: this is a
+Unfortunately the time window for possible collapse time is rather
+small.  If it had been a standard core-collapse it would have been
+seen by SK and probably other detectors, if any were on-- however
+possibly some were off.  SK is searching through test and calibration
+runs.  This is a possible candidate for a joint offline search.
