@@ -13,10 +13,10 @@ and make the corresponding entries in the online shift log page at\\
 
 \begin{itemize}
 
-\item Check that the server is running on bnlboom2:
+\item Check that the server is running on bnlboom1:
   
 \begin{verbatim}
-bnlboom2:~> ps -u snalert
+bnlboom1:~> ps -u snalert
   PID TTY          TIME CMD
 15976 ?        00:00:00 sh <defunct>
 15984 ?        00:00:00 gcserv
@@ -25,7 +25,7 @@ bnlboom2:~> ps -u snalert
  6778 ?        00:00:00 sshd
  6781 pts/2    00:00:00 tcsh
 \end{verbatim}
-There should be three processes in memory, as listed above.
+There should be three gcserver processes in memory, as listed above.
 
 \item Check the server log file, \texttt{/home/snalert/gcalert/out/gcserver.out}.  Are there any unusual error messages or alarm records?
 If any experiment is giving an unusually high rate of alarms, the
