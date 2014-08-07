@@ -14,18 +14,16 @@ import time
 
 
 # Note my trademark usage of excessive Hungarian notation.
-sHomeDir = "/wwwhosts/snews.bnl.gov/web/ssl/"
-
-# This is filesystem dir so use cgi-bin and not snews-cgi
-sDBDir = sHomeDir + "cgi-bin/db/"
+sHomeDir = "/srv/wwwhosts/snews.bnl.gov/shift-data"
+sDBDir = os.path.join(sHomeDir, "db")
+sShiftLogFile = os.path.join(sHomeDir, "logfile.html")
+sShiftEmailFile = os.path.join(sHomeDir, "remindme")
 
 sSnnetURL = "https://snews.bnl.gov"
 sTemplateFile = "shift_template.html"
 sFormFile = "shift_checklist-template.html"
-sShiftLogFile = sHomeDir + "wg/shift/logfile.html"
-sShiftEmailFile = sHomeDir + "wg/shift/remindme"
 
-SENDMAIL = "/usr/sbin/sendmail"
+# SENDMAIL = "/usr/sbin/sendmail"
 
 def StripHTML(sText):
     # strip HTML tags from the input text

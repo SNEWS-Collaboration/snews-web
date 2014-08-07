@@ -49,12 +49,10 @@ import time
 from clqrecord import cLQRecord
 
 # Note my trademark usage of excessive Hungarian notation.
-sHomeDir = "/wwwhosts/snews.bnl.gov/web/ssl/"
+sHomeDir = "/srv/wwwhosts/snews.bnl.gov/shift-data"
+sDBDir = os.path.join(sHomeDir, "db")
+sTableDir = os.path.join(sHomeDir, "downtime")
 
-# This is filesystem dir, not URL so use "cgi-bin" and not "snews-cgi"
-sDBDir = sHomeDir + "cgi-bin/db/"
-
-sTableDir = sHomeDir +  "downtime/"
 sSnnetURL = "https://snews.bnl.gov"
 
 # Use "snews-cgi/" instead of cgi-bin/ as URL to avoid conflicts on
