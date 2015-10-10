@@ -441,7 +441,10 @@ def ProcessForm(form):
         form["endyear"].value = time.strftime("%Y", time.gmtime(iEndTime))
         form["endhour"].value = time.strftime("%H", time.gmtime(iEndTime))
         
-    
+    # TEMP
+        Display("Form data collected.  Table not working")
+        raise SystemExit
+
         # do something with the collected form data
         if form["modstatus"].value == "New":
             NewEntry(form, iEntryNum)
