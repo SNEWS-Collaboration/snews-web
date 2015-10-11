@@ -441,10 +441,6 @@ def ProcessForm(form):
         form["endyear"].value = time.strftime("%Y", time.gmtime(iEndTime))
         form["endhour"].value = time.strftime("%H", time.gmtime(iEndTime))
         
-    # TEMP
-        Display("Form data collected.  Table not working")
-        raise SystemExit
-
         # do something with the collected form data
         if form["modstatus"].value == "New":
             NewEntry(form, iEntryNum)
@@ -454,11 +450,18 @@ def ProcessForm(form):
             ModifyEntry(form, iEntryNum)
             Output = Output + "<P>Entry number " + str(iEntryNum) \
                      + " was successfully modified.\n"
+
                 
     # end if-not-"Delete" block
     Output = Output + "<P>Click <a href=\"" + sCgiURL + \
              "?key=table\">here</a> for the updated " + \
              "downtime entry table.\n"
+
+    # TEMP
+        Display(Output)
+        raise SystemExit
+
+
     
     # write the current action to the list of all modifications and
     # send an e-mail to snews-downtime with the new entry's specs
