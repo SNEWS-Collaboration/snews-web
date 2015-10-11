@@ -446,13 +446,15 @@ def ProcessForm(form):
         # do something with the collected form data
         if form["modstatus"].value == "New":
 
+            NewEntry(form, iEntryNum)
+            Output = Output + "<P>Entry number " + str(iEntryNum) \
+                         + " was successfully created.\n"
     # TEMP
             Display("here")
             raise SystemExit
 
-            NewEntry(form, iEntryNum)
-            Output = Output + "<P>Entry number " + str(iEntryNum) \
-                         + " was successfully created.\n"
+
+
         elif form["modstatus"].value == "Modify":
             ModifyEntry(form, iEntryNum)
             Output = Output + "<P>Entry number " + str(iEntryNum) \
