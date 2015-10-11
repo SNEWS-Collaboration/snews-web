@@ -440,6 +440,11 @@ def ProcessForm(form):
         form["endmonth"].value = time.strftime("%B", time.gmtime(iEndTime))
         form["endyear"].value = time.strftime("%Y", time.gmtime(iEndTime))
         form["endhour"].value = time.strftime("%H", time.gmtime(iEndTime))
+
+    # TEMP
+        Display(Output)
+        raise SystemExit
+
         
         # do something with the collected form data
         if form["modstatus"].value == "New":
@@ -450,10 +455,6 @@ def ProcessForm(form):
             ModifyEntry(form, iEntryNum)
             Output = Output + "<P>Entry number " + str(iEntryNum) \
                      + " was successfully modified.\n"
-
-    # TEMP
-        Display(Output)
-        raise SystemExit
 
 
                 
