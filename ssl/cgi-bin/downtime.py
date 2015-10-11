@@ -120,12 +120,6 @@ def ReadEntry(iEntryNum):
 def NewEntry(form, iEntryNum):
     # create a new entry with the specified number
     
-    # TEMP
-            Display("here")
-            raise SystemExit
-
-
-
     sFileName = MakeFileName(iEntryNum)
     sBadFile = "Error: unable to write file " + sFileName
     
@@ -451,6 +445,11 @@ def ProcessForm(form):
         
         # do something with the collected form data
         if form["modstatus"].value == "New":
+
+    # TEMP
+            Display("here")
+            raise SystemExit
+
 
             NewEntry(form, iEntryNum)
 
