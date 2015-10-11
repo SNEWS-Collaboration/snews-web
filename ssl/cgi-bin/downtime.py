@@ -451,15 +451,16 @@ def ProcessForm(form):
             Output = Output + "<P>Entry number " + str(iEntryNum) \
                      + " was successfully modified.\n"
 
+    # TEMP
+        Display(Output)
+        raise SystemExit
+
+
                 
     # end if-not-"Delete" block
     Output = Output + "<P>Click <a href=\"" + sCgiURL + \
              "?key=table\">here</a> for the updated " + \
              "downtime entry table.\n"
-
-    # TEMP
-        Display(Output)
-        raise SystemExit
 
 
     
