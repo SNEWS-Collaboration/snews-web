@@ -123,6 +123,11 @@ def NewEntry(form, iEntryNum):
     sFileName = MakeFileName(iEntryNum)
     sBadFile = "Error: unable to write file " + sFileName
     
+    # TEMP
+            Display(sFileName)
+            raise SystemExit
+
+
     try:
         WriteLastQueryFile(form, sFileName)
     except:
@@ -447,11 +452,12 @@ def ProcessForm(form):
         if form["modstatus"].value == "New":
 
             NewEntry(form, iEntryNum)
-            Output = Output + "<P>Entry number " + str(iEntryNum) \
-                         + " was successfully created.\n"
+
     # TEMP
             Display("here")
             raise SystemExit
+            Output = Output + "<P>Entry number " + str(iEntryNum) \
+                         + " was successfully created.\n"
 
 
 
