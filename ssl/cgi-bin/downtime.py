@@ -125,7 +125,6 @@ def NewEntry(form, iEntryNum):
 #            Display(blah)
 #            raise SystemExit
 
-
     sFileName = MakeFileName(iEntryNum)
     sBadFile = "Error: unable to write file " + sFileName
     
