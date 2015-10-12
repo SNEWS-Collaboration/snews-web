@@ -445,6 +445,8 @@ def ProcessForm(form):
         
         # do something with the collected form data
         if form["modstatus"].value == "New":
+            Display("here")
+            raise SystemExit
 
             NewEntry(form, iEntryNum)
 
