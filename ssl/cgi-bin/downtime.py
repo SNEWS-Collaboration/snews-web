@@ -120,7 +120,8 @@ def ReadEntry(iEntryNum):
 def NewEntry(form, iEntryNum):
     # create a new entry with the specified number
     
-    Display("here")
+    blah = "in NewEntry"
+    Display(blah)
     raise SystemExit
     sFileName = MakeFileName(iEntryNum)
     sBadFile = "Error: unable to write file " + sFileName
