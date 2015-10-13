@@ -87,9 +87,6 @@ def StripHTML(sText):
 
 def MakeFileName(iEntryNum):
     # return the filename matching the given index number
-    blah = "MakeFileName " + str(iEntryNum)
-    Display(blah)
-    raise SystemExit
 
     return "lastquery_" + str(iEntryNum) + ".dat"
 
@@ -124,6 +121,10 @@ def NewEntry(form, iEntryNum):
     # create a new entry with the specified number
     
     sFileName = MakeFileName(iEntryNum)
+    blah = "after MakeFileName " + str(iEntryNum)
+    Display(blah)
+    raise SystemExit
+
     sBadFile = "Error: unable to write file " + sFileName
     
     try:
