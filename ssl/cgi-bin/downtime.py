@@ -121,13 +121,14 @@ def NewEntry(form, iEntryNum):
     # create a new entry with the specified number
     
     sFileName = MakeFileName(iEntryNum)
-    blah = "after MakeFileName " + str(iEntryNum)
-    Display(blah)
-    raise SystemExit
 
     sBadFile = "Error: unable to write file " + sFileName
     
     try:
+        blah = "after MakeFileName " + str(iEntryNum)
+        Display(sBadFile)
+        raise SystemExit
+
         WriteLastQueryFile(form, sFileName)
     except:
         raise sBadFile
