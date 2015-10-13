@@ -95,10 +95,12 @@ def WriteLastQueryFile(form, sFileName):
     # formatted file
 
     sPathName = sDBDir + sFileName
+
+    hOutput = open(sPathName, "w")
+
     Display(sPathName)
     raise SystemExit
 
-    hOutput = open(sPathName, "w")
 
     for keyname in form.keys():
         hOutput.write(keyname + "=" + form[keyname].value + "\n")
