@@ -94,6 +94,8 @@ def WriteLastQueryFile(form, sFileName):
     # write the contents of the supplied form to a "lastquery_N.dat"
     # formatted file
     sPathName = sDBDir + sFileName
+    Display(sPathName)
+    raise SystemExit
 
     hOutput = open(sPathName, "w")
 
@@ -125,10 +127,6 @@ def NewEntry(form, iEntryNum):
     sBadFile = "Error: unable to write file " + sFileName
     
     try:
-        blah = "after MakeFileName " + str(iEntryNum)
-        Display(sBadFile)
-        raise SystemExit
-
         WriteLastQueryFile(form, sFileName)
     except:
         raise sBadFile
