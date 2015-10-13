@@ -50,7 +50,7 @@ from clqrecord import cLQRecord
 
 # Note my trademark usage of excessive Hungarian notation.
 sHomeDir = "/srv/wwwhosts/snews.bnl.gov/shift-data"
-sDBDir = os.path.join(sHomeDir, "db")
+sDBDir = os.path.join(sHomeDir, "db/")
 sTableDir = os.path.join(sHomeDir, "downtime")
 
 sSnnetURL = "https://snews.bnl.gov"
