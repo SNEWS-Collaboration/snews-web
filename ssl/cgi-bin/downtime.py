@@ -93,11 +93,11 @@ def MakeFileName(iEntryNum):
 def WriteLastQueryFile(form, sFileName):
     # write the contents of the supplied form to a "lastquery_N.dat"
     # formatted file
-    sPathName = sDBDir + sFileName
-    Display(sPathName)
-    raise SystemExit
 
     hOutput = open(sPathName, "w")
+    sPathName = sDBDir + sFileName + "opened"
+    Display(sPathName)
+    raise SystemExit
 
     for keyname in form.keys():
         hOutput.write(keyname + "=" + form[keyname].value + "\n")
