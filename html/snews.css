@@ -7,7 +7,7 @@
 }
 
 *:visited{
-	color: #f60;
+	color: #06c;
 }
 
 a:hover {
@@ -19,7 +19,7 @@ body {
 	font-family: sans-serif;
 	/* font-family: georgia, serif; */
 	color: #ccc;
-	background: #000;
+	background: #00001a;
 	/* margin: 0px; */
 }
 
@@ -31,32 +31,38 @@ h2 + h3 {
 	margin-top: -1em;
 } 
 
-.Navigation {
-	position: absolute;
-	float: left;
-	width: 20%;
-	height: auto;
-	line-height: 125%;
-	font-family: sans-serif;
-	font-size: 1em;
-	background: #222;
-	color: #ccc;
-	margin: 10px 10px 10px 10px;
-	padding: 0 5px 1em 5px; /* the H3 thing at the top makes me add 1em at the bottom */
-	border: 2px solid #555;
+.Navigation body {
+    margin: 0;
 }
 
 .Navigation ul {
-	list-style-type: none;
-	padding: 0;
-	margin: 0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 20%;
+    background-color: #00001a;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+	border-right: 3px solid #fff;
 }
 
-.Navigation li {
-	border: 2px solid #000;
-	margin: 4px 4px 4px 4px;
+.Navigation li a {
+    display: block;
+    color: #fff;
+    padding: 16px 0 8px 16px;
+    text-decoration: none;
 }
-	
+
+.Navigation li a.active {
+    background-color: #00001a;
+    color: white;
+}
+
+.Navigation li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}	
 
 #Contents {
 	position: relative;
