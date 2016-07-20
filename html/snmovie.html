@@ -17,14 +17,107 @@
     <h1 class="PTitle">
     Supernova Burst Movies</h1>
 
-<p><a href=SNmovie3D/> 3D Movie</a>
-<p><a href=SNmovieEXTRA/> Unrolled view movie</a>
+<p><a href="SNmovie3D/"> 3D Movie</a> depicts what the data would look like if you
+could see the events happening while looking into the detector.
+<p><a href="SNmovieEXTRA/"> Unrolled view movie</a> shows the same data, but unrolled
+to make it easier to analyze and with some graphs showing collected data on the sides.
 
     <p>The final versions of these movies are by Cully Little; they incorporate
 work by Steve Farrell and Ben Reed. 
 The 3D movie makes use of the tscan event display (primary
 author Tomasz Barsczak) and both have made use of Super-K collaboration software tools.
-<p> See a supernova burst <a href=http://www.phy.duke.edu/~schol/superkave/neutrino_supernova.m4v> movie in 3D</a> in <a href=http://vis.duke.edu/dive/>the DiVE</a>
+These movies show what the Super-K detector sees, a large number of little <i>blips</i>
+on its radar. The way it sees these is not by seeing the actual neutrinos themselves,
+but instead by seeing events happen <i>because</i> of a neutrino. Basically, if something
+happens within the detector, Super-K is able to detect it. What you're seeing in
+the movies are every single event that it detects, which can then be broken down
+into data and observed later on.
+
+	 <div class="figure_right" style="width: 300px">
+	  <a href="images/Super-K.jpg">
+	  <img src="images/Super-K.jpg" width="300" alt="Super-K" /></a>
+	  <center>The layout of Super-K, showing how far underground it is
+	  and what the actual detector looks like.</center>
+	 </div>
+
+<p>In a relevant context, if Super-K were to think that a neutrino burst from
+a supernova was happening, it'd be because there would be a sharp increase in the
+number of events taking place. Something similar to this (most detectors have different
+looks or set-ups but ultimately get similar results) would appear in other detectors as well,
+with the actual size of the burst depending on how big the detector actually is.
+At this point they all automatically send out an alert, and if enough alerts are recieved,
+SNEWS sends out the alert to let people know a supernova is coming.
+
+<p>The events that it is seeing however are primarily those of anti-electron neutrinos, a specific
+<i>flavor</i> of neutrino, but what you're seeing in the movies is only about a third
+of what would be expected if all flavors were detected, since the others are
+detected via a less probable reaction, compared to the main one. A flavor doesn't specifically
+mean that one tastes different from another, it is more just a placeholder word
+to let poeple know that there are different types. The three types are electron,
+muon, and tau neutrinos, all of which have different attributes and characteristics.
+However, it was discovered that these three flavors can oscillate between one or
+another type quite frequently. The <a href="http://www.nobelprize.org/nobel_prizes/physics/laureates/2015/">
+2015 Nobel Prize in Physics</a> was awarded for this discovery, which explained
+why detectors were seeing one third of the neutrinos that physicists were predicting
+would be seen from the Sun since they could primarily only see the electron neutrino.
+
+<p>If you look carefully you can also see little rings on the detector occasionally
+forming, this is due to an effect called Cherenkov radiation. The pixels in the
+rings are each a "photomultipler tube" which produced an electrical signal when
+hit by light caused by a particle zipping off through the water after being
+knocked loose by an incoming neutrino.
+The easiest way to think of this effect is by looking at a boat on the water.
+As your boat passes through water, it makes ripples in the water due to the boat
+itself passing through, if you are moving this creates a doppler effect in the water,
+but what happens if you're moving faster than the waves you are creating? This
+causes the waves to get run over as soon as they are created, and forces them all
+to get heavily piled up, often getting pushed to the side, this creates the effect
+of a wake. This same process is taking place with these electrons, and while they
+aren't going faster than the universal constant c, light only moves about .75c in water,
+this means that if you accelerate an electron past that .75c, it will causes a "wake"
+of light, which then builds up and hits the detector as the rings that you can see if you pause
+at the right time.
+
+    <div class="figure_left" style="width: 260px">
+     <img src="images/Neutrino_Count.png" height="170" width="260" alt="Neutrino Count" />
+	 <center>A count of neutrinos, showing the two different ways of detecting, and how many times
+	 each are being seen.</center>
+	</div>
+
+<p>You may also notice on the graphs of the unrolled view there is a neutrino count, an
+energy graph, and a neutrino direction. Let's first explain the neutrino count, on which
+there are two colors of bars, the first, larger one, is the electrons that Super-K
+is detecting due to electron neutrinos hitting a proton, causing it to form together
+with it, creating a neutron, also in the reaction a positron is released, which is what
+Super-K is detecting, using the same method that they see electrons. This is the primary
+way that these neutrinos are detected, as evidenced by the much larger amount of them seen.
+The other way they see them is by a neutrino ramming into an electron, this neutrino can
+be any flavor, however, the reaction itself won't tell us anything about the flavor, since this is
+essentially just a momentum transfer, which doesn't rely on flavor at all. This is the smaller blue
+bar that you are seeing, which occurs much less mainly because the target that the neutrino has
+to hit for the first reaction is <i>much</i> larger than the one it hits for the second one.
+
+   <div class="figure_right" style="width: 260px">
+	 <img src="images/Neutrino_Direction.png" height="160" width="260" alt="Neutrino Direction" />
+	 <center>A graph showing the infered direction of the neutrino based on the information 
+	 from the particles the detector sees.</center>
+   </div>
+
+<p>This also ties into the neutrino direction graph, which can give you a decent idea of where
+a group of neutrinos may be coming from. The majority of that graph is near useless,
+since the primary reaction that Super-K is detecting gives us almost no information as
+to it's direction, since the positron comes rocketing out in a near random direction.
+The reason you are seeing that slightly darker spot though is due to the fact that
+the secondary reaction gives us a lot of information about where it came from,
+since it it essentially a collision problem, which is fairly easy to figure out
+how the neutrino must have hit the electron to move it in such a direction.
+The final graph on energy is essentially just showing the energies of the detected
+particles as they get seen by the detector.
+
+<p> See a supernova burst <a href="http://www.phy.duke.edu/~schol/superkave/neutrino_supernova.m4v">
+movie in 3D</a> in <a href="http://virtualreality.duke.edu/">the DiVE</a>. This shows
+what it would look like to stand inside the detector (a much smaller version of it)
+while a burst is hitting using Duke University's virtual reality room.
   </div>
 </body>
 </html>

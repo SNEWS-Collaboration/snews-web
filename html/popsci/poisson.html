@@ -1,8 +1,30 @@
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>Poisson Statistics</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+ <link rel="stylesheet" href="../snews.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="snews_popsci.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="../snews_print.css" type="text/css" media="print" />
+
+  <title>Poisson Statistics</title>
+  <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
 </head>
+
 <body>
+	<div class="Breadcrumbs">
+		<a href="../index.html">SNEWS</a> &gt; <a href="contents.html">History of Astronomy</a> &gt;
+		<a href="poisson.html">Poisson</a>
+  </div>
+  
+  <h1 class="PTitle">Supernovas: Making Astronomical History</h1>
+
+    <h2>Poisson Statistics</h2>
+
+    <h3>What is a Poisson distribution?</h3>
 
 <p>Consider a system in which most of the time, nothing happens, but
 every once in a while, an event occurs which catches our interest.
@@ -35,68 +57,144 @@ behavior forms a branch of mathematics called <i>Poisson statistics</i>.
 
 <p>
 <a href="http://www-gap.dcs.st-and.ac.uk/~history/Mathematicians/Poisson.html">
-SimÅÈon Denis Poisson</a> (1781-1840) introduced the probability
+Sim&eacute;on Denis Poisson</a> (1781-1840) introduced the probability
 concept which bears his name in the book
-<i>RecherchÅÈs sur la probabilitÅÈ des jugements en matiÅËre criminelle
-et matiÅËre civile</i> (<i>Researches on the Probability of Judgments
+<i>Recherches sur la probabilit&eacute; des jugements en mati&egrave;re criminelle et en mati&egrave;re civile</i>
+(<i>Research on the Probability of Judgments
 in Criminal and Civil Matters</i>), which was published in 1837.  Many
 mathematicians built upon this work, the first notable one being the
 Russian <a
 href="http://www-gap.dcs.st-and.ac.uk/~history/Mathematicians/Chebyshev.html">
 Pafnuty Chebyshev</a> (1821-1894).
 
-<p>In years past, one of the classic examples statistics textbooks
-gave to describe Poisson probabilities had a rather macabre touch.
-During 1944 and 1945, Nazi Germany fired 1,358 V-2 rockets at the city
-of London.  The V-2, more fully known as <i>Vergeltungswaffe 2</i> or
-"Reprisal Weapon 2", was fired from mobile launch sites and had a
-range of about 300 kilometres (200 miles).  Until the Nazi engineers
-invented a way to guide the V-2 with radio waves, each rocket used a
-self-contained guidance system.  A primitive computer made from analog
-ciruit parts adjusted the rocket's angle of flight, and when the
-rocket ran out of fuel--a time called <i>Brennschluss</i>, from German
-words meaning "burnout"--it continued under gravity's influence,
-tracing a parabolic trajectory which ended in a crater on Allied
-soil.  This guidance system wasn't accurate enough to ensure pinpoint
-impacts, but it did destroy lives.
+<p>There are many ways we can look at how to actually understand the Poisson distribution, a common
+way too look at it from an astronomical perspective is to look at the amount of meteors
+entering Earth's atmosphere. Many of these meteors are too small to be even noticeable at all,
+Often burning up in the atmosphere. In fact, over 100,000 kg of space debris hits the Earth <i>every day</i>,
+however, most of this is in the form of stellar dust, which is basically harmless.
 
-<p>If we examine the distribution of V-2 impacts upon London, we
-notice it has several interesting properites.  First, each impact is
-independent of the others; a V-2 landing on the city doesn't change
-the probability that another would land some time later.  Furthermore,
-because the Nazis launched their weapons at a roughly constant rate (a
-rate they tried to make as fast as possible), we have a well-defined
-average rate of impacts.  Finally, the Nazis had a limited number of
-launch sites, each one of which could only be used every so often, so
-given a small enough time interval, the probability of two or more V-2
-impacts is just about zero.  These are the precise three
-qualifications we listed earlier for a Poisson process.
+<p>To figure out exactly how many meteors hit in a certain time period can be a very difficult process, as
+there are so many different sizes and forms of meteors that it's difficult to give solid statistics
+without setting proper size restrictions. For example, if we look at a 1996 study which
+estimated the number of events by finding meteorites in the desert, they found that by
+extrapolating to the whole earth, there would be about 18,000 to 84,000 meteorites bigger than
+10 grams each year. Poisson distributions prefer much smaller numbers and time intervals, so lets
+first off average those two values to get about 51,000 events per year, if we bring the time interval
+down to an hour, we get about 5.8 events per hour.
 
-<p>We can change our perspective slightly and look at intervals in
-<i>space</i> instead of in <i>time</i>.  Suppose we lay a grid upon a
-map of London, dividing the city into squares.  We can then count the
-number of V-2 landings in each square.  Some sections will have no
-impacts (the lucky ones), while others will have one or more.
-Thinking carefully about the Nazi's inaccurate guidance system, you
-will recognize that a rocket landing in one square doesn't make it
-either more or less likely that another rocket will land in the same
-square later.  Put another way, the presence of one "dot" in a square
-doesn't affect the likelihood you'll find another "dot" beside it in
-the same space.  Poisson statistics let us calculate how many squares
-we expect to have one "bombie", how many we can expect to have two or
-more, and how many we can reasonably say will have none at all.  Of
-course, we <i>can't</i> say which parts of the city will remain safe;
-remember, the rockets land randomly.
+  <div class="figure_right" style="width: 472px">
+      <img src="poisson3.gif" width="472" alt="Poisson Distribution" />
+	  
+    <p>An example of what a 
+	<a href="https://www.umass.edu/wsp/resources/poisson/">
+	Poisson distribtuon</a> looks like as you increase &lambda; and/or k.</p>
+  </div>
 
-<p>Learning statistics in a British classroom after World War II must
-have been an interesting experience.
+<p>Now we can get into the actual math of the situation. Poissonian events are described by the fairly
+straight forward equation:
 
-<p>Both the V-2 and the Poissonian description of its destructive
-behavior became central themes in <a
-href="http://www.wikipedia.org/wiki/Thomas_Pynchon">Thomas Pynchon's</a>
-postmodern epic novel <i>Gravity's Rainbow</i>.
+<center>
+`P = (lambda^k * e^lambda)/(k!)`
+</center>
 
-<i><small>Researched, written and maintained by Blake Stacey</small</i>.
+<p>Here P is the probability of whichever specific k we choose, where k can be any whole integer we choose,
+&lambda; is our expected value, so in this situation 5.8 and e is the natural number (2.71828...).
+This will allow us to get a estimate of the probability that a certain amount of events will
+occur within the time frame, this is our value k, so if we want to know the probability that 4 events will occur,
+we plug 4 into our equation, and 5.8 in for &lambda;. We can do this for all of the values surrounding 5.8 until
+we hit the point of things being fairly unlikely to happen. In this table I have shown all the probabilities of
+a certain number of events occuring in an hour, I stopped going once the probability dropped below 1%.
+
+<center>
+<table border="1" widthh:"50%">
+  <tr>
+    <th>Events</th>
+    <th>Probability</th>
+	<th>Percentage</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>.018</td>
+	<td>1.8%</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>.051</td>
+	<td>5.1%</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>.098</td>
+	<td>9.8%</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>.143</td>
+	<td>14.3%</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>.166</td>
+	<td>16.6%</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>.160</td>
+	<td>16%</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>.133</td>
+	<td>13.3%</td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>.096</td>
+	<td>9.6%</td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td>.062</td>
+	<td>6.2%</td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>.036</td>
+	<td>3.6%</td>
+  </tr>
+  <tr>
+    <td>11</td>
+    <td>.019</td>
+	<td>1.9%</td>
+  </tr>
+</table>
+</center>
+
+<p>As you can see, the probability steadily increases from 1 to 5, with 5 being the max value,
+and then begin to drop off again after that. All this is saying is that you're more likely
+to see a value closer to 5.8 than one farther away. This specific example is obviously
+hard to directly observe, as this is metoers larger than 10 grams across the <i>entire Earth</i>,
+but it can give you a good idea of what you would see if it we could do something like that.
+
+<p>There are many other example of situations where a Poisson distribution can be useful,
+looking at the amount of goals scored in soccer games, the number of cars going through a
+gas station, or people going to the top of the Empire State Building.
+
+<hr />
+
+<center>References and Further Reading</center>
+
+<p><li><a href="https://www.amazon.com/Introduction-Error-Analysis-Uncertainties-Measurements/dp/093570275X">
+<i>Introduction to Error Analysis</i></a> by John R. Taylor, University Science Books (1997),
+(p. 245-260) gives a good outline of Poissonian distribution and how to apply them.</li>
+
+<ul class="navbar"> <li><a
+    href="telescope.html">[Prev]</a>Telescope Era</li>
+
+	    <li><a href="contents.html">[Up]</a>Contents</li>
+
+	    <li><a href="contents.html">[Next]</a>Contents</li>
+    </ul>
 
 </body>
 </html>

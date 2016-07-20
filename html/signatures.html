@@ -17,50 +17,56 @@
   <div id="Contents">
     <h1 class="PTitle">Verifying the SNEWS alert signature</h1>
 
-<P>To help prevent hoaxes, any supernova alert from SNEWS will be
-digitally signed using <A HREF="http://keyserver.veridis.com:11371/search?q=0x68DF93F7">this public key</A>.  The
-key's ID is 68DF93F7, and its fingerprint is <FONT SIZE=2><FONT FACE="courier">0D2C
-7BC4 0032 E26D 19CE 6B1A E00D AA34 68DF 93F7</FONT></FONT></P>
-<P>Make sure that your email client can happily verify a signed email
+<p>To help prevent hoaxes, any supernova alert from SNEWS will be
+digitally signed using <a href="http://keyserver.veridis.com:11371/search?q=0x68DF93F7">this public key(Missing)</a>.  The
+key's ID is 68DF93F7, and its fingerprint is <font size=2><font face="courier">0D2C
+7BC4 0032 E26D 19CE 6B1A E00D AA34 68DF 93F7</font></font></p>
+<p>Make sure that your email client can happily verify a signed email
 now, before the time when you really want to be outside looking up
 instead of configuring a computer program.  Here is an <a href="test-msg.txt.asc">email message</a>
 you could test your system on.  Below are links to instructions for
 setting up many common email clients.  If you know of more clients
-and methods we should link to, please <A HREF="mailto:ahabig@umn.edu?subject=SNEWS signature verification documentation">let me know</A>.</p>
-<p>Note that this is an "old-style" or "inline" signature, rather than a newer "detached" signature built as a MIME message.  This is because we've not been able to kludge together a way for our scripts to send a properly formed detached signature email.  However, it does have the advantage that you could always save the email to a file and verify the signature outside your mail client, something which is harder to do with new-style messages.</p>
-<p>Also, if you are able to verify the SNEWS key with a SNEWS working group member and are satisfied that it is legitimate, please sign the key yourself and submit your signatures back to the keyservers, so that the world's "web of trust" for this key will grow.</P>
-<P><A HREF="http://www.pgp.com/products/desktop_home/index.html">PGP</A> and/or
-<A HREF="http://www.gnupg.org/">GnuPG</A> setup on your email client:</P>
-<UL>
-	<LI><P><A HREF="http://www.bretschneidernet.de/tips/secmua.html.en">A
-	good overview</A> of many clients</P>
-	<LI><P><A HREF="http://www.mutt.org/">mutt</A>: a <A HREF="http://codesorcery.net/mutt/mutt-gnupg-howto">walkthrough</A>
-	and a <A HREF="http://tldp.org/HOWTO/Mutt-GnuPG-PGP-HOWTO.html">HOWTO</A>,
-	and the <A HREF="http://www.gnupg.org/aegypten/index.html">Agypten</A>
-	project</P>
-	<LI><P><A HREF="http://kontact.kde.org/kmail/">Kmail</A>: <a href="http://userbase.kde.org/KMail/PGP_MIME">builtin</a> and <A HREF="http://www.gnupg.org/aegypten/index.html">Agypten</A></P>
-	<LI><P><A HREF="http://www.washington.edu/pine/">pine</A>: <A HREF="http://www.megaloman.com/~hany/software/pinepgp/">pinepgp</A>
-	and <A HREF="http://user.cs.tu-berlin.de/~gator/pgp4pine/">pgp4pine</A></P>
-	<LI><P>mozilla (<A
+and methods we should link to, please <a href="mailto:ahabig@umn.edu?subject=SNEWS signature verification documentation">let me know</a>.</p>
+<p>Note that this is an "old-style" or "inline" signature, rather than a newer "detached" signature built as a MIME message.
+This is because we've not been able to kludge together a way for our scripts to send a properly formed detached signature email.
+However, it does have the advantage that you could always save the email to a file and verify the signature outside your mail client,
+something which is harder to do with new-style messages.</p>
+<p>Also, if you are able to verify the SNEWS key with a SNEWS working group member and are satisfied that it is legitimate,
+please sign the key yourself and submit your signatures back to the keyservers, so that the world's "web of trust" for this
+key will grow.</p>
+<p><a href="http://www.pgp.com/products/desktop_home/index.html">PGP</a> and/or
+<a href="http://www.gnupg.org/">GnuPG</a> setup on your email client:</p>
+<ul>
+	<!--<li><p><a href="http://www.bretschneidernet.de/tips/secmua.html.en">A
+	good overview(German)</a> of many clients</p>-->
+	<li><p><a href="http://www.mutt.org/">mutt</a>: a <a href="http://codesorcery.net/mutt/mutt-gnupg-howto">walkthrough</a>
+	and a <a href="http://tldp.org/HOWTO/Mutt-GnuPG-PGP-HOWTO.html">HOWTO</a>,
+	and the <a href="http://www.gnupg.org/aegypten/index.html">Agypten</a>
+	project</p>
+	<li><p><a href="http://kontact.kde.org/kmail/">Kmail</a>:<!-- <a href="http://userbase.kde.org/KMail/pGP_MIME">builtin</a>
+	and--> <a href="http://www.gnupg.org/aegypten/index.html">Agypten</a></p>
+	<li><p><a href="http://www.washington.edu/pine/">pine</a>: <a href="http://www.washburn.edu/sobu/broach/wuinpgp.html">pinepgp</a>
+	<!--and <a href="http://user.cs.tu-berlin.de/~gator/pgp4pine/">pgp4pine(Missing)</a>--></p>
+	<li><p>mozilla (<A
 	HREF="http://www.mozilla.com/en-US/thunderbird/">Thunderbird</a>
-	or <a href="http://www.seamonkey-project.org/">Seamonkey</A>):
-	<A HREF="http://enigmail.mozdev.org/">Enigmail</A></P>
-	<LI><P><A HREF="http://www.gnome.org/projects/evolution/">Evolution</A>:
-	<A HREF="http://www.go-evolution.org/FAQ#Encryption">built-in</A></P>
-	<LI><P><A HREF="http://office.microsoft.com/home/office.aspx?assetid=FX01085793">Outlook</A>:
-	Try the <A HREF="http://www.pgp.com/products/freeware.html">PGP
-	freeware client</A>, but for full functionality you might have to
-	buy their <A HREF="http://www.pgp.com/products/desktop_home/index.html">PGP
-	Desktop</A> software.  Here is a <A
-	HREF="http://www.slipstick.com/addins/security.asp">list</A> of
+	or <a href="http://www.seamonkey-project.org/">Seamonkey</a>):
+	<a href="http://enigmail.mozdev.org/">Enigmail</a></p>
+	<li><p><a href="http://www.gnome.org/projects/evolution/">Evolution</a>:
+	<a href="http://www.go-evolution.org/FAQ#Encryption">built-in</a></p>
+	<li><p><a href="https://www.microsoft.com/en-us/outlook-com/">Outlook</a>:
+	Try the <a href="http://www.pgp.com/products/freeware.html">PGP
+	freeware client</a>, but for full functionality you might have to
+	buy their <a href="http://www.pgp.com/products/desktop_home/index.html">PGP
+	Desktop</a> software.  Here is a <A
+	HREF="http://www.slipstick.com/addins/security.asp">list</a> of
 	possible solutions.
-	 If you know of a good free solution, please let me know.</P>
-	<LI><P><A HREF="http://www.eudora.com/">Eudora</A>: 
-	<a href="http://home.comcast.net/~chang/EudoraGPG/">Eudora-GPG</a> for Mac OSX</P>
-        <LI><P>GnuPG <A HREF="http://macgpg.sourceforge.net/">for the
-        Mac</A>.  Look at the bottom of the page for links to how to
+	 If you know of a good free solution, please let me know.</p>
+	<li><p><a href="http://www.eudora.com/">Eudora</a>: 
+	<!--<a href="http://home.comcast.net/~chang/EudoraGPG/">Eudora-GPG(Missing)</a> for Mac OSX--></p>
+        <li><p>GnuPG <a href="http://macgpg.sourceforge.net/">for the
+        Mac</a>.  Look at the bottom of the page for links to how to
         make your favorite Mac mail client play nicely.  <a
-        href="http://www.mactech.com/articles/mactech/Vol.21/21.08/GPGAndMail/index.html">Here</a> is a tutorial.</P>
-</UL>
-</BODY>
-</HTML>
+        href="http://www.mactech.com/articles/mactech/Vol.21/21.08/GPGAndMail/index.html">Here</a> is a tutorial.</p>
+</ul>
+</body>
+</html>
