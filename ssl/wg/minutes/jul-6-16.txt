@@ -15,7 +15,7 @@ Experiment updates:
 
  - Clarence Virtue reported on HALO, which has been online since 2012 and in SNEWS since October 2015.  The livetime is good and improving.  Calibrations have demonstrated efficiency.  
 
- - Shayne Reichard showed slides demonstrating Xe-100 supernova sensitivity (see )
+ - Shayne Reichard showed slides demonstrating Xe-100 supernova sensitivity (see https://arxiv.org/abs/1606.09243)
 At some point they will set up an alert for SNEWS.
 
  - Marek Kowalski reported for IceCube.  Uptime for supernova is very high.  They are improving the alert by better muon background subtraction.  
@@ -29,7 +29,7 @@ At some point they will set up an alert for SNEWS.
 - Lindley Winslow reported for KamLAND.  The outer detector has been refurbished and running is now normal.  They are also participating in sub-trheshold GW coincidence searches.
 
 - Yasuo Takeuchi reported for SK. Overall livetime is very high.
-A supernova monitor paper was recently published.  
+A supernova monitor paper was recently published (10.1016/j.astropartphys.2016.04.003)
 
 - Mark Vagins reported on EGADS, which should be running for supernova alert later this year.    The intent is to provide a supernova trigger for anyone who wants it.
 
