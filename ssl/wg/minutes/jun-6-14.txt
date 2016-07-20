@@ -1,0 +1,46 @@
+Minutes, SNEWS meeting at Neutrino 2014
+=======================================
+
+Attendees: Jonathan Asaadi, Shaomin Chen, Alec Habig, David Heeramen, Erik Katsavounidis, Kevin Labe Reina Maruyama, Art McDonald, Gioacchino Ranucci, Kate Scholberg, Yoichiro Suzuki, Michael Smy, Matt Strait, Andrzej Szelc, Yasuo Takeuchi, Carlo Vigorito, Hanyu Wei
+
+-- I gave the overall SNEWS update: slides posted.  Everything running
+smoothly, currently with SK+LVD+IceCube+Borexino+KamLAND. KamLAND is the newest participant, having joined in late 2013 after an extensive testing period.
+Daya Bay has now completed extensive tests and is ready to join.
+The BNL server is running with a  virtualized setup. A backup server exists at
+Bologna for the case of BNL network downtime; we switch over to this a
+few times per year.  There has been is essentially no SNEWS server
+downtime in the past few years.
+
+Experiment updates:
+
+-- Alec Habig reported that NOvA, which is now running. will be taking SNEWS output to dump data.
+
+-- Gioacchino Rannucci reported on Borexino: all smooth.  The SOX running should have no effect on supernova sensitivity (it's at lower energy).
+
+-- Matt Strait reported for SNO+: they are doing a water fill.  For scintillator they will have a low-threshold buffer.
+
+-- Andrej Szelc reported for MicroBooNE:  they expect to be running by the end of the year.  They will run in a mode that keeps a large buffer of data to be kept for the case of supernova trigger from SNEWS.
+
+
+-- David Heeraman and Reina Maruyama reported for IceCube.   They have recently upgraded the data spooling and are making improvements to muon rejection.  Recently they have had 98% uptime.   They are also devising an "escalation scheme" in case of supernova trigger.
+
+-- Shaomin Chen gave the Daya Bay update.  They now have a supernova trigger and are ready to join SNEWS.  Daya Bay will run for supernova triggers until at least the end of 2017.
+
+-- Michael Smy gave the Super-K update:  everything smooth.  There is now a "threshold-less" recorder for supernova triggers (to be used for later analysis).
+
+-- Carlo Vigorito reported for LVD (see posted slides).  They have now been online for 20 years.  For the past several years there has been very high uptime with ~1kt active mass. There has been recent work to
+improve hardware for timing for neutrino TOF measurement.  Slides are posted.
+
+-- A KamLAND representative was not able to attend the meeting, but see the posted slide:  all stable.  There will be a shutdown in 2016. 
+
+--  Alec Habig reported for  HALO.    HALO is now running, but SNEWS connection not quite there yet.
+
+
+Some items of discussion:
+
+ - With six detectors soon to be included, we will need to tweak the coincidence conditions.  The easiest thing is to make the "lookback rate" requirement more stringent, but we should check this does not hurt efficiency.  A 3-fold coincidence might be reasonable under some conditions. "Anticoincidence", which would require keeping track of detailed downtime, could potentially be done but requires more work.
+
+ - Astronomical alert:  GCN connection should be enabled soon.  Erik mentioned a "Private GCN" arranged with GW detectors-- perhaps we could do something similar.  A workshop was suggested.
+
+ - Erik Katsavounidis reported on GW connection:  ~Galactic coverage for core collapse has been achieved with gravitational wave detectors.  In the last running period they had astronomer followup of 6-7 transient triggers (one was a blind injection of a fake signal).  SWIFT was able to respond within an hour.
+  A working group is being formed with LVD, Borexino and IceCube, with an MOU for data sharing.
