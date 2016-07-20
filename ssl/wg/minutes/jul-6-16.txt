@@ -1,0 +1,49 @@
+Minutes, SNEWS meeting at Neutrino 2016
+===========================
+
+Attendees: Maxim Gromov, Alec Habig, Steve Kettell, Marek Kowalski, Jost Migenda, Shayne Reichard, Hamish Robertson, Kate Scholberg, Matt Strait, Andrzej Szelc, Yasuo Takeuchi, Mark Vagins, Carlo Vigorito, Clarence Virtue, Lindley Winslow, Takashi Yoshida
+
+-- I gave the overall SNEWS update: slides posted.  Everything running
+smoothly, currently with SK+LVD+IceCube+Borexino+KamLAND+Daya Bay+HALO. Daya Bay and  HALO are new participants since 2014.   Backup server at Bologna also running smoothly.  Downtime is very small.  The grant from NSF has been renewed through mid-2018.  
+
+There is now a connection to GCN (the GRB coordinates network).  Formatted email with the same info as a SNEWS alert is sent.  Test emails are sent to GCN on Tuesdays at noon Eastern.
+
+
+Experiment updates:
+ 
+ - Alec Habig reported on NOvA.  This uses a special socket connection via NOvA executable in case of alert.  There is also a frequent cron-based test.  We discussed whether other experiments could use this too, for speed (there is an express line, but it's just email).  Alec's interface could be adapted.
+
+ - Clarence Virtue reported on HALO, which has been online since 2012 and in SNEWS since October 2015.  The livetime is good and improving.  Calibrations have demonstrated efficiency.  
+
+ - Shayne Reichard showed slides demonstrating Xe-100 supernova sensitivity (see )
+At some point they will set up an alert for SNEWS.
+
+ - Marek Kowalski reported for IceCube.  Uptime for supernova is very high.  They are improving the alert by better muon background subtraction.  
+
+ - Maxim Gromov reported for Borexino.  They are working also on gravitational-wave-neutrino coincidence searches.  They will tune the trigger when the source is deployed.
+
+- Steve Kettell reported for Daya Bay.  The supernova trigger is stable.  They have had a few problems with fake bursts associated with thunderstorms.
+ 
+- Carlo Vigorito reported for LVD-- please see posted slides.
+
+- Lindley Winslow reported for KamLAND.  The outer detector has been refurbished and running is now normal.  They are also participating in sub-trheshold GW coincidence searches.
+
+- Yasuo Takeuchi reported for SK. Overall livetime is very high.
+A supernova monitor paper was recently published.  
+
+- Mark Vagins reported on EGADS, which should be running for supernova alert later this year.    The intent is to provide a supernova trigger for anyone who wants it.
+
+
+Other items
+
+- Takashi Yoshida gave a short presentation on potential for presupernova neutrinos.
+
+- A new high-rate test involving all 7 detectors is planned for later this year.  
+
+- We discussed possibilities for lowering the threshold, and providing more open information.  A workshop is planned for next year.
+
+
+
+
+
+
