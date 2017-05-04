@@ -8,7 +8,6 @@
   <title>Verifying the SNEWS alert signature</title>
   <link rel="stylesheet" href="snews.css" type="text/css" media="all" />
   <link rel="stylesheet" href="snews_print.css" type="text/css" media="print" />
-
 </head>
 
 <body>
@@ -18,7 +17,7 @@
     <h1 class="PTitle">Verifying the SNEWS alert signature</h1>
 
 <p>To help prevent hoaxes, any supernova alert from SNEWS will be
-digitally signed using <a href="http://keyserver.veridis.com:11371/search?q=0x68DF93F7">this public key(Missing)</a>.  The
+digitally signed using <a href="http://snews.bnl.gov/snalert.asc">this public key</a>.  The
 key's ID is 68DF93F7, and its fingerprint is <font size=2><font face="courier">0D2C
 7BC4 0032 E26D 19CE 6B1A E00D AA34 68DF 93F7</font></font></p>
 <p>Make sure that your email client can happily verify a signed email
@@ -34,6 +33,13 @@ something which is harder to do with new-style messages.</p>
 <p>Also, if you are able to verify the SNEWS key with a SNEWS working group member and are satisfied that it is legitimate,
 please sign the key yourself and submit your signatures back to the keyservers, so that the world's "web of trust" for this
 key will grow.</p>
+<p>Easy extension for Chrome and Firefox:</p>
+<p><a href="https://www.mailvelope.com/en/">Mailvelope</a> is a very basic,
+easy to use extension/addon for Chrome/Firefox, all you need to do is simply download
+it and enable it on your browser. Once that is done you are free to wait for the SNEWS alert.
+The program should auto-look up and confirm the signature when it is recieved, however if you
+want to be absolutely sure you can add the <a href="http:/snews.bnl.gov/snalert.asc">SNEWS Public Key</a>
+to your keyring and add any tags or names you want to it so you know that it is from us.</p>
 <p><a href="http://www.pgp.com/products/desktop_home/index.html">PGP</a> and/or
 <a href="http://www.gnupg.org/">GnuPG</a> setup on your email client:</p>
 <ul>
