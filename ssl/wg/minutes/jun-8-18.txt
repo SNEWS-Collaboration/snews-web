@@ -1,0 +1,38 @@
+Minutes, SNEWS meeting at Neutrino 2018
+===========================
+
+Attendees: Erica Caden, John Franklin Crenshaw, Basudeb Dasgupta, Yoshihito Gando, Alec Habig, Rasmus Hansen, Yoshinari Hayato, Lutz Koepke, Rafael Lang, Massimiliano Lincetto, Kate Scholberg, Andrey Sheshukov, Matt Strait, Justin Vasel, Clarence Virtue
+
+-- I gave the overall SNEWS update: slides posted.  Everything has been very stable without much change since 2016.  Everything running
+smoothly, currently with SK+LVD+IceCube+Borexino+KamLAND+Daya Bay+HALO.   Backup server at Bologna also running smoothly.  Downtime is very small.  The grant from NSF has been extended through mid-2019.    The alert output has been extended with socket connections, used by NOvA and XENON.  Several items are on the to-do list: an app, another "high rate test" (or "rusty" queue)-- perhaps such a high-rate queue can become permanent?
+
+-- A "SNEWS 2.0" workshop is planned for various updates in the context of the new landscape  of multimessenger astronomy.  Nominal date: week of March 11, 2019.  Venue under discussion.
+
+-- Clarence Virtue reported on HALO and SNO+.  HALO is stable with low trigger threshold and high livetime.  Power fluctuations which caused problems before are now reduced.  There is now backup lab power.  SNO+ is full of water, with LAB scintillator fill planned for July.  They are lacking person power for development of a supernova alert in the short term, but it should happen in due course.
+
+-- Report from LVD (Carlo Vigorito by mail).
+
+"The LVD detector is running smoothly with stable trigger mass at 95% of
+the nominal one (1 kton) and duty cycle better than 99.5% in the last 2
+years.
+
+For safety reason at LNGS within 2020 the overall scintillator mass  (LVD+
+Borexino) in  the underground labs should be reduced.  For both
+experiments this could affect the future. The situation is not clear.
+
+Till that moment we will try our best to keep LVD working."
+
+-- Alec Habig reported for NOvA: see slides.  NOvA reads 45 seconds of data given a SNEWS trigger (delivered by socket connection).  NOvA is sensitive to a decent fraction of the galaxy.  They are working on a trigger that will be an input to SNEWS.
+
+-- Yoshinari Hayato gave a report from Super-K:  SK is off and the tank is open for refurbishment.  Water fill will start in September and take 2 months  Gd will be added next summer and fall.  There will be more than usual calibration work over the next year or so as SK-Gd is commissioned.  EGADS and XMASS at Kamioka will be running during this period.
+
+-- Yoshihito Gando reported for KamLAND.  The KamLand-Zen-800 mini-balloon was recently deployed, resulting in 2 weeks of down time.  DAQ is started.  The higher rate should not affect the supernova alarm.  There will be down time in the near future for monitor checks of the inside by camera, perhaps a few hours a week.   
+
+-- Lutz Koepke reported for IceCube: SN DAQ is running smoothly, 99.6% uptime.  There are about 4 emails/day to a small group.  The alarms to SNEWS have been more stable in the past year due to better muon subtraction.  They can dump the whole detector for 90 seconds.    They have very good prospects for funding to deploy 7 more infill strings in 2022.  These can be used for R&D for next-generation photosensors (future "Gen-2" IceCube).
+
+-- Rafael Lang reported on XENON.  They digitize all data, with a trigger deciding what to store.  They can store ~0.5-1 hour. XENON-1 ton will warm up in a few months and will be upgrading next year.
+
+-- Matt Strait showed an interesting preliminary plot showing overall SNEWS alarm latency (see post).  Some input information is robust but other input information is just guesses.  We agreed to try to make this plot with reliable input latency information from each experiment.
+
+
+
