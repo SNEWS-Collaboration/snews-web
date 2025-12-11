@@ -59,9 +59,9 @@ def Display(sContent):
     
     # print a content-type header to let browsers know what flavor
     # of data we are transmitting
-    print "Content-type: text/html\n\n"
+    print( "Content-type: text/html\n\n")
     
-    print SubResult[0]
+    print( SubResult[0])
 
 def DisplayForm():
     # read the form template, process it and display the result
